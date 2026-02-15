@@ -1,14 +1,15 @@
+import { CategoryId } from "./MobileAppScrapingTechData";
 import MobileAppScrapingCategoryButton from "./MobileAppScrapingCategoryButton";
 
 interface Category {
-  id: number;
+  id: CategoryId;
   name: string;
 }
 
 interface MobileAppScrapingCategoryTabsProps {
-  categories: Category[];
-  selectedCategory: number;
-  onSelect: (id: number) => void;
+  categories: readonly Category[];
+  selectedCategory: CategoryId;
+  onSelect: (id: CategoryId) => void;
 }
 
 export default function MobileAppScrapingCategoryTabs({

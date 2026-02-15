@@ -1,9 +1,7 @@
+import { TechItem } from "./WebDataExtractionTechData";
+
 interface WebDataExtractionTechCardProps {
-  tech: {
-    id: number;
-    name: string;
-    logo: React.ReactNode;
-  };
+  tech: TechItem;
 }
 
 export default function WebDataExtractionTechCard({ tech }: WebDataExtractionTechCardProps) {

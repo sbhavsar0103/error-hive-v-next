@@ -7,7 +7,7 @@ export const categories = [
   { id: "language", name: "Language" },
   { id: "nlp", name: "NLP" },
   { id: "web", name: "Web Technology" },
-];
+] as const;
 
 export const techLogos = {
   automation: [
@@ -49,4 +49,8 @@ export const techLogos = {
     { id: "22", name: "React", logo: "⚛️" },
     { id: "23", name: "Node.js", logo: "🟢" },
   ],
-};
+} as const;
+
+/* 🔥 MAGIC LINE */
+export type CategoryId = keyof typeof techLogos;
+export type TechItem = (typeof techLogos)[CategoryId][number];

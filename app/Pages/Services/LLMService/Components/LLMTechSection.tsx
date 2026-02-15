@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { categories, techLogos } from "./LLMTechData";
+import { categories, techLogos, CategoryId } from "./LLMTechData";
 import LLMCategoryTabs from "./LLMCategoryTabs";
 import LLMTechGrid from "./LLMTechGrid";
 
 export default function LLMTechSection() {
-  const [selectedCategory, setSelectedCategory] = useState("data");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryId>("data");
 
   return (
     <div className="bg-[#060010] text-white py-16 lg:py-24">
@@ -30,7 +30,7 @@ export default function LLMTechSection() {
           </div>
         </div>
 
-        <LLMTechGrid techs={techLogos[selectedCategory] || []} />
+        <LLMTechGrid techs={techLogos[selectedCategory]} />
 
       </div>
     </div>

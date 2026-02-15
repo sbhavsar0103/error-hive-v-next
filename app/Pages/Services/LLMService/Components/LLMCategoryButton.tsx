@@ -1,14 +1,15 @@
 import type { ReactElement } from "react";
+import { CategoryId } from "./LLMTechData";
 
 interface Category {
-  id: number;
+  id: CategoryId;
   name: string;
 }
 
 interface CategoryButtonProps {
   category: Category;
   isActive: boolean;
-  onClick: (id: number) => void;
+  onClick: (id: CategoryId) => void;
 }
 
 export default function CategoryButton({

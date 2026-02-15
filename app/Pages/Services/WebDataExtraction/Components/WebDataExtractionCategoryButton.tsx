@@ -1,7 +1,9 @@
+import { CategoryId } from "./WebDataExtractionTechData";
+
 interface WebDataExtractionCategoryButtonProps {
-  category: { id: number; name: string };
+  category: { id: CategoryId; name: string };
   isActive: boolean;
-  onClick: (id: number) => void;
+  onClick: (id: CategoryId) => void;
 }
 
 export default function WebDataExtractionCategoryButton({

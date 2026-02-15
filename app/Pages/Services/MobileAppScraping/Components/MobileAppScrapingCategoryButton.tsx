@@ -1,7 +1,9 @@
+import { CategoryId } from "./MobileAppScrapingTechData";
+
 interface MobileAppScrapingCategoryButtonProps {
-  category: { id: number; name: string };
+  category: { id: CategoryId; name: string };
   isActive: boolean;
-  onClick: (id: number) => void;
+  onClick: (id: CategoryId) => void;
 }
 
 export default function MobileAppScrapingCategoryButton({

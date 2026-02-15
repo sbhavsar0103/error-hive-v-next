@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { categories, techLogos } from "./WebDataExtractionTechData";
+import { categories, CategoryId, techLogos } from "./WebDataExtractionTechData";
 import WebDataExtractionCategoryTabs from "./WebDataExtractionCategoryTabs";
 import WebDataExtractionTechGrid from "./WebDataExtractionTechGrid";
 
 export default function WebDataExtractionTechSection() {
-  const [selectedCategory, setSelectedCategory] = useState("data");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryId>("data");
 
   return (
     <div className="bg-[#060010] text-white py-16 lg:py-24">
@@ -30,7 +30,7 @@ export default function WebDataExtractionTechSection() {
           </div>
         </div>
 
-        <WebDataExtractionTechGrid techs={techLogos[selectedCategory] || []} />
+        <WebDataExtractionTechGrid techs={techLogos[selectedCategory]} />
 
       </div>
     </div>

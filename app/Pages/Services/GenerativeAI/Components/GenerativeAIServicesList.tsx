@@ -2,15 +2,15 @@ import GenerativeAIServiceItem from "./GenerativeAIServiceItem";
 import { LucideIcon } from "lucide-react";
 
 export interface GenerativeAIService {
-  id: string;
+  id: number;
   title: string;
   icon: LucideIcon;
 }
 
 interface GenerativeAIServicesListProps {
   services: GenerativeAIService[];
-  selectedServiceId: string;
-  setSelectedServiceId: React.Dispatch<React.SetStateAction<string>>;
+  selectedServiceId: number;
+  setSelectedServiceId: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function GenerativeAIServicesList({

@@ -1,14 +1,15 @@
 import WebDataExtractionCategoryButton from "./WebDataExtractionCategoryButton";
+import { CategoryId } from "./WebDataExtractionTechData";
 
 interface Category {
-  id: number;
+  id: CategoryId;
   name: string;
 }
 
 interface WebDataExtractionCategoryTabsProps {
-  categories: Category[];
-  selectedCategory: number;
-  onSelect: (id: number) => void;
+  categories: readonly Category[];
+  selectedCategory: CategoryId;
+  onSelect: (id: CategoryId) => void;
 }
 
 export default function WebDataExtractionCategoryTabs({

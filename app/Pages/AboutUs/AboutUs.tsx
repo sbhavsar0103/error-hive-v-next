@@ -41,13 +41,13 @@ const AboutUs: React.FC = () => {
         style={{ paddingTop: "10rem", paddingBottom: "6rem" }}
       >
         <div className="mx-auto bg-amber-500 rounded-3xl py-16 px-6 sm:px-12 relative z-10 shadow-[0_0_40px_rgba(245,158,11,0.4)]">
-          <FadeContent direction="up" delay={0.1}>
+          <FadeContent  delay={0.1}>
             <p className="text-sm sm:text-base italic text-[#060010] mb-6 tracking-wide">
               “Innovation is not just what we do — it’s who we are.”
             </p>
           </FadeContent>
 
-          <FadeContent direction="up" delay={0.3}>
+          <FadeContent  delay={0.3}>
             <h2 className="text-2xl sm:text-4xl font-medium text-[#060010] mb-5 leading-snug">
               We Build{" "}
               <span className="text-white bg-[#060010] px-2 rounded-md">
@@ -61,7 +61,7 @@ const AboutUs: React.FC = () => {
             </h2>
           </FadeContent>
 
-          <FadeContent direction="up" delay={0.5}>
+          <FadeContent  delay={0.5}>
             <p className="text-base sm:text-lg text-[#060010]/90 leading-relaxed mb-10 max-w-3xl mx-auto font-light">
               At <span className="font-medium">Error-Hive Solution</span>, we
               specialize in creating intelligent digital experiences through the
@@ -83,7 +83,7 @@ const AboutUs: React.FC = () => {
             </p>
           </FadeContent>
 
-          <FadeContent direction="up" delay={0.7}>
+          <FadeContent  delay={0.7}>
             <button className="px-8 py-3 bg-[#060010] text-white font-medium rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
               Let&apos;s Connect
             </button>

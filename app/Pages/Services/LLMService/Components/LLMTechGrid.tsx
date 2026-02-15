@@ -1,14 +1,10 @@
 import { ReactNode } from "react";
 import LLMTechCard from "./LLMTechCard";
+import { TechItem } from "./LLMTechData";
 
-interface LLMTech {
-  id: number;
-  name: string;
-  logo: ReactNode;
-}
 
 interface LLMTechGridProps {
-  techs: LLMTech[];
+  techs: readonly TechItem[];
 }
 
 export default function LLMTechGrid({ techs }: LLMTechGridProps) {

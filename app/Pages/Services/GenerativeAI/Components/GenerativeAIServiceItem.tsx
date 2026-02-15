@@ -1,7 +1,7 @@
 import { LucideIcon } from "lucide-react";
 
 interface GenerativeAIService {
-  id: string;
+  id: number;
   title: string;
   icon: LucideIcon;
 }

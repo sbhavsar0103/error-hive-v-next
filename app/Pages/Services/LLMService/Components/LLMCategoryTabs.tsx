@@ -1,14 +1,15 @@
 import LLMCategoryButton from "./LLMCategoryButton";
+import { CategoryId } from "./LLMTechData";
 
 interface Category {
-  id: number;
+  id: CategoryId;
   name: string;
 }
 
 interface LLMCategoryTabsProps {
-  categories: Category[];
-  selectedCategory: number;
-  onSelect: (id: number) => void;
+  categories: readonly Category[];
+  selectedCategory: CategoryId;
+  onSelect: (id: CategoryId) => void;
 }
 
 export default function LLMCategoryTabs({

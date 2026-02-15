@@ -2,7 +2,7 @@ import React from "react";
 import DataScienceServiceItem from "./DataScienceServiceItem";
 
 interface Service {
-  id: string | number;
+  id: number;
   icon: React.ElementType;
   title: string;
   description?: string;
@@ -10,8 +10,8 @@ interface Service {
 
 interface DataScienceServicesListProps {
   services: Service[];
-  selectedServiceId: string | number;
-  setSelectedServiceId: (id: string | number) => void;
+  selectedServiceId: number;
+  setSelectedServiceId: (id: number) => void;
 }
 
 const DataScienceServicesList: React.FC<DataScienceServicesListProps> = ({

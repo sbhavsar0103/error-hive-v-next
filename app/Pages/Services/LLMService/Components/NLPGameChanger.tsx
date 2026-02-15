@@ -28,7 +28,7 @@ const NLPGameChanger = () => {
         <section id="mission" className="bg-[#060010] py-20 px-4 sm:px-6 lg:px-8">
             <NLPGameChangerHeader />
             <div className="max-w-7xl mx-auto">
-                <FadeContent blur={false} duration={200} easing="ease-out" initialOpacity={0}>
+                <FadeContent blur={false} duration={200}  initialOpacity={0}>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {NLPGameChangerCards.map((card, index) => {
                             const Icon = card.icon;

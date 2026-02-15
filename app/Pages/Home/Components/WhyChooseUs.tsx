@@ -77,7 +77,7 @@ const WhyChooseUs: React.FC = () => {
         <FadeContent
           blur={false}
           duration={200}
-          easing="ease-out"
+          
           initialOpacity={0}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

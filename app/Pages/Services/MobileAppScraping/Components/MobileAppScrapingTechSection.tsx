@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { categories, techLogos } from "./MobileAppScrapingTechData";
+import {
+  categories,
+  techLogos,
+  CategoryId,
+} from "./MobileAppScrapingTechData";
 import MobileAppScrapingCategoryTabs from "./MobileAppScrapingCategoryTabs";
 import MobileAppScrapingTechGrid from "./MobileAppScrapingTechGrid";
 
 export default function MobileAppScraping() {
-  const [selectedCategory, setSelectedCategory] = useState("data");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryId>("data");
 
   return (
     <div className="bg-[#060010] text-white py-16 lg:py-24">
@@ -30,7 +34,7 @@ export default function MobileAppScraping() {
           </div>
         </div>
 
-        <MobileAppScrapingTechGrid techs={techLogos[selectedCategory] || []} />
+        <MobileAppScrapingTechGrid techs={techLogos[selectedCategory]} />
 
       </div>
     </div>

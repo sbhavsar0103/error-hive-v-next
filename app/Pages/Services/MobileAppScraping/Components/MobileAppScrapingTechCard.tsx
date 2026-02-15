@@ -1,6 +1,6 @@
 interface MobileAppScrapingTechCardProps {
   tech: {
-    id: number;
+    id: string;
     name: string;
     logo: React.ReactNode;
   };

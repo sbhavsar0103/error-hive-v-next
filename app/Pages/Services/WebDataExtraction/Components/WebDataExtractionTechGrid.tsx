@@ -1,13 +1,8 @@
 import WebDataExtractionTechCard from "./WebDataExtractionTechCard";
-
-interface Tech {
-  id: number;
-  name: string;
-  logo: React.ReactNode;
-}
+import { TechItem } from "./WebDataExtractionTechData";
 
 interface WebDataExtractionTechGridProps {
-  techs: Tech[];
+  techs: readonly TechItem[];
 }
 
 export default function WebDataExtractionTechGrid({ techs }: WebDataExtractionTechGridProps) {

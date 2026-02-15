@@ -1,4 +1,5 @@
 import MobileAppScrapingTechCard from "./MobileAppScrapingTechCard";
+import { TechItem } from "./MobileAppScrapingTechData";
 
 interface Tech {
   id: number;
@@ -6,8 +7,9 @@ interface Tech {
   logo: React.ReactNode;
 }
 
+
 interface MobileAppScrapingTechGridProps {
-  techs: Tech[];
+  techs: readonly TechItem[];
 }
 
 export default function MobileAppScrapingTechGrid({ techs }: MobileAppScrapingTechGridProps) {

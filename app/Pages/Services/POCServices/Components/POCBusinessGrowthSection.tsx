@@ -3,7 +3,7 @@ import POCHeader from "./POCHeader";
 import POCServiceList from "./POCServiceList";
 
 export default function POCBusinessGrowthSection() {
-  const [hoveredId, setHoveredId] = useState(null);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const services = [
     {
