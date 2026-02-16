@@ -35,8 +35,7 @@ const Navbar = () => {
 
     scrapping: [
       { label: "Web Data Extraction", path: "/services/web-data-extraction" },
-      { label: "Mobile Application Scrapping", path: "/services/mobile-scraping" },
-      { label: "Real Time API", path: "/services/real-time-api" },
+      { label: "Mobile Application Scrapping", path: "/services/mobile-scraping" }
     ],
   };
 
@@ -176,12 +175,10 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+        <div className="fixed top-20 left-0 w-full h-[calc(100vh-80px)] 
+                  bg-black/95 backdrop-blur-xl border-t border-white/10 
+                  overflow-y-auto z-40">
           <div className="px-6 py-6 space-y-4">
-            <Link href="/" className="block text-white">
-              Home
-            </Link>
-
             <div>
               <button
                 onClick={() =>
@@ -203,7 +200,7 @@ const Navbar = () => {
 
               {openDropdown === "mobile-services" && (
                 <div className="mt-3 pl-4 space-y-2 text-gray-300">
-                  {[...megaMenu.services, ...megaMenu.capabilities].map(
+                  {[...megaMenu.services, ...megaMenu.capabilities, ...megaMenu.scrapping].map(
                     ({ label, path }) => (
                       <Link
                         key={label}
