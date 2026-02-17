@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Bot, LineChart, Network } from "lucide-react";
+import Link from "next/link";
 
 import FloatingParticles from "./Components/FloatingParticles";
 import AIVisualization from "./Components/AIVisualization";

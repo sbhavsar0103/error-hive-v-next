@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 interface Service {
   icon: React.ElementType;
@@ -40,10 +41,10 @@ const DataScienceServiceDetails: React.FC<DataScienceServiceDetailsProps> = ({
         </p>
       </div>
 
-      <button className="group inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-[#060010] rounded-xl font-semibold text-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+      <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-lg  hover:bg-amber-400 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
         Get Started
-        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </button>
+        <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+      </Link>
     </div>
   );
 };

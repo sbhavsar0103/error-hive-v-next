@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import MachineLearningStepCard from "./MachineLearningStepCard";
+import Link from "next/link";
 
 export default function MachineLearningProcessSection() {
   const steps = [
@@ -65,13 +66,17 @@ export default function MachineLearningProcessSection() {
             </p>
           </div>
 
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+          <Link
+            href="/contact" className="group relative inline-flex px-8 py-4   bg-gradient-to-r from-amber-500 to-amber-600   text-white font-medium rounded-xl overflow-hidden   transition-all duration-300   hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105"
+          >
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
+
             <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+          </Link>
+
         </div>
 
         {/* RIGHT SIDE — SCROLLING CARDS */}

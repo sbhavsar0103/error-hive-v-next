@@ -1,6 +1,8 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import StepCard from "./StepCard";
+
 
 interface Step {
   number: number;
@@ -42,7 +44,7 @@ const steps: Step[] = [
     ],
   },
 ];
- 
+
 const ProcessSection: React.FC = () => {
   return (
     <section className="relative bg-[#060010] py-24 px-6">
@@ -70,13 +72,15 @@ const ProcessSection: React.FC = () => {
             </p>
           </div>
 
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+          <Link
+            href="/contact"
+            className="group relative inline-flex items-center gap-2 px-8 py-4  bg-gradient-to-r from-amber-500 to-amber-600  text-white font-medium rounded-xl overflow-hidden  transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
+          </Link>
+
         </div>
 
         {/* RIGHT SIDE — SCROLLING CARDS */}
@@ -113,13 +117,15 @@ const ProcessSection: React.FC = () => {
                 </p>
               </div>
 
-              <button className="group/btn relative px-8 py-4 bg-white text-amber-600 font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 w-fit">
+              <Link
+                href="/contact"
+                className="group/btn relative inline-flex px-8 py-4  bg-white text-amber-600 font-semibold rounded-xl  overflow-hidden transition-all duration-300  hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 w-fit">
                 <span className="relative z-10 flex items-center gap-2">
                   Schedule Call for AI Consultation
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-              </button>
+              </Link>
             </div>
 
             <div className="relative h-80 flex items-center justify-center">

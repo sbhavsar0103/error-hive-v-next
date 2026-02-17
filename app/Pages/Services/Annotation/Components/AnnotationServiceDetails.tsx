@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ChevronRight, LucideIcon } from "lucide-react";
 
 /** Service type */
@@ -18,7 +19,7 @@ const AnnotationServiceDetails: React.FC<AnnotationServiceDetailsProps> = ({
   const IconComponent = selectedService.icon;
 
   return (
-        <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5">
+    <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5">
       <div>
         {/* Decorative grid dots */}
         <div className="grid grid-cols-8 gap-3 mb-12 opacity-20">
@@ -41,10 +42,10 @@ const AnnotationServiceDetails: React.FC<AnnotationServiceDetailsProps> = ({
         </p>
       </div>
 
-      <button className="group inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-[#060010] rounded-xl font-semibold text-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+      <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-lg  hover:bg-amber-400 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
         Get Started
-        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </button>
+        <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+      </Link>
     </div>
   );
 };

@@ -1,8 +1,19 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Brain, Zap } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const AIVisualization: React.FC = () => {
+  const [waveHeights, setWaveHeights] = useState<number[]>([]);
+
+  useEffect(() => {
+    const heights = Array.from({ length: 6 }, () =>
+      40 + Math.random() * 60
+    );
+    setWaveHeights(heights);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -17,7 +28,7 @@ const AIVisualization: React.FC = () => {
           <Brain className="w-8 h-8 text-white" />
         </div>
 
-        <div className="flex-1" >
+        <div className="flex-1">
           <div className="h-3 bg-gradient-to-r from-amber-500 to-transparent rounded-full mb-2" />
           <div className="h-3 bg-gradient-to-r from-amber-600 to-transparent rounded-full w-3/4" />
         </div>
@@ -25,7 +36,7 @@ const AIVisualization: React.FC = () => {
 
       {/* Cards */}
       <div className="grid grid-cols-2 gap-4">
-        {Array.from({ length: 4 }).map((_, i: number) => (
+        {Array.from({ length: 4 }).map((_, i) => (
           <div
             key={i}
             className="bg-[#1a0a22]/40 rounded-xl p-4 border border-amber-500/20 hover:border-amber-500/60 transition-all duration-300 hover:scale-105"
@@ -39,11 +50,11 @@ const AIVisualization: React.FC = () => {
 
       {/* Wave Bars */}
       <div className="flex gap-2">
-        {Array.from({ length: 6 }).map((_, i: number) => (
+        {waveHeights.map((height, i) => (
           <div
             key={i}
             className="flex-1 bg-gradient-to-t from-amber-600 to-amber-500 rounded-lg animate-wave"
-            style={{ height: `${40 + Math.random() * 60}px` }}
+            style={{ height: `${height}px` }}
           />
         ))}
       </div>

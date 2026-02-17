@@ -1,6 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 const containerVariants: Variants = {
   hidden: {
@@ -24,22 +25,15 @@ const HeroButtons: React.FC = () => {
       variants={containerVariants}
       className="flex flex-col sm:flex-row gap-4 mt-8"
     >
-      <motion.button
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black px-8 py-4 rounded-lg font-semibold flex items-center gap-2"
-      >
-        Get Started
-        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </motion.button>
-
-      <motion.button
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        className="border-2 border-amber-500 text-amber-400 px-8 py-4 rounded-lg font-semibold hover:bg-amber-500/10"
-      >
-        View Services
-      </motion.button>
+      <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
+        <Link
+          href="/contact"
+          className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black px-8 py-4 rounded-lg font-semibold flex items-center gap-2"
+        >
+          Get Started
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </motion.div>
     </motion.div>
   );
 };
