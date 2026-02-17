@@ -151,15 +151,17 @@ const Navbar = () => {
               About Us
             </Link>
 
-            <Link href="/contact" className="text-white hover:text-blue-400 transition">
-              Contact
+            <Link href="/case-study" className="text-white hover:text-blue-400 transition">
+              Case Study
             </Link>
 
           </div>
 
-          <button className="ml-4 bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition">
-            Let’s Talk
-          </button>
+          <Link href="/contact" className="text-white hover:text-blue-400 transition">
+            <button className="ml-4 bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition">
+              Let’s Talk
+            </button>
+          </Link>
 
           {/* MOBILE BUTTON */}
           <div className="md:hidden">

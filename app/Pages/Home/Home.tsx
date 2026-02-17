@@ -6,6 +6,7 @@ import MagicBento from "../../Components/MagicBento/MagicBento";
 import OurServices from "./Components/OurServices";
 import WhyChooseUs from "./Components/WhyChooseUs";
 import LetsConnect from "./Components/LetsConnect";
+import Link from "next/link";
 
 const BannerHero: React.FC = () => {
   return (
@@ -46,12 +47,6 @@ const BannerHero: React.FC = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-          <div className="mb-6 pointer-events-auto">
-            <span className="inline-block px-6 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium backdrop-blur-sm">
-              New Background
-            </span>
-          </div>
-
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight pointer-events-auto">
             Welcome To <br />
             <span className="text-amber-500">Error-Hive Solution</span>
@@ -62,19 +57,23 @@ const BannerHero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-            <button
-              type="button"
-              className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </button>
+            <Link href="/contact" passHref>
+              <button
+                type="button"
+                className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </button>
+            </Link>
 
-            <button
-              type="button"
-              className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300"
-            >
-              Learn More
-            </button>
+            <Link href="/about" passHref>
+              <button
+                type="button"
+                className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </section>
