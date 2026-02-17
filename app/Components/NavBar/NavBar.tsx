@@ -157,21 +157,27 @@ const Navbar = () => {
 
           </div>
 
-          <Link href="/contact" className="text-white hover:text-blue-400 transition">
-            <button className="ml-4 bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition">
-              Let’s Talk
-            </button>
-          </Link>
-
-          {/* MOBILE BUTTON */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white"
+          <div className="flex items-center gap-4">
+            <Link
+              href="/contact"
+              className="hidden md:inline-block text-white hover:text-blue-400 transition"
             >
-              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
-            </button>
+              <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition cursor-pointer">
+                Let’s Talk
+              </button>
+            </Link>
+
+            {/* Mobile Button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-white"
+              >
+                {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              </button>
+            </div>
           </div>
+
         </div>
       </div>
 

@@ -60,7 +60,7 @@ const BannerHero: React.FC = () => {
             <Link href="/contact" passHref>
               <button
                 type="button"
-                className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
                 Get Started
               </button>
@@ -69,7 +69,7 @@ const BannerHero: React.FC = () => {
             <Link href="/about" passHref>
               <button
                 type="button"
-                className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
               >
                 Learn More
               </button>
