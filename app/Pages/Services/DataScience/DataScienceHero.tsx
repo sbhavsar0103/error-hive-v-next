@@ -9,7 +9,6 @@ import MagicBento from "../../../Components/MagicBento/MagicBento";
 import { motion, Variants } from "framer-motion";
 
 const DataScienceHero: React.FC = () => {
-  const [mounted, setMounted] = useState<boolean>(false);
 
   const container: Variants = {
     hidden: { opacity: 0 },
@@ -22,17 +21,14 @@ const DataScienceHero: React.FC = () => {
     },
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+        // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-6 py-20"
       >
         {/* Background grid overlay */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -42,18 +38,23 @@ const DataScienceHero: React.FC = () => {
         {/* Centered content */}
         <div className="relative z-10 w-full flex justify-center px-6">
           <div className="max-w-7xl w-full flex flex-col items-center text-center">
-            <div
-              className={`transition-all duration-1000 ${
-                mounted
+            {/* <div
+              className={`transition-all duration-1000 ${mounted
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
-              }`}
+                }`}
+            > */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="font-bold text-white mb-6 leading-[1.1] text-[clamp(1.5rem,5vw,3.5rem)]">
                 Turn Raw Data into Intelligent Decisions with Advanced Data Science
               </h1>
 
-              <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
+              {/* <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto"> */}
+              <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
                 From predictive analytics and AI-driven automation to big data
                 processing and business intelligence, our Data Science solutions
                 help businesses analyze, visualize, and optimize operations with
@@ -61,7 +62,8 @@ const DataScienceHero: React.FC = () => {
               </p>
 
               <HeroButtons />
-            </div>
+            </motion.div>
+            {/* </div> */}
           </div>
         </div>
       </motion.div>

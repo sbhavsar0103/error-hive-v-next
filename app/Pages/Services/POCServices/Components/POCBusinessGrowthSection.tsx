@@ -27,13 +27,15 @@ export default function POCBusinessGrowthSection() {
   ];
 
   return (
+    // <section className="relative bg-[#060010] py-20 px-6 overflow-hidden">
     <section className="relative bg-[#060010] py-20 px-6 overflow-hidden">
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#060010] via-[#0a0520] to-[#060010]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl" />
 
-      <div className="relative max-w-4xl mx-auto">
+      {/* <div className="relative max-w-4xl mx-auto"> */}
+      <div className="relative max-w-md sm:max-w-3xl lg:max-w-4xl mx-auto">
         <POCHeader />
 
         <POCServiceList

@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import LLMTechCard from "./LLMTechCard";
 import { TechItem } from "./LLMTechData";
 

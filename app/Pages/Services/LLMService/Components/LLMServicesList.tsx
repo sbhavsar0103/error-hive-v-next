@@ -21,7 +21,8 @@ export default function LLMServicesList({
   setSelectedServiceId,
 }: LLMServicesListProps): React.ReactElement {
   return (
-    <div className="bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-3xl p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-amber-500/50 scrollbar-track-transparent">
+    <div
+      className="w-full lg:w-[380px] bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md rounded-3xl p-6 lg:p-8 border border-white/10 overflow-y-auto max-h-[600px] scrollbar-thin scrollbar-thumb-amber-500/40 scrollbar-track-transparent">
       <div className="space-y-3">
         {services.map((service) => (
           <LLMServiceItem

@@ -32,7 +32,8 @@ export default function POCServicesHero() {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+                // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+                className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center py-20 sm:py-0"
             >
                 {/* Background grid overlay */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -44,14 +45,21 @@ export default function POCServicesHero() {
                     <div className="max-w-7xl w-full flex flex-col items-center text-center">
 
                         <div className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                            {/* <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                Validate AI Solutions With <br />
+                                <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
+                                    Complete Confidence!
+                                </span>
+                            </h1> */}
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
                                 Validate AI Solutions With <br />
                                 <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
                                     Complete Confidence!
                                 </span>
                             </h1>
 
-                            <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-xl mx-auto">
+                            {/* <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-xl mx-auto"> */}
+                            <p className="text-sm sm:text-base md:text-lg text-amber-200/70 mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-xl mx-auto">
                                 As a custom AI development company, we build products that improve efficiency,
                                 automate processes, and support smarter decisions. Our teams deliver scalable
                                 solutions tailored to business goals, turning ideas into real AI products.

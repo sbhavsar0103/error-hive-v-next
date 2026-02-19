@@ -28,7 +28,7 @@ const HeroButtons: React.FC = () => {
       <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
         <Link
           href="/contact"
-          className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black px-8 py-4 rounded-lg font-semibold flex items-center gap-2"
+          className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black px-5 py-2.5 sm:px-8 sm:py-4 text-sm sm:text-base rounded-lg font-semibold flex items-center gap-2"
         >
           Get Started
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

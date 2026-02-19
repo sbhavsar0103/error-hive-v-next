@@ -47,14 +47,20 @@ const steps: Step[] = [
 
 const ProcessSection: React.FC = () => {
   return (
-    <section className="relative bg-[#060010] py-24 px-6">
+    <section
+      // className="relative bg-[#060010] py-24 px-6"
+      className="relative bg-[#060010] py-24 px-6"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#060010] via-[#0a0520] to-[#060010]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl" />
 
       {/* CONTENT GRID */}
-      <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
+      <div
+        // className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start"
+        className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-start"
+      >
         {/* LEFT SIDE (STICKY) */}
         <div className="space-y-8 lg:sticky lg:top-[15rem] self-start">
           <span className="text-amber-500 text-sm font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/5 inline-block">
@@ -62,11 +68,19 @@ const ProcessSection: React.FC = () => {
           </span>
 
           <div className="space-y-6">
-            <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+            {/* <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight"> */}
+            <h2
+              className="font-bold text-white leading-[1.1] tracking-tight"
+              style={{ fontSize: "clamp(1.8rem, 5vw, 3.5rem)" }}
+            >
               Our AI Process
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            {/* <p className="text-gray-400 text-lg leading-relaxed max-w-md"> */}
+            <p
+              className="text-gray-400 leading-relaxed max-w-md"
+              style={{ fontSize: "clamp(0.9rem, 2.6vw, 1.1rem)" }}
+            >
               We follow structured and result-driven approaches to empower our AI
               consulting services.
             </p>
@@ -74,7 +88,7 @@ const ProcessSection: React.FC = () => {
 
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-2 px-8 py-4  bg-gradient-to-r from-amber-500 to-amber-600  text-white font-medium rounded-xl overflow-hidden  transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+            className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600  text-white font-medium overflow-hidden transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 px-6 sm:px-8 py-3 sm:py-4 rounded-full  text-sm sm:text-base active:scale-95">
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -84,7 +98,19 @@ const ProcessSection: React.FC = () => {
         </div>
 
         {/* RIGHT SIDE — SCROLLING CARDS */}
-        <div className="space-y-10">
+        {/* <div className="space-y-10"> */}
+        {/* <div className="space-y-6 sm:space-y-10">
+          {steps.map((step, index: number) => (
+            <StepCard
+              key={step.number}
+              number={step.number}
+              title={step.title}
+              items={step.items}
+              delay={index * 0.1}
+            />
+          ))}
+        </div> */}
+        <div className="space-y-6 sm:space-y-10">
           {steps.map((step, index: number) => (
             <StepCard
               key={step.number}
@@ -98,19 +124,28 @@ const ProcessSection: React.FC = () => {
       </div>
 
       {/* CTA BLOCK */}
-      <div className="relative max-w-7xl mx-auto mt-32">
-        <div className="relative bg-gradient-to-r from-amber-600/20 via-amber-500/15 to-amber-600/20 backdrop-blur-xl rounded-3xl p-12 lg:p-6 border border-amber-500/20 overflow-hidden group hover:border-amber-500/40 transition-all duration-500">
+      {/* <div className="relative max-w-7xl mx-auto mt-32"> */}
+      <div className="relative max-w-7xl mx-auto mt-20 sm:mt-32">
+        <div className="relative bg-gradient-to-r from-amber-600/20 via-amber-500/15 to-amber-600/20 backdrop-blur-xl rounded-3xl p-6 sm:p-10 lg:p-12 border border-amber-500/20 overflow-hidden group hover:border-amber-500/40 transition-all duration-500">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+                {/* <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight"> */}
+                <h3
+                  className="font-bold text-white leading-[1.15] tracking-tight"
+                  style={{ fontSize: "clamp(1.4rem, 4.5vw, 2.25rem)" }}
+                >
                   Stop Planning AI.
                   <br />
                   Start Profiting From It.
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                {/* <p className="text-gray-300 text-sm leading-relaxed"> */}
+                <p
+                  className="text-gray-300 leading-relaxed"
+                  style={{ fontSize: "clamp(0.8rem, 2.4vw, 0.95rem)" }}
+                >
                   Every day without intelligent automation costs you revenue,
                   market share, and momentum. Get a custom AI roadmap with clear
                   value projections and measurable returns for your business.
@@ -119,7 +154,7 @@ const ProcessSection: React.FC = () => {
 
               <Link
                 href="/contact"
-                className="group/btn relative inline-flex px-8 py-4  bg-white text-amber-600 font-semibold rounded-xl  overflow-hidden transition-all duration-300  hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 w-fit">
+                className="group/btn relative inline-flex px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-full  active:scale-95 bg-white text-amber-600 font-semibold rounded-xl  overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 w-fit">
                 <span className="relative z-10 flex items-center gap-2">
                   Schedule Call for AI Consultation
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -128,7 +163,10 @@ const ProcessSection: React.FC = () => {
               </Link>
             </div>
 
-            <div className="relative h-80 flex items-center justify-center">
+            <div
+              // className="relative h-80 flex items-center justify-center"
+              className="relative h-56 sm:h-80 flex items-center justify-center"
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/10 rounded-2xl blur-2xl" />
               <div className="relative w-full h-full bg-gradient-to-br from-amber-400/10 to-orange-400/5 rounded-2xl border border-amber-500/20 flex items-center justify-center overflow-hidden group/icon">
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-500/10 to-transparent opacity-0 group-hover/icon:opacity-100 transition-opacity duration-500" />

@@ -18,7 +18,7 @@ export default function POCServiceList({
   setHoveredId,
 }: POCServiceListProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 sm:space-y-4 lg:space-y-6 max-w-3xl mx-auto">
       {services.map((service) => (
         <POCServiceItem
           key={service.id}

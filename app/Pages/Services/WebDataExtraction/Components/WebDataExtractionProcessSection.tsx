@@ -48,27 +48,31 @@ export default function WebDataExtractionProcessSection() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl"></div>
 
       {/* CONTENT GRID */}
-      <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
+      {/* <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start"> */}
+      <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-stretch">
+
 
         {/* LEFT SIDE (STICKY) */}
-        <div className="space-y-8 lg:sticky lg:top-[15rem] self-start]">
-
-          <span className="text-amber-500 text-sm font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/5 inline-block">
+        {/* <div className="space-y-8 lg:sticky lg:top-[15rem] self-start]"> */}
+        <div className="space-y-8 flex flex-col justify-center h-full">
+          <span className="text-amber-500 text-sm font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/5 inline-block w-fit">
             Process
           </span>
 
           <div className="space-y-6">
-            <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+            {/* <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight"> */}
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
               Our AI Process
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            {/* <p className="text-gray-400 text-lg leading-relaxed max-w-md"> */}
+            <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
               We follow structured and result-driven approaches to empower our AI consulting services.
             </p>
           </div>
 
           <Link
-            href="/contact" className="group relative inline-flex px-8 py-4   bg-gradient-to-r from-amber-500 to-amber-600   text-white font-medium rounded-xl overflow-hidden   transition-all duration-300   hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105"
+            href="/contact" className="group relative inline-flex px-8 py-4   bg-gradient-to-r from-amber-500 to-amber-600   text-white font-medium rounded-xl overflow-hidden   transition-all duration-300   hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 w-fit"
           >
             <span className="relative z-10 flex items-center gap-2">
               Get Started

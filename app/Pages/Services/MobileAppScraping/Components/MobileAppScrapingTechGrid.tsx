@@ -1,13 +1,6 @@
 import MobileAppScrapingTechCard from "./MobileAppScrapingTechCard";
 import { TechItem } from "./MobileAppScrapingTechData";
 
-interface Tech {
-  id: number;
-  name: string;
-  logo: React.ReactNode;
-}
-
-
 interface MobileAppScrapingTechGridProps {
   techs: readonly TechItem[];
 }

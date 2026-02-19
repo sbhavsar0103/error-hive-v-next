@@ -33,16 +33,20 @@ const AnnotationServiceDetails: React.FC<AnnotationServiceDetailsProps> = ({
           <IconComponent className="w-8 h-8 text-amber-500" />
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        {/* <h2 className="text-3xl lg:text-4xl font-bold mb-6"> */}
+        <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6">
           {selectedService.title}
         </h2>
 
-        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        {/* <p className="text-gray-400 text-lg leading-relaxed mb-8"> */}
+        <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
           {selectedService.description}
         </p>
       </div>
 
-      <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-lg  hover:bg-amber-400 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+      {/* <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-lg  hover:bg-amber-400 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105"> */}
+      <Link href="/contact" className="group inline-flex items-center gap-2 px-5 py-3 sm:px-8 sm:py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-sm sm:text-base lg:text-lg  hover:bg-amber-400 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+
         Get Started
         <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
       </Link>

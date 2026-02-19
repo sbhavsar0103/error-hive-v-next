@@ -231,10 +231,6 @@ const Navbar = () => {
             <Link href="/contact" className="block text-white">
               Contact
             </Link>
-
-            <button className="w-full mt-4 bg-amber-600 text-white py-3 rounded-lg">
-              Let’s Talk
-            </button>
           </div>
         </div>
       )}

@@ -1,4 +1,7 @@
+"use client";
+
 import type { ReactElement } from "react";
+import { motion } from "framer-motion";
 import { CategoryId } from "./LLMTechData";
 
 interface Category {
@@ -20,13 +23,44 @@ export default function CategoryButton({
   return (
     <button
       onClick={() => onClick(category.id)}
-      className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-        isActive
-          ? "bg-amber-500 text-[#060010] shadow-lg shadow-amber-500/30"
-          : "bg-white/5 text-white hover:bg-white/10 border border-white/10"
-      }`}
+      className="
+        relative px-5 sm:px-6 
+        py-2.5 sm:py-3
+        rounded-full
+        font-semibold
+        text-[clamp(0.8rem,1vw,0.95rem)]
+        transition-colors duration-300
+        focus:outline-none
+      "
     >
-      {category.name}
+      {/* Sliding Active Background */}
+      {isActive && (
+        <motion.span
+          layoutId="activeCategory"
+          className="
+            absolute inset-0 
+            rounded-full 
+            bg-amber-500
+            shadow-lg shadow-amber-500/30
+          "
+          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        />
+      )}
+
+      {/* Label */}
+      <motion.span
+        whileTap={{ scale: 0.95 }}
+        className={`
+          relative z-10
+          ${
+            isActive
+              ? "text-[#060010]"
+              : "text-white/80 hover:text-white"
+          }
+        `}
+      >
+        {category.name}
+      </motion.span>
     </button>
   );
 }

@@ -16,7 +16,7 @@ const StepCard: React.FC<StepCardProps> = ({
 }) => {
   return (
     <div
-      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-500 hover:border-amber-500/30 hover:shadow-xl hover:shadow-amber-500/10"
+      className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 transition-all duration-500 hover:border-amber-500/30 hover:shadow-xl hover:shadow-amber-500/10"
       style={{
         animation: `fadeInUp 0.6s ease-out forwards ${delay}s`,
         opacity: 0,

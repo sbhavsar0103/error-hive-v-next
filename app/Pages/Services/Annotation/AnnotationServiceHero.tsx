@@ -39,7 +39,8 @@ const AnnotationServiceHero = () => {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+        // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-6 py-20"
       >
         {/* Background grid */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
@@ -49,30 +50,31 @@ const AnnotationServiceHero = () => {
         {/* Content */}
         <div className="relative z-10 w-full flex justify-center px-6">
           <div className="max-w-7xl w-full flex flex-col items-center text-center">
-            <div
-              className={`transition-all duration-1000 ${
-                mounted
+            {/* <div
+              className={`transition-all duration-1000 ${mounted
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
-              }`}
+                }`}
+            > */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="font-bold text-white mb-6 leading-[1.1] text-[clamp(1.5rem,5vw,3.5rem)]">
                 Powering AI Accuracy with Expert Data Labeling & Intelligent Data
                 Mining
               </h1>
 
-              <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
                 AI models are only as good as the data they are trained on. Our
                 Data Annotation & Mining solutions ensure high-quality,
                 structured, and accurately labeled datasets for machine
-                learning, deep learning, and AI-driven automation. From image
-                and video annotation to text labeling and data enrichment, we
-                help businesses build robust AI models with precision and
-                efficiency.
+                learning, deep learning, and AI-driven automation.
               </p>
-
               <HeroButtons />
-            </div>
+            </motion.div>
+            {/* </div> */}
           </div>
         </div>
       </motion.div>

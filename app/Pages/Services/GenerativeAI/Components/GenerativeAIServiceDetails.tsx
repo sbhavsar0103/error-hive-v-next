@@ -36,11 +36,13 @@ export default function GenerativeAIServiceDetails({
           <IconComponent className="w-8 h-8 text-amber-500" />
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        {/* <h2 className="text-3xl lg:text-4xl font-bold mb-6"> */}
+        <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-4 sm:mb-6">
           {selectedService.title}
         </h2>
 
-        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        {/* <p className="text-gray-400 text-lg leading-relaxed mb-8"> */}
+        <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
           {selectedService.description}
         </p>
       </div>

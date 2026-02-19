@@ -1,5 +1,4 @@
 'use client';
-import { useEffect, useState } from "react";
 import FloatingParticles from "./Components/FloatingParticles";
 import HeroButtons from "./Components/HeroButtons";
 import GameChanger from "./Components/GameChanger";
@@ -10,7 +9,6 @@ import MagicBento from "../../../Components/MagicBento/MagicBento";
 import { motion } from "framer-motion";
 
 export default function MobileAppScrapingHero() {
-    const [mounted, setMounted] = useState(false);
 
     const container = {
         hidden: { opacity: 0 },
@@ -23,17 +21,14 @@ export default function MobileAppScrapingHero() {
         },
     };
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
     return (
         <>
             <motion.div
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+                // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
+                className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-6 py-20"
             >
                 {/* Background grid overlay */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -43,20 +38,25 @@ export default function MobileAppScrapingHero() {
                 {/* Centered content */}
                 <div className="relative z-10 w-full flex justify-center px-6">
                     <div className="max-w-7xl w-full flex flex-col items-center text-center">
-                        <div className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        {/* <div className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}> */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
+                            <h1 className="font-bold text-white mb-6 leading-[1.1] text-[clamp(1.5rem,5vw,3.5rem)]">
                                 Mobile App Data Extraction Services – Android & iOS <br />
                             </h1>
 
-                            <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
+                            <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
                                 <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">Error-Hive</span> helps businesses unlock structured data from Android & iOS apps with 99.9% accuracy. Extract real-time insights from e-commerce, food delivery, travel, mobility, finance, and retail apps — delivered in clean, analytics-ready datasets.
                             </p>
 
                             <HeroButtons />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div >
             <hr />
             <GameChanger />
             <hr />

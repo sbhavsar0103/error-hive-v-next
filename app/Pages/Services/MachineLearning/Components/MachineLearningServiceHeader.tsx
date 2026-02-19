@@ -7,11 +7,13 @@ export default function MachineLearningServiceHeader() {
                 </span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+            {/* <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight"> */}
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white leading-tight">
                 Our Top LLM Services
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+            {/* <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto"> */}
+            <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
                 We've engineered features that will actually make a difference to your business.
             </p>
         </div>

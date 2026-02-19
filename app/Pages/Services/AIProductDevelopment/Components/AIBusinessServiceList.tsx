@@ -2,6 +2,7 @@ import React from "react";
 import AIBusinessServiceItem, {
   AIBusinessService,
 } from "./AIBusinessServiceItem";
+import { motion } from "framer-motion";
 
 interface AIBusinessServiceListProps {
   services: AIBusinessService[];
@@ -15,16 +16,29 @@ const AIBusinessServiceList: React.FC<AIBusinessServiceListProps> = ({
   setHoveredId,
 }) => {
   return (
-    <div className="space-y-4">
-      {services.map((service) => (
-        <AIBusinessServiceItem
-          key={service.id}
-          service={service}
-          hoveredId={hoveredId}
-          setHoveredId={setHoveredId}
-        />
-      ))}
-    </div>
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: { staggerChildren: 0.15 },
+        },
+      }}
+    >
+      <div className="space-y-6 md:space-y-8">
+        {services.map((service) => (
+          <AIBusinessServiceItem
+            key={service.id}
+            service={service}
+            hoveredId={hoveredId}
+            setHoveredId={setHoveredId}
+          />
+        ))}
+      </div>
+    </motion.div>
   );
 };
 

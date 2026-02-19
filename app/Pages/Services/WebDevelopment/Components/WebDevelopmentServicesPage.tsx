@@ -1,11 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import WebDevelopmentServiceHeader from "./WebDevelopmentServiceHeader";
 import WebDevelopmentServicesList from "./WebDevelopmentServicesList";
 import WebDevelopmentServiceDetails from "./WebDevelopmentServiceDetails";
 import services from "./MachineLearningServicesMenu";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function WebDevelopmentServicesPage() {
   const [selectedServiceId, setSelectedServiceId] = useState(services[0].id);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === services.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
+  const goNext = () => {
+    setCurrentIndex((prev) =>
+      prev === services.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goPrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? services.length - 1 : prev - 1
+    );
+  };
+
 
   const selectedService =
     services.find((s) => s.id === selectedServiceId) || services[0];
@@ -16,7 +43,8 @@ export default function WebDevelopmentServicesPage() {
 
         <WebDevelopmentServiceHeader />
 
-        <div className="grid lg:grid-cols-[400px,1fr] gap-6 lg:gap-8 h-[600px]" style={{ display: "flex"}}>
+        {/* <div className="grid lg:grid-cols-[400px,1fr] gap-6 lg:gap-8 h-[600px]" style={{ display: "flex"}}> */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:h-[600px]">
 
           <WebDevelopmentServicesList
             services={services}
@@ -24,7 +52,42 @@ export default function WebDevelopmentServicesPage() {
             setSelectedServiceId={setSelectedServiceId}
           />
 
-          <WebDevelopmentServiceDetails selectedService={selectedService} />
+          {/* Desktop Only */}
+          <div className="hidden lg:block">
+            <WebDevelopmentServiceDetails selectedService={selectedService} />
+          </div>
+
+          {/* Mobile Only */}
+          <div className="relative lg:hidden overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`,
+              }}
+            >
+              {services.map((service) => (
+                <div key={service.id} className="w-full flex-shrink-0 px-2">
+                  <WebDevelopmentServiceDetails selectedService={service} />
+                </div>
+              ))}
+            </div>
+
+            {/* Left Button */}
+            <button
+              onClick={goPrev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Right Button */}
+            <button
+              onClick={goNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

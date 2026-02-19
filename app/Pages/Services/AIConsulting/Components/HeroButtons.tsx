@@ -25,13 +25,14 @@ const HeroButtons: React.FC = () => {
       variants={containerVariants}
       className="flex flex-col sm:flex-row gap-4 mt-8"
     >
-      <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}>
-        <Link
+      {/* <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}> */}
+      <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+        {/* <Link
           href="/contact"
           className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black px-8 py-4 rounded-lg font-semibold flex items-center gap-2"
-        >
-          Get Started
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        > */}
+        <Link href="/contact" className="group bg-gradient-to-r from-amber-500 to-amber-600 text-black  px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold  flex items-center justify-center gap-2  shadow-md hover:shadow-lg  transition-all duration-300" style={{ fontSize: "clamp(0.9rem, 2.5vw, 1rem)" }}> Get Started {/* <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> */}
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
         </Link>
       </motion.div>
     </motion.div>

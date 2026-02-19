@@ -1,38 +1,63 @@
 import { useState } from "react";
-import { categories, CategoryId, techLogos } from "./WebDataExtractionTechData";
+import { categories, techLogos, CategoryId } from "./WebDataExtractionTechData";
 import WebDataExtractionCategoryTabs from "./WebDataExtractionCategoryTabs";
 import WebDataExtractionTechGrid from "./WebDataExtractionTechGrid";
 
 export default function WebDataExtractionTechSection() {
-  const [selectedCategory, setSelectedCategory] = useState<CategoryId>("data");
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryId>("data");
 
   return (
-    <div className="bg-[#060010] text-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-[#060010] text-white py-20 lg:py-28 overflow-hidden">
 
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 mb-6">
-            <span className="text-amber-500 text-sm font-medium">Tech</span>
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 lg:mb-20">
+
+          {/* Label */}
+          <div className="inline-flex items-center px-5 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 mb-6">
+            <span className="text-amber-500 text-sm tracking-wide font-medium">
+              Technology Stack
+            </span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8">
+          {/* Responsive clamp typography */}
+          <h2
+            className="
+              font-semibold
+              tracking-tight
+              leading-tight
+              mb-8
+            "
+            style={{
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            }}
+          >
             Innovating with Advanced Tech
-          </h1>
+          </h2>
 
-          <WebDataExtractionCategoryTabs
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onSelect={setSelectedCategory}
-          />
+          {/* Tabs */}
+          <div className="mt-8">
+            <WebDataExtractionCategoryTabs
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onSelect={setSelectedCategory}
+            />
+          </div>
 
-          <div className="relative h-1.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full mb-12">
-            <div className="absolute inset-0 bg-amber-500/20 rounded-full blur-md" />
+          {/* Elegant divider */}
+          <div className="relative mt-12 h-px w-full max-w-3xl mx-auto bg-gradient-to-r from-transparent via-amber-500/40 to-transparent">
+            <div className="absolute inset-0 bg-amber-500/20 blur-sm" />
           </div>
         </div>
 
-        <WebDataExtractionTechGrid techs={techLogos[selectedCategory]} />
+        {/* GRID */}
+        <div className="mt-16">
+          <WebDataExtractionTechGrid techs={techLogos[selectedCategory]} />
+        </div>
 
       </div>
-    </div>
+    </section>
   );
 }

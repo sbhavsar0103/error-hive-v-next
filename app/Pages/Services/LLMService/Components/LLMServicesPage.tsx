@@ -11,22 +11,30 @@ export default function LLMServicesPage() {
     services.find((s) => s.id === selectedServiceId) || services[0];
 
   return (
-    <div className="min-h-screen bg-[#060010] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <section className="bg-[#060010] text-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24">
 
         <LLMServiceHeader />
 
-        <div className="grid lg:grid-cols-[400px,1fr] gap-6 lg:gap-8 h-[600px]" style={{ display: "flex" }}>
+        {/* Layout */}
+        <div className="mt-12 grid gap-10 lg:grid-cols-[380px_1fr] items-start">
 
-          <LLMServicesList
-            services={services}
-            selectedServiceId={selectedServiceId}
-            setSelectedServiceId={setSelectedServiceId}
-          />
+          {/* LEFT SIDE */}
+          <div className="lg:sticky lg:top-28 self-start">
+            <LLMServicesList
+              services={services}
+              selectedServiceId={selectedServiceId}
+              setSelectedServiceId={setSelectedServiceId}
+            />
+          </div>
 
-          <LLMServiceDetails selectedService={selectedService} />
+          {/* RIGHT SIDE */}
+          <div className="min-h-[400px]">
+            <LLMServiceDetails selectedService={selectedService} />
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }
