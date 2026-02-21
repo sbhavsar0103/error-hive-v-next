@@ -45,7 +45,7 @@ const OurMission = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-semibold bg-gradient-to-r from-amber-500 via-amber-300 to-amber-400 bg-clip-text text-transparent mb-3">
+                    <h3 className="text-2xl font-semibold bg-amber-500 bg-clip-text text-transparent mb-3">
                       {card.title}
                     </h3>
 

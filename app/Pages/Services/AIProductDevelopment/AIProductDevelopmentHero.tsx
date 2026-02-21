@@ -7,9 +7,6 @@ import HeroButtons from "./Components/HeroButtons";
 import AIBusinessGrowthSection from "./Components/AIBusinessGrowthSection";
 import AIBusinessProcessSection from "./Components/AIBusinessProcessSection";
 
-import CurvedLoop from "../../../Components/CurvedLoop/CurvedLoop";
-import MagicBento from "../../../Components/MagicBento/MagicBento";
-
 const containerVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -32,81 +29,38 @@ const AIProductDevelopment: React.FC = () => {
 
   return (
     <>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-        // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
-        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-4 sm:px-6"
-      >
+      <motion.div variants={containerVariants} initial="hidden" animate="show" className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-4 sm:px-6">
         {/* Background grid overlay */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-
         <FloatingParticles />
-
         {/* Centered content */}
         <div className="relative z-10 w-full flex justify-center px-6">
           <div className="max-w-7xl w-full flex flex-col items-center text-center">
-            <div
-              className={`transition-all duration-1000 ${mounted
+            <div className={`transition-all duration-1000 ${mounted
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
-                }`}
-            >
-              {/* <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"> */}
+                }`}>
               <h1 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold text-white mb-5 sm:mb-6 leading-tight">
                 Transforming Ideas into Scalable <br />
                 <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
                   AI Products and Solutions
                 </span>
               </h1>
-
-              {/* <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-xl mx-auto"> */}
               <p className="text-sm sm:text-base lg:text-xl text-amber-200/70 mb-5 sm:mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto">
                 We design and develop AI products that drive efficiency,
                 automation, and smarter decisions. Our teams build scalable
                 solutions tailored to your needs, working closely with you to
                 turn ideas into AI products aligned with business goals.
               </p>
-
               <HeroButtons />
             </div>
           </div>
         </div>
       </motion.div>
-
       <hr />
-
       <AIBusinessGrowthSection />
-
       <hr />
-
       <AIBusinessProcessSection />
-
-      <hr />
-
-      <section className="bg-[#060010] flex flex-col items-center justify-center overflow-hidden">
-        <CurvedLoop
-          marqueeText="Error - Hive Solution ✦"
-          speed={2}
-          curveAmount={120}
-          direction="right"
-          interactive={true}
-        />
-
-        <MagicBento
-          textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
-          enableBorderGlow={true}
-          enableTilt={false}
-          enableMagnetism={false}
-          clickEffect={false}
-          spotlightRadius={250}
-          particleCount={8}
-          glowColor="245, 158, 11"
-        />
-      </section>
     </>
   );
 };

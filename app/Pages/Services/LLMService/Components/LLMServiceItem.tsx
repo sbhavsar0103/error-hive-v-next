@@ -23,42 +23,19 @@ export default function LLMServiceItem({
   return (
     <button
       onClick={onClick}
-      className={`
-        group relative w-full text-left px-6 py-4 rounded-2xl
-        transition-all duration-300
-        overflow-hidden
-        ${
-          isSelected
-            ? "bg-gradient-to-r from-amber-500/20 to-amber-500/10 border border-amber-500/30"
-            : "bg-white/[0.04] hover:bg-white/[0.08] border border-transparent"
-        }
-      `}
+      className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 ${
+        isSelected
+          ? "bg-amber-500 text-[#060010] shadow-lg shadow-amber-500/30 scale-[1.02]"
+          : "bg-white/5 text-white hover:bg-white/10 hover:scale-[1.01]"
+      }`}
     >
-      {/* Left Animated Indicator */}
-      <span
-        className={`
-          absolute left-0 top-0 h-full w-1 rounded-r-full
-          transition-all duration-300
-          ${isSelected ? "bg-amber-500" : "bg-transparent"}
-        `}
-      />
-
-      <div className="flex items-center gap-3 relative z-10">
+      <div className="flex items-center gap-3">
         <IconComponent
-          className={`
-            w-5 h-5 flex-shrink-0 transition-colors duration-300
-            ${isSelected ? "text-amber-500" : "text-amber-400"}
-          `}
+          className={`w-5 h-5 flex-shrink-0 ${
+            isSelected ? "text-[#060010]" : "text-amber-500"
+          }`}
         />
-
-        <span
-          className={`
-            font-medium text-base transition-colors duration-300
-            ${isSelected ? "text-white" : "text-gray-300"}
-          `}
-        >
-          {service.title}
-        </span>
+        <span className="font-medium text-base">{service.title}</span>
       </div>
     </button>
   );

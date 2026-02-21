@@ -79,24 +79,13 @@ const OurServices: React.FC = () => {
   ];
 
   return (
-    <section
-      id="services"
-      // className="bg-[#060010] py-20 px-4 sm:px-6 lg:px-8"
-      className="bg-[#060010] py-14 sm:py-20 px-5 sm:px-6 lg:px-8"
-    >
+    <section id="services" className="bg-[#060010] py-14 sm:py-20 px-5 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Section Heading */}
         <div className="text-center mb-16">
-          {/* <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Our <span className="text-amber-500">Services</span>
-          </h2> */}
-          <h2
-            className="font-bold text-white mb-3 tracking-tight"
-            style={{ fontSize: "clamp(1.6rem, 4.5vw, 3rem)" }}
-          >
+          <h2 className="font-bold text-white mb-3 tracking-tight" style={{ fontSize: "clamp(1.6rem, 4.5vw, 3rem)" }}>
             Our <span className="text-amber-500">Services</span>
           </h2>
-          {/* <p className="text-gray-400 text-lg max-w-2xl mx-auto"> */}
+
           <p
             className="text-gray-400 max-w-xl mx-auto leading-relaxed"
             style={{ fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)" }}
@@ -120,48 +109,20 @@ const OurServices: React.FC = () => {
                 <SpotlightCard key={index} className="h-full">
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="mb-4 p-3 bg-[#060010] rounded-xl w-fit">
-                      {/* <Icon className="w-8 h-8 text-amber-500" /> */}
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-amber-500" />
                     </div>
 
-                    {/* <h3 className="text-xl font-semibold bg-gradient-to-r from-amber-500 via-amber-300 to-amber-400 bg-clip-text text-transparent mb-3"> */}
-                    <h3
-                      className="font-semibold mb-2 tracking-tight bg-gradient-to-r from-amber-500 via-amber-300 to-amber-400 bg-clip-text text-transparent"
-                      style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}
-                    >
+                    <h3 className="font-semibold mb-2 tracking-tight bg-amber-500 bg-clip-text text-transparent" style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}>
                       {service.title}
                     </h3>
 
-                    {/* <p className="text-gray-400 text-sm leading-relaxed flex-grow text-justify"> */}
-                    <p
-                      className="text-gray-400 leading-relaxed flex-grow"
-                      style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}
-                    >
+                    <p className="text-gray-400 leading-relaxed flex-grow" style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}>
                       <ShinyText
                         text={service.description}
                         disabled={false}
                         speed={3}
                       />
                     </p>
-
-                    {/* <Link href="/contact" passHref>
-                      <button className="mt-6 text-amber-500 hover:text-amber-400 font-semibold text-sm flex items-center group">
-                        Learn More
-                        <svg
-                          className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </button>
-                    </Link> */}
                   </div>
                 </SpotlightCard>
               );

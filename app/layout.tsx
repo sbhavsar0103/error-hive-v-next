@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/app/Components/NavBar/NavBar";
+import Footer from "@/app/Components/Footer/Footer";
+import CurvedLoop from "@/app/Components/CurvedLoop/CurvedLoop";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,9 +28,26 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`} >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col min-h-screen`}
+      >
         <Navbar />
-        {children}
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        {/* CURVED LOOP SECTION */}
+        <section className="bg-[#060010] flex flex-col items-center justify-center overflow-hidden">
+          <CurvedLoop
+            marqueeText="Error - Hive Solution ✦"
+            speed={2}
+            curveAmount={120}
+            direction="right"
+            interactive={true}
+          />
+        </section>
+
+        <Footer />
       </body>
     </html>
   );

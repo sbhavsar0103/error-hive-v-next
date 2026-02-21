@@ -5,8 +5,6 @@ import HeroButtons from "./Components/HeroButtons";
 import NLPGameChanger from "./Components/NLPGameChanger";
 import LLMServicesPage from "./Components/LLMServicesPage";
 import LLMTechSection from "./Components/LLMTechSection";
-import CurvedLoop from "../../../Components/CurvedLoop/CurvedLoop";
-import MagicBento from "../../../Components/MagicBento/MagicBento";
 import { motion } from "framer-motion";
 
 export default function LLMServiceHero() {
@@ -29,36 +27,23 @@ export default function LLMServiceHero() {
 
     return (
         <>
-            <motion.div
-                variants={container}
-                initial="hidden"
-                animate="show"
-                // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
-                className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-4 sm:px-6"
-            >
+            <motion.div variants={container} initial="hidden" animate="show" className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-4 sm:px-6">
                 {/* Background grid overlay */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-
                 <FloatingParticles />
-
                 {/* Centered content */}
-                {/* <div className="relative z-10 w-full flex justify-center px-6"> */}
                 <div className="relative z-10 w-full flex justify-center px-4 sm:px-6">
                     <div className="max-w-7xl w-full flex flex-col items-center text-center">
                         <div className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                            {/* <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"> */}
                             <h1 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold  text-white  mb-5 sm:mb-6 leading-[1.15] tracking-tight">
                                 AI-Powered Large Language Models (LLMs) <br />
                                 <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
                                     for Smart Automation & Text Processing
                                 </span>
                             </h1>
-
-                            {/* <p className="text-xl text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto"> */}
                             <p className="text-[clamp(0.95rem,2vw,1.2rem)] text-amber-200/70 mb-7 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
                                 This ensures strong keyword placement for AI, Large Language Models, Automation, and Text Processing, helping with search visibility while remaining user-friendly. 🚀
                             </p>
-
                             <HeroButtons />
                         </div>
                     </div>
@@ -71,10 +56,6 @@ export default function LLMServiceHero() {
             <hr />
             <LLMTechSection />
             <hr />
-            <section className="bg-[#060010] flex flex-col items-center justify-center overflow-hidden">
-                <CurvedLoop marqueeText="Error - Hive Solution ✦" speed={2} curveAmount={120} direction="right" interactive={true} />
-                <MagicBento textAutoHide={true} enableStars={true} enableSpotlight={true} enableBorderGlow={true} enableTilt={false} enableMagnetism={false} clickEffect={false} spotlightRadius={250} particleCount={8} glowColor="245, 158, 11" />
-            </section>
         </>
     );
 }

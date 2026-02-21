@@ -8,9 +8,6 @@ import GameChanger from "./Components/GameChanger";
 import AnnotationServicesPage from "./Components/AnnotationServicesPage";
 import AnnotationProcessSection from "./Components/AnnotationProcessSection";
 
-import CurvedLoop from "../../../Components/CurvedLoop/CurvedLoop";
-import MagicBento from "../../../Components/MagicBento/MagicBento";
-
 const AnnotationServiceHero = () => {
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -35,32 +32,14 @@ const AnnotationServiceHero = () => {
   return (
     <>
       {/* HERO */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-        // className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center"
-        className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-6 py-20"
-      >
+      <motion.div variants={containerVariants} initial="hidden" animate="show" className="relative min-h-screen bg-[#060010] overflow-hidden flex items-center justify-center px-6 py-20">
         {/* Background grid */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-
         <FloatingParticles />
-
         {/* Content */}
         <div className="relative z-10 w-full flex justify-center px-6">
           <div className="max-w-7xl w-full flex flex-col items-center text-center">
-            {/* <div
-              className={`transition-all duration-1000 ${mounted
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-                }`}
-            > */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
               <h1 className="font-bold text-white mb-6 leading-[1.1] text-[clamp(1.5rem,5vw,3.5rem)]">
                 Powering AI Accuracy with Expert Data Labeling & Intelligent Data
                 Mining
@@ -74,11 +53,9 @@ const AnnotationServiceHero = () => {
               </p>
               <HeroButtons />
             </motion.div>
-            {/* </div> */}
           </div>
         </div>
       </motion.div>
-
       <hr />
       <GameChanger />
       <hr />
@@ -86,30 +63,6 @@ const AnnotationServiceHero = () => {
       <hr />
       <AnnotationProcessSection />
       <hr />
-
-      {/* CTA / FOOTER */}
-      <section className="bg-[#060010] flex flex-col items-center justify-center overflow-hidden">
-        <CurvedLoop
-          marqueeText="Error - Hive Solution ✦"
-          speed={2}
-          curveAmount={120}
-          direction="right"
-          interactive
-        />
-
-        <MagicBento
-          textAutoHide
-          enableStars
-          enableSpotlight
-          enableBorderGlow
-          enableTilt={false}
-          enableMagnetism={false}
-          clickEffect={false}
-          spotlightRadius={250}
-          particleCount={8}
-          glowColor="245, 158, 11"
-        />
-      </section>
     </>
   );
 };

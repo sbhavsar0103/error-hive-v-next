@@ -30,8 +30,8 @@ const OurStory = () => {
         <div className="mb-12 sm:mb-16 text-center lg:text-left">
           <FadeContent  delay={0.1}>
             <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-amber-500/10 border border-amber-500/30 rounded-full">
-              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-              <span className="text-xs sm:text-sm font-medium text-amber-300/90 tracking-wide">
+              <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+              <span className="text-xs sm:text-sm font-medium text-amber-500/90 tracking-wide">
                 Our Heritage
               </span>
             </div>
@@ -40,7 +40,7 @@ const OurStory = () => {
           <FadeContent  delay={0.2}>
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-light text-white mb-4 sm:mb-6 leading-tight">
               The Story Behind{" "}
-              <span className="font-semibold bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">
+              <span className="font-semibold bg-amber-500 bg-clip-text text-transparent">
                 Error-Hive
               </span>
             </h2>
@@ -62,7 +62,7 @@ const OurStory = () => {
             <FadeContent  delay={0.4}>
               <div className="space-y-4 sm:space-y-6">
                 <div>
-                  <p className="text-amber-300/80 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4">
+                  <p className="text-amber-500/80 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4">
                     Our Philosophy
                   </p>
                   <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-light">
@@ -99,11 +99,11 @@ const OurStory = () => {
                         <div className="relative z-10 flex gap-3 sm:gap-4">
                           <div className="flex-shrink-0">
                             <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-500/20 group-hover:bg-amber-500/30 transition-colors duration-300">
-                              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
+                              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" />
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-sm sm:text-base font-semibold text-white mb-1 sm:mb-2 group-hover:text-amber-300 transition-colors duration-300">
+                            <h3 className="text-sm sm:text-base font-semibold text-white mb-1 sm:mb-2 group-hover:text-amber-500 transition-colors duration-300">
                               <ShinyText text={card.title} speed={4} />
                             </h3>
                             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
@@ -132,9 +132,9 @@ const OurStory = () => {
                   cubeSize={60}
                   maxAngle={45}
                   radius={3}
-                  borderStyle="2px dashed #D97706"
-                  faceColor="#1a1a2e"
-                  rippleColor="#FBBF24"
+                  borderStyle="2px dashed #F59E0B"
+                  faceColor="#1A1A2E"
+                  rippleColor="#FFC107"
                   rippleSpeed={1.5}
                   autoAnimate={true}
                   rippleOnClick={true}

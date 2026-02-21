@@ -18,11 +18,11 @@ const DataScienceServiceDetails: React.FC<DataScienceServiceDetailsProps> = ({
   const IconComponent = selectedService.icon;
 
   return (
-    <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5">
+    <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5 lg:h-full">
       <div>
         {/* Decorative grid dots */}
         <div className="grid grid-cols-8 gap-3 mb-12 opacity-20">
-          {[...Array(24)].map((_, i: number) => (
+          {[...Array(24)].map((_, i) => (
             <div key={i} className="w-2 h-2 rounded-full bg-amber-500/30" />
           ))}
         </div>

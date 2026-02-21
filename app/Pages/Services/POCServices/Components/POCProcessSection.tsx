@@ -35,7 +35,6 @@ export default function POCProcessSection() {
 
   return (
     <section
-      // className="relative bg-[#060010] py-24 px-6"
       className="relative bg-[#060010] py-16 sm:py-20 lg:py-24 px-4 sm:px-6"
     >
 
@@ -48,7 +47,6 @@ export default function POCProcessSection() {
       <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
 
         {/* LEFT SIDE (STICKY) */}
-        {/* <div className="space-y-8 lg:sticky lg:top-[15rem] self-start]"> */}
         <div className="space-y-6 sm:space-y-8 lg:sticky lg:top-[15rem] self-start">
           <span className="text-amber-500 text-xs sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2
 m font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/5 inline-block">
@@ -56,7 +54,6 @@ m font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-ambe
           </span>
 
           <div className="space-y-6">
-            {/* <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight"> */}
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
               What We Offer in AI POC Development
             </h2>
@@ -78,7 +75,6 @@ m font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-ambe
         </div>
 
         {/* RIGHT SIDE — SCROLLING CARDS */}
-        {/* <div className="space-y-10"> */}
         <div className="space-y-6 sm:space-y-10">
           {steps.map((step, index) => (
             <StepCard

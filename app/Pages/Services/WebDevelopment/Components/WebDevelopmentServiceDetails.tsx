@@ -19,7 +19,7 @@ export default function WebDevelopmentServiceDetails({
   const IconComponent = selectedService.icon;
 
   return (
-    <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5">
+    <div className="bg-gradient-to-br from-gray-900/40 to-gray-800/20 rounded-3xl p-8 lg:p-12 flex flex-col justify-between backdrop-blur-sm border border-white/5 lg:h-full">
       <div>
         {/* Decorative grid dots */}
         <div className="grid grid-cols-8 gap-3 mb-12 opacity-20">

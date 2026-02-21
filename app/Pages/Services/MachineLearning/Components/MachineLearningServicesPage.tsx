@@ -43,7 +43,6 @@ export default function MachineLearningServicesPage() {
 
         <MachineLearningServiceHeader />
 
-        {/* <div className="grid lg:grid-cols-[400px,1fr] gap-6 lg:gap-8 h-[600px]" style={{ display: "flex"}}> */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:h-[600px]">
 
           <MachineLearningServicesList
@@ -52,19 +51,14 @@ export default function MachineLearningServicesPage() {
             setSelectedServiceId={setSelectedServiceId}
           />
 
+          {/* Desktop Only */}
           <div className="hidden lg:block">
             <MachineLearningServiceDetails selectedService={selectedService} />
           </div>
-          {/* MOBILE VIEW - AUTO SLIDER */}
-          <div className="relative lg:hidden overflow-hidden">
 
-            {/* Slider Wrapper */}
-            <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
+          {/* Mobile Only */}
+          <div className="relative lg:hidden overflow-hidden">
+            <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
               {services.map((service) => (
                 <div key={service.id} className="w-full flex-shrink-0 px-2">
                   <MachineLearningServiceDetails selectedService={service} />
@@ -73,18 +67,12 @@ export default function MachineLearningServicesPage() {
             </div>
 
             {/* Left Button */}
-            <button
-              onClick={goPrev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition"
-            >
+            <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
               <ChevronLeft className="w-5 h-5" />
             </button>
 
             {/* Right Button */}
-            <button
-              onClick={goNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition"
-            >
+            <button onClick={goNext} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>

@@ -1,40 +1,83 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import LLMServiceHeader from "./LLMServiceHeader";
 import LLMServicesList from "./LLMServicesList";
 import LLMServiceDetails from "./LLMServiceDetails";
 import services from "./LLMServicesMenu";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function LLMServicesPage() {
   const [selectedServiceId, setSelectedServiceId] = useState(services[0].id);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === services.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
+  const goNext = () => {
+    setCurrentIndex((prev) =>
+      prev === services.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goPrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? services.length - 1 : prev - 1
+    );
+  };
+
 
   const selectedService =
     services.find((s) => s.id === selectedServiceId) || services[0];
 
   return (
-    <section className="bg-[#060010] text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24">
+    <div className="min-h-screen bg-[#060010] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
         <LLMServiceHeader />
 
-        {/* Layout */}
-        <div className="mt-12 grid gap-10 lg:grid-cols-[380px_1fr] items-start">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:h-[600px]">
 
-          {/* LEFT SIDE */}
-          <div className="lg:sticky lg:top-28 self-start">
-            <LLMServicesList
-              services={services}
-              selectedServiceId={selectedServiceId}
-              setSelectedServiceId={setSelectedServiceId}
-            />
-          </div>
+          <LLMServicesList
+            services={services}
+            selectedServiceId={selectedServiceId}
+            setSelectedServiceId={setSelectedServiceId}
+          />
 
-          {/* RIGHT SIDE */}
-          <div className="min-h-[400px]">
+          {/* Desktop Only */}
+          <div className="hidden lg:block">
             <LLMServiceDetails selectedService={selectedService} />
           </div>
 
+          {/* Mobile Only */}
+          <div className="relative lg:hidden overflow-hidden">
+            <div className="flex transition-transform duration-700 ease-in-out" style={{   transform: `translateX(-${currentIndex * 100}%)`}}>
+              {services.map((service) => (
+                <div key={service.id} className="w-full flex-shrink-0 px-2">
+                  <LLMServiceDetails selectedService={service} />
+                </div>
+              ))}
+            </div>
+
+            {/* Left Button */}
+            <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Right Button */}
+            <button onClick={goNext} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
