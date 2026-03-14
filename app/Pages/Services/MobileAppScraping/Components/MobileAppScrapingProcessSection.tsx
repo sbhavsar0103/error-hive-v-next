@@ -7,34 +7,34 @@ export default function MobileAppScrapingProcessSection() {
   const steps = [
     {
       number: 1,
-      title: "Understanding Business Needs",
+      title: "App Analysis & Data Discovery",
       items: [
-        "Identify and focus on core features essential for the MVP",
-        "Define objectives aligned with business goals",
+        "Identify target Android and iOS applications for data extraction",
+        "Analyze app structure, APIs, and required data fields",
       ],
     },
     {
       number: 2,
-      title: "AI Feasibility & Data Assessment",
+      title: "Scraping Strategy & Setup",
       items: [
-        "Evaluate existing data and infrastructure",
-        "Conduct feasibility studies to determine AI readiness",
+        "Design scraping architecture for mobile app environments",
+        "Configure automation tools, proxies, and device emulation",
       ],
     },
     {
       number: 3,
-      title: "Solution Mapping & Strategy Development",
+      title: "Mobile App Data Extraction",
       items: [
-        "Define AI models, tools, and technologies",
-        "Create a structured roadmap for implementation",
+        "Extract product data, pricing, reviews, listings, and app content",
+        "Capture dynamic app data including offers, delivery time, and availability",
       ],
     },
     {
       number: 4,
-      title: "Implementation & Optimization",
+      title: "Data Processing & Delivery",
       items: [
-        "Deploy AI solutions with continuous monitoring",
-        "Optimize performance based on real-world feedback",
+        "Clean and structure extracted data into usable formats",
+        "Deliver datasets via API, JSON, CSV, Excel, or database pipelines",
       ],
     },
   ];
@@ -61,12 +61,12 @@ export default function MobileAppScrapingProcessSection() {
           <div className="space-y-6">
             {/* <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight"> */}
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Our AI Process
+              Our Mobile App Scraping Process
             </h2>
 
             {/* <p className="text-gray-400 text-lg leading-relaxed max-w-md"> */}
             <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
-              We follow structured and result-driven approaches to empower our AI consulting services.
+              We follow a structured mobile app scraping workflow to extract, process, and deliver high-quality data from Android and iOS applications at scale.
             </p>
           </div>
 

@@ -7,34 +7,34 @@ export default function WebDataExtractionProcessSection() {
   const steps = [
     {
       number: 1,
-      title: "Understanding Business Needs",
+      title: "Understanding Data Requirements",
       items: [
-        "Identify and focus on core features essential for the MVP",
-        "Define objectives aligned with business goals",
+        "Identify target websites, platforms, and data fields to extract",
+        "Define business objectives such as price monitoring, lead generation, or market research",
       ],
     },
     {
       number: 2,
-      title: "AI Feasibility & Data Assessment",
+      title: "Website Analysis & Scraping Strategy",
       items: [
-        "Evaluate existing data and infrastructure",
-        "Conduct feasibility studies to determine AI readiness",
+        "Analyze website structure, APIs, pagination, and anti-bot protections",
+        "Design an efficient scraping strategy using proxies and automation tools",
       ],
     },
     {
       number: 3,
-      title: "Solution Mapping & Strategy Development",
+      title: "Data Extraction & Processing",
       items: [
-        "Define AI models, tools, and technologies",
-        "Create a structured roadmap for implementation",
+        "Build scalable scrapers to collect structured data from websites",
+        "Clean, validate, and transform raw data into usable datasets",
       ],
     },
     {
       number: 4,
-      title: "Implementation & Optimization",
+      title: "Delivery & Automation",
       items: [
-        "Deploy AI solutions with continuous monitoring",
-        "Optimize performance based on real-world feedback",
+        "Deliver data in CSV, JSON, API, or database formats",
+        "Automate scraping pipelines for scheduled or real-time updates",
       ],
     },
   ];
@@ -48,32 +48,23 @@ export default function WebDataExtractionProcessSection() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl"></div>
 
       {/* CONTENT GRID */}
-      {/* <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start"> */}
       <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-stretch">
-
-
-        {/* LEFT SIDE (STICKY) */}
-        {/* <div className="space-y-8 lg:sticky lg:top-[15rem] self-start]"> */}
         <div className="space-y-8 flex flex-col justify-center h-full">
           <span className="text-amber-500 text-sm font-medium tracking-wider uppercase px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/5 inline-block w-fit">
             Process
           </span>
 
           <div className="space-y-6">
-            {/* <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight"> */}
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Our AI Process
+              Our Web Scraping Process
             </h2>
 
-            {/* <p className="text-gray-400 text-lg leading-relaxed max-w-md"> */}
             <p className="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
-              We follow structured and result-driven approaches to empower our AI consulting services.
+              We follow a structured web scraping process to extract, clean, and deliver high-quality data from websites at scale.
             </p>
           </div>
 
-          <Link
-            href="/contact" className="group relative inline-flex px-8 py-4   bg-gradient-to-r from-amber-500 to-amber-600   text-white font-medium rounded-xl overflow-hidden   transition-all duration-300   hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 w-fit"
-          >
+          <Link href="/contact" className="group relative inline-flex px-8 py-4   bg-gradient-to-r from-amber-500 to-amber-600   text-white font-medium rounded-xl overflow-hidden   transition-all duration-300   hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 w-fit">
             <span className="relative z-10 flex items-center gap-2">
               Get Started
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />

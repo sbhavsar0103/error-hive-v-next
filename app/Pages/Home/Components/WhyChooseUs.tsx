@@ -22,82 +22,67 @@ interface CardItem {
 const WhyChooseUs: React.FC = () => {
   const advantages: Advantage[] = [
     {
-      title: "Offshore Outsourcing Expertise",
-      desc: "We excel in delivering efficient and cost-effective IT services, ensuring seamless communication and smooth project management from start to finish.",
+      title: "Specialized AI & LLM Expertise",
+      desc: "Our team specializes in AI development, LLM integration, machine learning, and intelligent automation solutions tailored for modern businesses.",
     },
     {
-      title: "One-Stop IT Solutions",
-      desc: "From consulting and UI/UX design to development, deployment, and maintenance, we provide all your IT needs under one roof, saving time and maximizing convenience.",
+      title: "End-to-End Software Development",
+      desc: "From product strategy and UI/UX to deployment and scaling, we provide complete custom software development under one roof.",
     },
     {
-      title: "Proven Track Record",
-      desc: "With a portfolio of successful projects and a growing base of satisfied clients, we have earned a reputation for reliability, quality, and excellence.",
+      title: "Proven Technical Excellence",
+      desc: "We follow best practices in architecture, security, and performance optimization to deliver enterprise-grade AI and web applications.",
     },
     {
-      title: "Sustainable and Scalable Solutions",
-      desc: "Our future-ready IT solutions are designed to adapt and scale as your business grows, ensuring long-term value and dependability.",
+      title: "Scalable & Future-Ready Systems",
+      desc: "Our solutions are built to scale with your growth, ensuring long-term adaptability and technical sustainability.",
     },
   ];
 
   const cards: CardItem[] = [
     {
-      title: "Expert Team",
-      desc: "Our developers are highly skilled in cutting-edge technologies to deliver top-quality solutions.",
+      title: "Experienced AI Engineers",
+      desc: "Our developers specialize in AI systems, LLM architectures, and scalable software engineering.",
     },
     {
-      title: "Scalable Solutions",
-      desc: "We build systems that grow seamlessly with your business and evolving demands.",
+      title: "Scalable Architecture",
+      desc: "We design systems built for performance, growth, and enterprise-level scalability.",
     },
     {
-      title: "Client-Centric Approach",
-      desc: "We focus on understanding your business goals to deliver tailor-made solutions.",
+      title: "Business-Focused Strategy",
+      desc: "We align technology decisions with measurable business outcomes and ROI.",
     },
     {
-      title: "Agile Development",
-      desc: "Flexible and iterative process ensures faster delivery and continuous improvement.",
+      title: "Agile & Transparent Process",
+      desc: "Iterative development cycles ensure faster delivery, clear communication, and continuous improvement.",
     },
   ];
 
   return (
-    <section
-      id="why-choose-us"
-      className="bg-[#060010] py-14 sm:py-20 px-5 sm:px-6 lg:px-8"
-    >
+    <section id="why-choose-us" className="bg-[#060010] py-14 sm:py-20 px-5 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2
-            className="font-bold text-white mb-3 tracking-tight"
-            style={{ fontSize: "clamp(1.6rem, 4.5vw, 3rem)" }}
-          >
-            Why <span className="text-amber-500">Choose Us</span>
+          <h2 className="font-bold text-white mb-3 tracking-tight" style={{ fontSize: "clamp(1.6rem, 4.5vw, 3rem)" }}>
+            Why We’re a Trusted <span className="text-amber-500">AI Development Company</span>
           </h2>
           <p
-            className="text-gray-400 max-w-xl mx-auto leading-relaxed"
+            className="text-gray-400 max-w-2xl mx-auto leading-relaxed"
             style={{ fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)" }}
           >
-            We combine innovation, expertise, and dedication to help you achieve your digital goals.
+            We deliver scalable AI development, LLM integration, and custom software
+            solutions with a strong focus on performance, reliability, and long-term business growth.
           </p>
         </div>
 
-        <FadeContent
-          blur={false}
-          duration={200}
-
-          initialOpacity={0}
-        >
-          <div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center"
-          >
+        <FadeContent blur={false} duration={200} initialOpacity={0}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             {/* Left Content */}
             <div>
               <ul className="space-y-6 sm:space-y-8">
                 {advantages.map((adv, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-4 text-white"
-                  >
-                    <div className="p-3 bg-amber-400/10 rounded-full border border-amber-500/30 mt-1">
+                  <li key={index} className="flex items-start gap-4 text-white">
+                    <div className="p-3 bg-amber-500/10 rounded-full border border-amber-500/30 mt-1">
                       <Atom className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" />
                     </div>
 
@@ -105,9 +90,7 @@ const WhyChooseUs: React.FC = () => {
                       <h4 className="font-semibold mb-1 tracking-tight bg-amber-500 bg-clip-text text-transparent" style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}>
                         {adv.title}
                       </h4>
-                      <p className="text-gray-400 leading-relaxed"
-                        style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}
-                      >
+                      <p className="text-gray-400 leading-relaxed" style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}>
                         {adv.desc}
                       </p>
                     </div>
@@ -151,6 +134,11 @@ const WhyChooseUs: React.FC = () => {
           </div>
         </FadeContent>
       </div>
+      <p className="sr-only">
+        Error Hive Solutions is a trusted AI development company in India
+        offering LLM development, generative AI applications, machine learning,
+        and enterprise software engineering services for startups and enterprises.
+      </p>
     </section>
   );
 };

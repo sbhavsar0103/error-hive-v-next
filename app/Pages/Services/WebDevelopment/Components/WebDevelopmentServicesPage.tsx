@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import WebDevelopmentServiceHeader from "./WebDevelopmentServiceHeader";
 import WebDevelopmentServicesList from "./WebDevelopmentServicesList";
 import WebDevelopmentServiceDetails from "./WebDevelopmentServiceDetails";
-import services from "./MachineLearningServicesMenu";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import services from "./WebDevelopmentServicesMenu";
 
 export default function WebDevelopmentServicesPage() {
   const [selectedServiceId, setSelectedServiceId] = useState(services[0].id);

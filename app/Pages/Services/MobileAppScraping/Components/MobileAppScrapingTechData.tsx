@@ -1,25 +1,6 @@
 import { IconType } from "react-icons";
 
-import {
-  SiApacheairflow,
-  SiTensorflow,
-  SiPytorch,
-  SiKeras,
-  SiPandas,
-  SiNumpy,
-  SiOpencv,
-  SiTableau,
-  SiOpenai,
-  SiHuggingface,
-  SiLangchain,
-  SiSpacy,
-  SiReact,
-  SiNodedotjs,
-} from "react-icons/si";
-
-import { FaChartLine } from "react-icons/fa";
 import { TbBrandPython } from "react-icons/tb";
-import { GiArtificialIntelligence } from "react-icons/gi";
 
 /* =========================
    TYPES
@@ -33,7 +14,6 @@ export interface Category {
 export interface TechItem {
   id: string;
   name: string;
-  icon: IconType;
 }
 
 /* =========================
@@ -41,14 +21,17 @@ export interface TechItem {
 ========================= */
 
 export const categories: Category[] = [
-  { id: "automation", name: "Automation" },
-  { id: "vision", name: "Computer Vision" },
-  { id: "data", name: "Data Science" },
-  { id: "ai", name: "Generative AI" },
-  { id: "llm", name: "LLM" },
-  { id: "language", name: "Language" },
-  { id: "nlp", name: "NLP" },
-  { id: "web", name: "Web Technology" },
+  { id: "ecommerce", name: "Ecommerce" },
+  { id: "carparts", name: "Car Parts" },
+  { id: "liquor", name: "Liquor" },
+  { id: "airport", name: "Airport Transfer" },
+  { id: "carrental", name: "Car Rental" },
+  { id: "cruise", name: "Cruise" },
+  { id: "esim", name: "ESim" },
+  { id: "flight", name: "Flight" },
+  { id: "hotel", name: "Hotel" },
+  { id: "restaurant", name: "Restaurant" },
+  { id: "movies", name: "Movies" },
 ];
 
 /* =========================
@@ -56,51 +39,68 @@ export const categories: Category[] = [
 ========================= */
 
 export const techLogos: Record<string, TechItem[]> = {
-  automation: [
-    { id: "1", name: "Apache Airflow", icon: SiApacheairflow },
-    { id: "2", name: "Luigi", icon: TbBrandPython },
+  ecommerce: [
+    { id: "1", name: "Ajio (India)" },
+    { id: "2", name: "Allegro (Poland)" },
+    { id: "3", name: "Amazon (India)" },
+    { id: "4", name: "ASDA (UK)" },
+    { id: "5", name: "BigBasket (India)" },
+    { id: "6", name: "Blinkit (India)" },
+    { id: "7", name: "Zepto (India)" },
+    { id: "8", name: "Swiggy Instamart (India)" },
+    { id: "9", name: "UberEats (Multiple)" },
+    { id: "10", name: "FairPrice (Singapore)" },
+    { id: "11", name: "Flipkart (India)" },
+    { id: "12", name: "Myntra (India)" },
+    { id: "13", name: "Plein (Netherlands)" },
+    { id: "14", name: "Target (US)" },
   ],
 
-  vision: [
-    { id: "3", name: "OpenCV", icon: SiOpencv },
-    { id: "4", name: "Pillow", icon: TbBrandPython },
+  carparts: [
+    { id: "15", name: "AutoDoc (UK)" },
   ],
 
-  data: [
-    { id: "5", name: "TensorFlow", icon: SiTensorflow },
-    { id: "6", name: "Tableau", icon: SiTableau },
-    { id: "7", name: "ZenML", icon: GiArtificialIntelligence },
-    { id: "8", name: "Seaborn", icon: FaChartLine },
-    { id: "9", name: "Keras", icon: SiKeras },
-    { id: "10", name: "PyTorch", icon: SiPytorch },
-    { id: "11", name: "Pandas", icon: SiPandas },
-    { id: "12", name: "NumPy", icon: SiNumpy },
-    { id: "13", name: "Matplotlib", icon: FaChartLine },
+  liquor: [
+    { id: "16", name: "BWS (Germany)" },
+    { id: "17", name: "Danmurphys (Australia)" },
+    { id: "18", name: "Liquorland (Australia)" },
+    { id: "19", name: "Waitrose (UK)" },
+    { id: "20", name: "Costco (UK)" },
+    { id: "21", name: "Norman Good Fellows (South Africa)" },
   ],
 
-  ai: [
-    { id: "14", name: "OpenAI", icon: SiOpenai },
-    { id: "15", name: "Hugging Face", icon: SiHuggingface },
+  airport: [
+    { id: "22", name: "Klook Airport Transfer (Middle East)" },
   ],
 
-  llm: [
-    { id: "16", name: "LangChain", icon: SiLangchain },
-    { id: "17", name: "Llama", icon: GiArtificialIntelligence },
+  carrental: [
+    { id: "23", name: "Klook Car Rental (Middle East)" },
+    { id: "24", name: "Avis (US)" },
   ],
 
-  language: [
-    { id: "18", name: "NLTK", icon: TbBrandPython },
-    { id: "19", name: "SpaCy", icon: SiSpacy },
+  cruise: [
+    { id: "25", name: "Klook Cruise (Middle East)" },
   ],
 
-  nlp: [
-    { id: "20", name: "Transformers", icon: GiArtificialIntelligence },
-    { id: "21", name: "BERT", icon: GiArtificialIntelligence },
+  esim: [
+    { id: "26", name: "Klook ESim (Middle East)" },
   ],
 
-  web: [
-    { id: "22", name: "React", icon: SiReact },
-    { id: "23", name: "Node.js", icon: SiNodedotjs },
+  flight: [
+    { id: "27", name: "Google Flight (India)" },
+  ],
+
+  hotel: [
+    { id: "28", name: "Booking (Multiple Country)" },
+  ],
+
+  restaurant: [
+    { id: "29", name: "Zomato (India)" },
+    { id: "30", name: "GoFood (Indonesia)" },
+  ],
+
+  movies: [
+    { id: "31", name: "IMDb (USA)" },
   ],
 };
 

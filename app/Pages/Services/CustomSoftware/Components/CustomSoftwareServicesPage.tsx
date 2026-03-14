@@ -1,0 +1,92 @@
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import CustomSoftwareServiceHeader from "./CustomSoftwareServiceHeader";
+import CustomSoftwareServicesList from "./CustomSoftwareServicesList";
+import CustomSoftwareServiceDetails from "./CustomSoftwareServiceDetails";
+import services from "./CustomSoftwareServicesMenu";
+
+
+export default function CustomSoftwareServicesPage() {
+  const [selectedServiceId, setSelectedServiceId] = useState(services[0].id);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === services.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
+  const goNext = () => {
+    setCurrentIndex((prev) =>
+      prev === services.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goPrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? services.length - 1 : prev - 1
+    );
+  };
+
+
+  const selectedService =
+    services.find((s) => s.id === selectedServiceId) || services[0];
+
+  return (
+    <section>
+      <div className="min-h-screen bg-[#060010] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+
+          <CustomSoftwareServiceHeader />
+
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:h-[600px]">
+
+            <CustomSoftwareServicesList
+              services={services}
+              selectedServiceId={selectedServiceId}
+              setSelectedServiceId={setSelectedServiceId}
+            />
+
+            {/* Desktop Only */}
+            <div className="hidden lg:block">
+              <CustomSoftwareServiceDetails selectedService={selectedService} />
+            </div>
+
+            {/* Mobile Only */}
+            <div className="relative lg:hidden overflow-hidden">
+              <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                {services.map((service) => (
+                  <div key={service.id} className="w-full flex-shrink-0 px-2">
+                    <CustomSoftwareServiceDetails selectedService={service} />
+                  </div>
+                ))}
+              </div>
+
+              {/* Left Button */}
+              <button onClick={goPrev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              {/* Right Button */}
+              <button onClick={goNext} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-md p-2 rounded-full text-white hover:bg-amber-500 transition">
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <p className="sr-only">
+          We provide custom software development services including SaaS
+          development, enterprise software engineering, AI-powered application
+          development, system integration, and scalable digital product design.
+        </p>
+      </div>
+    </section>
+  );
+}

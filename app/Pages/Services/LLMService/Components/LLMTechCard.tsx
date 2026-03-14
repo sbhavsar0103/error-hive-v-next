@@ -13,7 +13,7 @@ export default function LLMTechCard({ tech }: LLMTechCardProps) {
       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
-        <div className="text-5xl lg:text-3xl mb-4 text-amber-400 transform group-hover:scale-110 transition-all duration-300">
+        <div className="text-5xl lg:text-3xl mb-4 text-amber-500 transform group-hover:scale-110 transition-all duration-300">
           <Icon />
         </div>
 

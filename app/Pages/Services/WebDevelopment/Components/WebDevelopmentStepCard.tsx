@@ -1,4 +1,3 @@
-import React from "react";
 import WebDevelopmentStepListItem from "./WebDevelopmentStepListItem";
 
 interface WebDevelopmentStepCardProps {

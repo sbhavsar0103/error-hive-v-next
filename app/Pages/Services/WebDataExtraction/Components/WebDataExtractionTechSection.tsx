@@ -4,8 +4,8 @@ import WebDataExtractionCategoryTabs from "./WebDataExtractionCategoryTabs";
 import WebDataExtractionTechGrid from "./WebDataExtractionTechGrid";
 
 export default function WebDataExtractionTechSection() {
-  const [selectedCategory, setSelectedCategory] =
-    useState<CategoryId>("data");
+
+  const [selectedCategory, setSelectedCategory] = useState<CategoryId>("ecommerce");
 
   return (
     <section className="relative bg-[#060010] text-white py-20 lg:py-28 overflow-hidden">
@@ -18,23 +18,13 @@ export default function WebDataExtractionTechSection() {
           {/* Label */}
           <div className="inline-flex items-center px-5 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 mb-6">
             <span className="text-amber-500 text-sm tracking-wide font-medium">
-              Technology Stack
+              Data Sources
             </span>
           </div>
 
           {/* Responsive clamp typography */}
-          <h2
-            className="
-              font-semibold
-              tracking-tight
-              leading-tight
-              mb-8
-            "
-            style={{
-              fontSize: "clamp(2rem, 4vw, 3.5rem)",
-            }}
-          >
-            Innovating with Advanced Tech
+          <h2 className=" font-semibold tracking-tight leading-tight mb-8" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+            Platforms We Collect Data From
           </h2>
 
           {/* Tabs */}

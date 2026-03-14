@@ -27,10 +27,7 @@ const OurMission = () => {
   ];
 
   return (
-    <section
-      id="mission"
-      className="bg-[#060010] py-20 px-4 sm:px-6 lg:px-8"
-    >
+    <section id="mission" className="bg-[#060010] py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <FadeContent blur={false} duration={200}  initialOpacity={0}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -50,28 +47,14 @@ const OurMission = () => {
                     </h3>
 
                     <p className="text-gray-400 text-sm leading-relaxed flex-grow text-justify">
-                      <ShinyText
-                        text={card.description}
-                        disabled={false}
-                        speed={3}
-                      />
+                      <ShinyText text={card.description} disabled={false} speed={3}/>
                     </p>
 
                     {/* Button */}
-                    <button className="mt-6 text-amber-500 hover:text-amber-400 font-semibold text-sm flex items-center group">
+                    <button className="mt-6 text-amber-500 hover:text-amber-500 font-semibold text-sm flex items-center group">
                       Learn More
-                      <svg
-                        className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                       </svg>
                     </button>
                   </div>
