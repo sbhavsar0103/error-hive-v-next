@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import BannerHero from "@/app/Pages/Home/Home";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "AI Development Company in India | LLM & Generative AI Experts",
   description:
     "Leading AI Development Company in India helping startups and enterprises build LLM solutions, Generative AI applications, AI automation systems, and scalable web platforms.",
@@ -12,10 +13,8 @@ export const metadata: Metadata = {
     "Generative AI Development",
     "AI Automation Services",
   ],
-  alternates: {
-    canonical: "https://error-hive.com",
-  },
-};
+  canonical: "/",
+});
 
 export default function Home() {
   return <BannerHero />;

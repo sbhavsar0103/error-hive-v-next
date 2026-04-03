@@ -1,7 +1,8 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import CustomSoftwareHero from "@/app/Pages/Services/CustomSoftware/CustomSoftwareHero";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Custom Software Development Services | Error Hive Solutions",
   description:
     "Error Hive Solutions provides custom software development services including AI-powered applications, enterprise systems, SaaS platforms, and scalable digital solutions tailored to your business needs.",
@@ -12,15 +13,8 @@ export const metadata: Metadata = {
     "SaaS Development",
     "Software Development Company in India"
   ],
-  openGraph: {
-    title: "Custom Software Development Services | Error Hive Solutions",
-    description:
-      "Build scalable, secure, and AI-powered custom software solutions with Error Hive Solutions.",
-    url: "https://error-hive.com/services/custom-software",
-    siteName: "Error Hive Solutions",
-    type: "website",
-  },
-};
+  canonical: "/services/custom-software-development",
+});
 
 export default function CustomSoftwarePage() {
   return <CustomSoftwareHero />;

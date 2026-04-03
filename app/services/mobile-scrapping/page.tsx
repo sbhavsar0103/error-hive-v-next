@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import MobileAppScrapingHero from "@/app/Pages/Services/MobileAppScraping/MobileAppScrapingHero";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Mobile App Scraping Services | Error Hive",
   description:
     "Extract valuable data from mobile applications with Error Hive's mobile app scraping solutions. Automate data collection and gain actionable insights.",
@@ -11,20 +13,8 @@ export const metadata = {
     "automated mobile data collection",
     "Error Hive scraping services"
   ],
-  openGraph: {
-    title: "Mobile App Scraping Services | Error Hive",
-    description:
-      "Automated mobile app data extraction solutions for businesses and analytics.",
-    url: "https://error-hive.com/services/mobile-scrapping",
-    siteName: "Error Hive",
-    type: "website",
-  },
-  twitter: {
-    title: "Mobile App Scraping Services | Error Hive",
-    description:
-      "Extract structured data from mobile apps with automated scraping solutions.",
-  },
-};
+  canonical: "/services/mobile-scrapping",
+});
 
 export default function MobileAppScrapingPage() {
   return <MobileAppScrapingHero />;
