@@ -1,6 +1,7 @@
 'use client';
 
 import { Linkedin, Instagram, Mail, MapPin } from 'lucide-react';
+import Link from "next/link";
 
 const serviceColumns = [
   {
@@ -64,7 +65,7 @@ const serviceColumns = [
       {
         title: 'Mobile App Scraping',
         description: 'Extract valuable data from mobile applications',
-        href: '/services/mobile-scrapping'
+        href: '/services/mobile-scraping'
       }
     ]
   }
@@ -73,9 +74,7 @@ const serviceColumns = [
 const Footer = () => {
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Case Studies', href: '/case-studies' },
     // { name: 'Blogs', href: '/blogs' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -92,7 +91,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-16">
 
           <div className="flex flex-col items-center lg:items-start max-w-sm">
-            <a href="/" className="flex flex-col items-center lg:items-start mb-4">
+            <Link href="/" className="flex flex-col items-center lg:items-start mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-3xl font-bold text-white">Error</span>
                 <span className="text-3xl font-bold text-amber-500">-</span>
@@ -102,14 +101,14 @@ const Footer = () => {
               <span className="text-[11px] text-amber-500 tracking-[0.3em] uppercase mt-1 m-auto">
                 Solutions
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="flex gap-6 justify-center lg:justify-end">
             {socialLinks.map((social) => (
-              <a key={social.label} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-amber-500 hover:border-amber-500 transition-colors duration-300">
+              <Link key={social.label} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-amber-500 hover:border-amber-500 transition-colors duration-300">
                 <social.icon className="w-5 h-5" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -128,9 +127,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {column.items.map((item) => (
                   <li key={item.title}>
-                    <a href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
+                    <Link href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -143,9 +142,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <a href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
+                  <Link href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -162,9 +161,9 @@ const Footer = () => {
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail className="w-5 h-5 text-amber-500 flex-shrink-0" />
 
-                <a href="mailto:hello@error-hive.com" className="hover:text-amber-500 transition-colors duration-200">
+                <Link href="mailto:hello@error-hive.com" className="hover:text-amber-500 transition-colors duration-200">
                   contact@error-hive.com
-                </a>
+                </Link>
               </li>
 
               <li className="flex items-center gap-3 text-gray-400">
@@ -191,13 +190,13 @@ const Footer = () => {
 
             <div className="flex gap-6">
 
-              <a href="/privacy-policy" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
+              <Link href="/privacy-policy" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
                 Privacy Policy
-              </a>
+              </Link>
 
-              <a href="/terms" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
                 Terms of Service
-              </a>
+              </Link>
 
             </div>
 

@@ -3,6 +3,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { Quote, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 interface TestimonialCardProps {
   company: string;
@@ -26,7 +27,7 @@ export function TestimonialCard({
       <div className="relative z-10 flex flex-col h-full justify-between">
 
         {/* Top Section */}
-        <a href={companyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 mb-6 group/link">
+        <Link href={companyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 mb-6 group/link">
 
           {/* Company Logo */}
           <Image src={companyLogo} alt={company} width={70} height={70} className="rounded-lg object-contain transition group-hover/link:opacity-80"/>
@@ -40,7 +41,7 @@ export function TestimonialCard({
             <ExternalLink className="w-4 h-4 text-amber-400 opacity-70 group-hover/link:opacity-100 transition" />
           </div>
 
-        </a>
+        </Link>
 
         {/* Review */}
         <div className="relative">

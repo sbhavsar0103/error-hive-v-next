@@ -2,16 +2,18 @@ import React from "react";
 import SpotlightCard from "../../../Components/SpotlightCard/SpotlightCard";
 import ShinyText from "../../../Components/ShinyText/ShinyText";
 import FadeContent from "../../../Components/FadeContent/FadeContent";
-import { Code, Brain, MessageSquare, Globe, Database, Cloud, Cpu, Zap, LucideIcon } from "lucide-react";
+import { Code, Brain, Globe, Database, Smartphone, Briefcase, Layout, Search, AppWindow, LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 /* ----------------------------------
  Types
 -----------------------------------*/
 interface Service {
+  id: number;
   icon: LucideIcon;
   title: string;
   description: string;
+  href: string;
 }
 
 /* ----------------------------------
@@ -20,52 +22,60 @@ interface Service {
 const OurServices: React.FC = () => {
   const services: Service[] = [
     {
-      icon: Brain,
-      title: "AI Development Services",
-      description:
-        "Custom AI solutions including automation, predictive systems, and enterprise-grade artificial intelligence applications.",
-    },
-    {
-      icon: MessageSquare,
-      title: "Web & Application Scraping",
-      description:
-        "Structured data extraction from websites and applications for market research, lead generation, and competitive analysis.",
-    },
-    {
-      icon: Cpu,
-      title: "Machine Learning Solutions",
-      description:
-        "Custom ML models for classification, forecasting, recommendation engines, and data-driven decision systems.",
-    },
-    {
+      id: 1,
       icon: Code,
       title: "Custom Software Development",
-      description:
-        "Scalable, secure, and high-performance enterprise software tailored to your business needs.",
+      description: "Tailored solutions for unique business needs",
+      href: "/services/custom-software-development",
     },
     {
+      id: 2,
       icon: Globe,
-      title: "Web Application Development",
-      description:
-        "Modern, responsive, and SEO-optimized web applications using React, Next.js, and scalable architectures.",
+      title: "Web App Development",
+      description: "Scalable, responsive, and modern web applications",
+      href: "/services/web-development",
     },
     {
+      id: 3,
+      icon: Smartphone,
+      title: "Mobile App Development",
+      description: "Cross-platform apps for iOS and Android",
+      href: "/services/mobile-development",
+    },
+    {
+      id: 4,
+      icon: Briefcase,
+      title: "Business Software Consulting",
+      description: "Expert guidance for software planning and growth",
+      href: "/services/business-software-consulting",
+    },
+    {
+      id: 5,
+      icon: Layout,
+      title: "UI/UX Design and Development",
+      description: "Engaging, user-centered digital experiences",
+      href: "/services/ui-ux-design",
+    },
+    {
+      id: 6,
+      icon: Brain,
+      title: "AI Solutions",
+      description: "Smart automation with machine learning models",
+      href: "/services/ai-solutions",
+    },
+    {
+      id: 7,
       icon: Database,
-      title: "Data Science & Analytics",
-      description:
-        "Transform data into insights with visualization, predictive modeling, and business intelligence solutions.",
+      title: "Data Preprocessing and Cleaning",
+      description: "Structured, clean data for reliable insights",
+      href: "/services/data-preprocessing",
     },
     {
-      icon: Cloud,
-      title: "Cloud & DevOps Engineering",
-      description:
-        "AWS, Azure, and GCP deployment with scalable cloud architecture and CI/CD automation.",
-    },
-    {
-      icon: Zap,
-      title: "API Development & Integration",
-      description:
-        "Secure REST and GraphQL APIs designed for scalability, performance, and seamless integrations.",
+      id: 8,
+      icon: Search,
+      title: "Web Scraping",
+      description: "Automated extraction of structured web data",
+      href: "/services/web-scraping-services",
     },
   ];
 
@@ -91,23 +101,28 @@ const OurServices: React.FC = () => {
               providing LLM development, generative AI solutions, machine learning,
               web development, cloud engineering, and enterprise software services.
             </p>
-            {services.map((service) => {
+            {services.map((service, index) => {
               const Icon = service.icon;
-              const slug = service.title.toLowerCase().replace(/\s+/g, "-");
 
               return (
-                <Link key={slug} href={`/services/${slug}`} className="block">
+                <Link href={service.href} key={service.id || index} className="block h-full">
                   <SpotlightCard className="h-full cursor-pointer">
                     <div className="relative z-10 flex flex-col h-full">
                       <div className="mb-4 p-3 bg-[#060010] rounded-xl w-fit">
                         <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-amber-500" />
                       </div>
 
-                      <h3 className="font-semibold mb-2 tracking-tight bg-amber-500 bg-clip-text text-transparent" style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}>
+                      <h3
+                        className="font-semibold mb-2 tracking-tight bg-amber-500 bg-clip-text text-transparent"
+                        style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}
+                      >
                         {service.title}
                       </h3>
 
-                      <p className="text-gray-400 leading-relaxed flex-grow" style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}>
+                      <p
+                        className="text-gray-400 leading-relaxed flex-grow"
+                        style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}
+                      >
                         <ShinyText
                           text={service.description}
                           disabled={false}

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Link from "next/link";
 
 const serviceColumns = [
   {
@@ -87,7 +88,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#060010]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <a href="/" className="flex flex-col items-start group">
+          <Link href="/" className="flex flex-col items-start group">
 
             <span className="text-2xl lg:text-3xl font-bold flex items-center space-x-2">
               <span className="text-white transition-colors">
@@ -107,7 +108,7 @@ export default function Navbar() {
               Solutions
             </span>
 
-          </a>
+          </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative" onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
@@ -152,21 +153,21 @@ export default function Navbar() {
               </div>
             </div>
 
-            <a href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
+            <Link href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
               About Us
-            </a>
-            <a href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
+            </Link>
+            <Link href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
               Testimonials
-            </a>
+            </Link>
             {/* <a href="/blogs" className="text-gray-300 hover:text-amber-500 transition-colors">
               Blogs
             </a> */}
           </div>
 
           <div className="hidden lg:block">
-            <a href="/contact" className="inline-block px-6 py-2.5 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-200">
+            <Link href="/contact" className="inline-block px-6 py-2.5 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-200">
               Let's Talk
-            </a>
+            </Link>
           </div>
 
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden text-white p-2 hover:bg-gray-800 rounded-lg transition-colors" aria-label="Toggle menu">
@@ -207,19 +208,19 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          <a href="/about" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/about" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             About Us
-          </a>
-          <a href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          </Link>
+          <Link href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Testimonials
-          </a>
+          </Link>
           {/* <a href="/blogs" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Blogs
           </a> */}
           <div className="pt-4">
-            <a href="/contact" className="block text-center px-6 py-3 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/contact" className="block text-center px-6 py-3 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
               Let's Talk
-            </a>
+            </Link>
           </div>
         </div>
       </div>
