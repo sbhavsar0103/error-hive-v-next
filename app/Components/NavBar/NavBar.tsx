@@ -55,17 +55,17 @@ const serviceColumns = [
     ]
   },
   {
-    columnTitle: 'Scrapping',
+    columnTitle: 'Scraping',
     items: [
       {
-        title: 'Web Scrapping',
+        title: 'Web Scraping',
         description: 'Automated extraction of structured web data',
         href: '/services/web-scraping-services'
       },
       {
-        title: 'Mobile App Scrapping',
+        title: 'Mobile App Scraping',
         description: 'Extract valuable data from mobile applications',
-        href: '/services/mobile-scrapping'
+        href: '/services/mobile-scraping'
       }
     ]
   }
