@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import MobileDevelopmentGameChanger from "./Components/MobileDevelopmentGameChanger";
 import MobileDevelopmentBusinessGrowthSection from "./Components/MobileDevelopmentBusinessGrowthSection";
@@ -65,8 +64,6 @@ export default function MobileDevelopmentHero() {
             <MobileDevelopmentProcessSection />
             <hr />
             <MobileDevelopmentHowWeWorkSteps />
-            <hr />
-            <LetsConnect />
             <hr />
         </section>
     );

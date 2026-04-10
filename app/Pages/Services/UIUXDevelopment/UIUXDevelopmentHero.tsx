@@ -10,7 +10,6 @@ import UIUXDevelopmentHowWeWorkSteps from "./Components/UIUXDevelopmentHowWeWork
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 const UIUXDevelopmentHero: React.FC = () => {
 
@@ -68,8 +67,6 @@ const UIUXDevelopmentHero: React.FC = () => {
       <UIUXDevelopmentServicesPage />
       <hr />
       <UIUXDevelopmentHowWeWorkSteps />
-      <hr />
-      <LetsConnect />
       <hr />
     </section>
   );

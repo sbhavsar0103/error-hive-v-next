@@ -5,7 +5,6 @@ import { motion, Variants } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import GameChanger from "./Components/GameChanger";
 import BusinessSoftwareConsultingServicesPage from "./Components/BusinessSoftwareConsultingServicesPage";
@@ -61,7 +60,6 @@ export default function BusinessSoftwareConsultingHero() {
             <BusinessSoftwareConsultingServicesPage />
             <hr />
             <BusinessSoftwareConsultingProcessSection />
-            <hr />
         </section>
     );
 }

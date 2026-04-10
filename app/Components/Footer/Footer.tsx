@@ -1,208 +1,194 @@
 'use client';
 
-import { Linkedin, Instagram, Mail, MapPin } from 'lucide-react';
+import {
+  ArrowRight,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+} from 'lucide-react';
 import Link from "next/link";
 
-const serviceColumns = [
+const salesPhone = process.env.NEXT_PUBLIC_SALES_PHONE ?? "+91 XXX XXX XXXX";
+const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "/contact";
+
+const coreServices = [
+  { name: "AI SaaS Development", href: "/services/ai-solutions" },
+  { name: "Custom Web Applications", href: "/services/web-development" },
+  { name: "Data Automation & Web Scraping", href: "/services/web-scraping-services" },
+  { name: "MVP Development", href: "/services/custom-software-development" },
+];
+
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+  { name: "Testimonials", href: "/testimonials" },
+];
+
+const socialLinks = [
   {
-    columnTitle: 'Software Development',
-    items: [
-      {
-        title: 'Custom Software Development',
-        description: 'Tailored solutions for unique business needs',
-        href: '/services/custom-software-development'
-      },
-      {
-        title: 'Web App Development',
-        description: 'Scalable, responsive, and modern web applications',
-        href: '/services/web-development'
-      },
-      {
-        title: 'Mobile App Development',
-        description: 'Cross-platform apps for iOS and Android',
-        href: '/services/mobile-development'
-      }
-    ]
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/error-hive",
+    label: "LinkedIn",
   },
   {
-    columnTitle: 'IT Consulting & Design',
-    items: [
-      {
-        title: 'Business Software Consulting',
-        description: 'Expert guidance for software planning and growth',
-        href: '/services/business-software-consulting'
-      },
-      {
-        title: 'UI/UX Design and Development',
-        description: 'Engaging, user-centered digital experiences',
-        href: '/services/ui-ux-design'
-      }
-    ]
+    icon: Instagram,
+    href: "https://www.instagram.com/",
+    label: "Instagram",
   },
-  {
-    columnTitle: 'AI & Data Solutions',
-    items: [
-      {
-        title: 'AI Solutions',
-        description: 'Smart automation with machine learning models',
-        href: '/services/ai-solutions'
-      },
-      {
-        title: 'Data Preprocessing and Cleaning',
-        description: 'Structured, clean data for reliable insights',
-        href: '/services/data-preprocessing'
-      }
-    ]
-  },
-  {
-    columnTitle: 'Scraping',
-    items: [
-      {
-        title: 'Web Scraping',
-        description: 'Automated extraction of structured web data',
-        href: '/services/web-scraping-services'
-      },
-      {
-        title: 'Mobile App Scraping',
-        description: 'Extract valuable data from mobile applications',
-        href: '/services/mobile-scraping'
-      }
-    ]
-  }
 ];
 
 const Footer = () => {
-  const company = [
-    { name: 'About Us', href: '/about' },
-    // { name: 'Blogs', href: '/blogs' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
-
   return (
     <footer className="bg-[#060010] text-gray-300">
-      <div className="max-w-[90vw] mx-auto px-6 py-16">
+      <div className="mx-auto max-w-[90vw] px-6 py-16">
+        <div className="rounded-[2rem] bg-amber-500 px-8 py-10 text-[#060010]">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#060010]/65">
+                Build With Error Hive
+              </p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                Book a Free Strategy Call and get a practical roadmap for your next product.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-[#060010]/75 sm:text-lg">
+                We help startups, SaaS founders, SMBs, and restaurant businesses launch AI-powered software,
+                web apps, and automation systems with clear scope and faster execution.
+              </p>
+            </div>
 
-        {/* Top Section */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 mb-16">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-[#060010] px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Book a Free Strategy Call
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link
+                href={whatsappUrl}
+                className="inline-flex items-center justify-center rounded-full border border-[#060010]/15 px-6 py-3 text-sm font-semibold text-[#060010] transition-colors duration-300 hover:bg-white/25"
+              >
+                WhatsApp Us
+              </Link>
+            </div>
+          </div>
+        </div>
 
-          <div className="flex flex-col items-center lg:items-start max-w-sm">
-            <Link href="/" className="flex flex-col items-center lg:items-start mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-3xl font-bold text-white">Error</span>
-                <span className="text-3xl font-bold text-amber-500">-</span>
-                <span className="text-3xl font-bold text-white">Hive</span>
-              </div>
-
-              <span className="text-[11px] text-amber-500 tracking-[0.3em] uppercase mt-1 m-auto">
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+          <div>
+            <Link href="/" className="inline-flex flex-col">
+              <span className="text-3xl font-bold text-white">
+                Error<span className="text-amber-500">-</span>Hive
+              </span>
+              <span className="mt-1 text-[11px] uppercase tracking-[0.3em] text-amber-500">
                 Solutions
               </span>
             </Link>
-          </div>
 
-          <div className="flex gap-6 justify-center lg:justify-end">
-            {socialLinks.map((social) => (
-              <Link key={social.label} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-amber-500 hover:border-amber-500 transition-colors duration-300">
-                <social.icon className="w-5 h-5" />
-              </Link>
-            ))}
-          </div>
+            <p className="mt-6 max-w-md text-base leading-relaxed text-gray-400">
+              AI development company focused on SaaS development, custom software, and automation systems that
+              help businesses launch faster and operate smarter.
+            </p>
 
-        </div>
-
-        {/* Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-12 mb-16">
-
-          {/* Services Columns */}
-          {serviceColumns.map((column) => (
-            <div key={column.columnTitle}>
-              <h3 className="text-white font-semibold text-lg mb-6">
-                {column.columnTitle}
-              </h3>
-
-              <ul className="space-y-3">
-                {column.items.map((item) => (
-                  <li key={item.title}>
-                    <Link href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-8 flex gap-4">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors duration-300 hover:border-amber-500 hover:text-amber-500"
+                >
+                  <social.icon className="h-5 w-5" />
+                </Link>
+              ))}
             </div>
-          ))}
+          </div>
 
-          {/* Pages */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Pages</h3>
-            <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <Link href={item.href} className="text-gray-400 hover:text-amber-500 transition-colors duration-200 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full">
-                    {item.name}
+            <h3 className="text-lg font-semibold text-white">Core Services</h3>
+            <ul className="mt-6 space-y-3">
+              {coreServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
+                  >
+                    {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">
-              Contact
-            </h3>
+            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <ul className="mt-6 space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <ul className="space-y-4">
-
-              <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5 text-amber-500 flex-shrink-0" />
-
-                <Link href="mailto:hello@error-hive.com" className="hover:text-amber-500 transition-colors duration-200">
+          <div>
+            <h3 className="text-lg font-semibold text-white">Contact</h3>
+            <ul className="mt-6 space-y-4">
+              <li className="flex items-start gap-3 text-gray-400">
+                <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Link href="mailto:contact@error-hive.com" className="transition-colors duration-200 hover:text-amber-500">
                   contact@error-hive.com
                 </Link>
               </li>
-
-              <li className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-5 h-5 text-amber-500 flex-shrink-0" />
+              <li className="flex items-start gap-3 text-gray-400">
+                <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Link href={`tel:${salesPhone.replace(/\s+/g, "")}`} className="transition-colors duration-200 hover:text-amber-500">
+                  {salesPhone}
+                </Link>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Link href={whatsappUrl} className="transition-colors duration-200 hover:text-amber-500">
+                  Chat on WhatsApp
+                </Link>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
                 <span>India</span>
               </li>
-
             </ul>
 
-            <p className="text-sm text-gray-400 mt-6 leading-relaxed">
-              Let's discuss how we can transform your business digitally.
+            <p className="mt-6 text-sm leading-relaxed text-gray-500">
+              For live phone and WhatsApp contact, set `NEXT_PUBLIC_SALES_PHONE` and `NEXT_PUBLIC_WHATSAPP_URL`.
             </p>
           </div>
-
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 border-t border-gray-800/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-
+        <div className="mt-12 border-t border-gray-800/50 pt-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Error - Hive Solutions. All rights reserved.
             </p>
 
             <div className="flex gap-6">
-
-              <Link href="/privacy-policy" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
+              <Link href="/privacy-policy" className="text-sm text-gray-500 transition-colors duration-200 hover:text-amber-500">
                 Privacy Policy
               </Link>
-
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-amber-500 transition-colors duration-200">
+              <Link href="/terms" className="text-sm text-gray-500 transition-colors duration-200 hover:text-amber-500">
                 Terms of Service
               </Link>
-
             </div>
-
           </div>
         </div>
-
       </div>
     </footer>
   );

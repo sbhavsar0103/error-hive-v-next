@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import GameChanger from "./Components/CustomSoftwareGameChanger";
 import AnnotationServicesPage from "./Components/CustomSoftwareServicesPage";
@@ -56,8 +55,6 @@ const CustomSoftwareHero = () => {
       <AnnotationServicesPage />
       <hr />
       <AnnotationProcessSection />
-      <hr />
-      <LetsConnect />
       <hr />
       <CustomSoftwareHowWeWorkSteps />
       <hr />

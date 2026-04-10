@@ -7,7 +7,6 @@ import HeroStats from "../../../Components/HeroStats/HeroStats";
 import FloatingCard from "../../../Components/FloatingCard/FloatingCard";
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import AIVisualization from "./Components/AIVisualization";
 import AISolutionsProcessSection from "./Components/AISolutionsProcessSection";
@@ -89,8 +88,6 @@ const AISolutionsHero: React.FC = () => {
       <AISolutionsServicesPage />
       <hr />
       <AISolutionsHowWeWorkSteps />
-      <hr />
-      <LetsConnect />
       <hr />
     </>
   );

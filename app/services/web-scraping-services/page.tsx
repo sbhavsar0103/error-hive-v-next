@@ -3,15 +3,16 @@ import WebDataExtractionHero from "@/app/Pages/Services/WebDataExtraction/WebDat
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web Data Extraction Services | Error Hive",
+  title: "AI Development Company for SaaS, Custom Software & Automation | Error Hive",
   description:
-    "Automate data collection with Error Hive's web data extraction services. Extract structured data from websites for analytics, business intelligence, and automation.",
+    "Error Hive is an AI development company helping startups and businesses build SaaS products, custom web applications, and data automation systems from India.",
   keywords: [
-    "web scraping services",
-    "web data extraction",
-    "website data scraping",
-    "automated data collection",
-    "Error Hive scraping solutions"
+    "AI development company",
+    "SaaS development",
+    "custom software development India",
+    "custom web app development",
+    "data automation services",
+    "web scraping company India"
   ],
   canonical: "/services/web-scraping-services",
 });

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import GenerativeAIServicePage from "./Components/DataPreprocessingServicesPage";
 import GenerativeAIProcessSection from "./Components/DataPreprocessingProcessSection";
@@ -59,8 +58,6 @@ export default function DataPreprocessingHero() {
       <GenerativeAIServicePage />
       <hr />
       <DataPreprocessingHowWeWorkSteps />
-      <hr />
-      <LetsConnect />
       <hr />
     </>
   );

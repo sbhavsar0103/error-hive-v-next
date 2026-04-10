@@ -4,19 +4,14 @@ import React from 'react';
 import { TestimonialCard } from './Components/TestimonialCard';
 import { testimonials } from "./Components/TestimonialData";
 
-import LetsConnect from "../../Components/LetsConnect/LetsConnect";
-
 export default function TestimonialsPage() {
     return (
         <>
             <div className="min-h-screen bg-[#060010] text-white">
-                
                 {/* Outline Title */}
                 <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
-                    <div
-                        className="select-none text-[10vw] font-bold uppercase leading-none tracking-tighter"
-                        style={{ WebkitTextStroke: '2px rgb(245, 157, 11)', color: 'transparent' }}
-                    >
+                    <div className="select-none text-[10vw] font-bold uppercase leading-none tracking-tighter"
+                        style={{ WebkitTextStroke: '2px rgb(245, 157, 11)', color: 'transparent' }}>
                         TESTIMONIALS
                     </div>
                 </div>
@@ -26,7 +21,7 @@ export default function TestimonialsPage() {
                     <div className="absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
 
                     <div className="mx-auto max-w-7xl">
-                        
+
                         {/* Section Heading */}
                         <div className="mb-16 text-center">
                             <h2 className="mb-4 text-4xl font-bold text-white sm:text-5xl">
@@ -49,11 +44,6 @@ export default function TestimonialsPage() {
                     </div>
                 </div>
             </div>
-
-            <hr className="border-amber-500/20" />
-
-            <LetsConnect />
-
             <hr className="border-amber-500/20" />
         </>
     );

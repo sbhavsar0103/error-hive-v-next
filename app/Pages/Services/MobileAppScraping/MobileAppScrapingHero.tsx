@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import MobileAppScrapingGameChanger from "./Components/MobileAppScrapingGameChanger";
 import MobileAppScrapingProcessSection from "./Components/MobileAppScrapingProcessSection";
@@ -66,8 +65,6 @@ export default function MobileAppScrapingHero() {
             <MobileAppScrapingTechSection />
             <hr />
             <MobileAppScrapingHowWeWorkSteps />
-            <hr />
-            <LetsConnect />
             <hr />
         </>
     );

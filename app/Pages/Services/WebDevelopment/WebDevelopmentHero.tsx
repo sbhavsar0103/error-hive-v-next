@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
-import LetsConnect from "../../../Components/LetsConnect/LetsConnect";
 
 import GameChanger from "./Components/WebDevelopmentGameChanger";
 import WebDevelopmentServicesPage from "./Components/WebDevelopmentServicesPage";
@@ -61,8 +60,6 @@ export default function WebDevelopmentHero() {
             <WebDevelopmentProcessSection />
             <hr />
             <WebDevelopmentHowWeWorkSteps />
-            <hr />
-            <LetsConnect />
             <hr />
         </section>
     );

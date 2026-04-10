@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import LiquidEther from "../../Components/LiquidEther/LiquidEther";
 import TechMarquee from "../../Components/TechMarquee/TechMarquee";
-import LetsConnect from "../../Components/LetsConnect/LetsConnect";
 
 import OurServices from "./Components/OurServices";
 import WhyChooseUs from "./Components/WhyChooseUs";
@@ -58,8 +57,6 @@ const BannerHero: React.FC = () => {
       <OurServices />
       <hr />
       <WhyChooseUs />
-      <hr />
-      <LetsConnect />
       <hr />
     </>
   );

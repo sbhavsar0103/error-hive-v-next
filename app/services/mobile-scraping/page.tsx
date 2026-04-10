@@ -13,7 +13,7 @@ export const metadata: Metadata = constructMetadata({
     "automated mobile data collection",
     "Error Hive scraping services"
   ],
-  canonical: "/services/mobile-scrapping",
+  canonical: "/services/mobile-scraping",
 });
 
 export default function MobileAppScrapingPage() {
