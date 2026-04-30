@@ -3,9 +3,9 @@ import MobileAppScrapingHero from "@/app/Pages/Services/MobileAppScraping/Mobile
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Mobile App Scraping Services | Error Hive",
+  title: "Mobile App Data Extraction Services | Error Hive Solutions",
   description:
-    "Extract valuable data from mobile applications with Error Hive's mobile app scraping solutions. Automate data collection and gain actionable insights.",
+    "Extract structured data from mobile applications and APIs for market research, competitive analysis, and business intelligence. Scalable and automated pipelines.",
   keywords: [
     "mobile app scraping",
     "app data extraction",

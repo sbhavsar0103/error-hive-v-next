@@ -12,6 +12,9 @@ import AIVisualization from "./Components/AIVisualization";
 import AISolutionsProcessSection from "./Components/AISolutionsProcessSection";
 import AISolutionsServicesPage from "./Components/AISolutionsServicesPage";
 import AISolutionsHowWeWorkSteps from "./Components/AISolutionsHowWeWorkSteps";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -25,6 +28,43 @@ const containerVariants: Variants = {
 };
 
 const AISolutionsHero: React.FC = () => {
+  const faqs = [
+    {
+        "question": "What types of AI solutions do you build?",
+        "answer": "We build LLM applications, generative AI tools, AI chatbots, machine learning models, predictive analytics systems, and AI automation pipelines for startups and enterprises."
+    },
+    {
+        "question": "How long does an AI development project take?",
+        "answer": "Most AI projects range from 4 to 12 weeks depending on complexity, data availability, and integration requirements."
+    },
+    {
+        "question": "Do you work with startups or only large enterprises?",
+        "answer": "We work with both. Many of our clients are early-stage startups building their first AI product, as well as mid-size companies adding AI to existing systems."
+    },
+    {
+        "question": "What is your development process for AI projects?",
+        "answer": "We start with a discovery session to understand your goals, then assess your data, design the AI architecture, build and test the model, and deploy it to production with ongoing monitoring."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Web Scraping",
+        "href": "/services/web-scraping-services",
+        "description": "Extract structured data from the web at scale."
+    },
+    {
+        "title": "Data Preprocessing",
+        "href": "/services/data-preprocessing",
+        "description": "Clean and structure data for machine learning models."
+    },
+    {
+        "title": "Custom Software",
+        "href": "/services/custom-software-development",
+        "description": "Build scalable, custom web applications and SaaS products."
+    }
+];
+
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -51,7 +91,7 @@ const AISolutionsHero: React.FC = () => {
                 </span>
               </h1>
               <p className="text-amber-200/70 mb-7 leading-relaxed max-w-xl" style={{ fontSize: "clamp(0.95rem, 2.8vw, 1.25rem)" }}>
-                Unlock the power of artificial intelligence to automate
+                As a leading AI development company in Ahmedabad, India, we serve startups and enterprises worldwide. Unlock the power of artificial intelligence to automate
                 processes, gain insights, and drive growth—tailored for your
                 business.
               </p>
@@ -86,6 +126,12 @@ const AISolutionsHero: React.FC = () => {
       <AISolutionsProcessSection />
       <hr />
       <AISolutionsServicesPage />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
       <hr />
       <AISolutionsHowWeWorkSteps />
       <hr />

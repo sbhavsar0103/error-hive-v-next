@@ -9,8 +9,35 @@ import GameChanger from "./Components/WebDevelopmentGameChanger";
 import WebDevelopmentServicesPage from "./Components/WebDevelopmentServicesPage";
 import WebDevelopmentProcessSection from "./Components/WebDevelopmentProcessSection";
 import WebDevelopmentHowWeWorkSteps from "./Components/WebDevelopmentHowWeWorkSteps";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 export default function WebDevelopmentHero() {
+  const faqs = [
+    {
+        "question": "What technologies do you use for web development?",
+        "answer": "We primarily use React, Next.js, Node.js, and TypeScript for front-end and back-end development, with PostgreSQL or MongoDB for databases."
+    },
+    {
+        "question": "Can you rebuild my existing website?",
+        "answer": "Yes. We handle full website migrations, redesigns, and performance overhauls for existing businesses."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Custom Software",
+        "href": "/services/custom-software-development",
+        "description": "Build scalable, custom web applications and SaaS products."
+    },
+    {
+        "title": "Mobile Development",
+        "href": "/services/mobile-development",
+        "description": "Cross-platform iOS and Android applications."
+    }
+];
+
 
     const containerVariants: Variants = useMemo(
         () => ({
@@ -58,7 +85,13 @@ export default function WebDevelopmentHero() {
             <WebDevelopmentServicesPage />
             <hr />
             <WebDevelopmentProcessSection />
-            <hr />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
+      <hr />
             <WebDevelopmentHowWeWorkSteps />
             <hr />
         </section>

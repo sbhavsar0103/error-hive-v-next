@@ -3,9 +3,9 @@ import AboutUs from "@/app/Pages/AboutUs/AboutUs";
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "About Us | Error Hive Solutions",
+  title: "About Error Hive Solutions | AI & Software Development Company India",
   description:
-    "Learn about Error Hive Solutions, our mission, vision, and the expert team behind our AI and Custom Software Development services.",
+    "Learn about Error Hive Solutions — our team, mission, and approach to building AI-powered software and custom digital products for businesses globally.",
   keywords: [
     "About Error Hive",
     "AI Development Company",

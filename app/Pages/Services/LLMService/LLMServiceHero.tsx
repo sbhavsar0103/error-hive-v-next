@@ -6,8 +6,39 @@ import NLPGameChanger from "./Components/NLPGameChanger";
 import LLMServicesPage from "./Components/LLMServicesPage";
 import LLMTechSection from "./Components/LLMTechSection";
 import { motion } from "framer-motion";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 export default function LLMServiceHero() {
+  const faqs = [
+    {
+        "question": "What is LLM development?",
+        "answer": "Large Language Model (LLM) development involves fine-tuning or integrating AI models like GPT-4, Llama 3, or Claude into your applications to understand and generate human-like text."
+    },
+    {
+        "question": "Can you train an LLM on my company's private data?",
+        "answer": "Yes. We specialize in Retrieval-Augmented Generation (RAG) and model fine-tuning to create AI assistants that are experts on your proprietary data while keeping it secure."
+    },
+    {
+        "question": "How do you ensure data privacy when using LLMs?",
+        "answer": "We deploy models on secure cloud infrastructure or on-premise servers and ensure that your private data is never used to train public models."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "AI Solutions",
+        "href": "/services/ai-solutions",
+        "description": "Leverage your data with custom AI and LLM solutions."
+    },
+    {
+        "title": "Data Preprocessing",
+        "href": "/services/data-preprocessing",
+        "description": "Clean and structure data for machine learning models."
+    }
+];
+
     const [mounted, setMounted] = useState(false);
 
     const container = {
@@ -53,7 +84,13 @@ export default function LLMServiceHero() {
             <NLPGameChanger />
             <hr />
             <LLMServicesPage />
-            <hr />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
+      <hr />
             <LLMTechSection />
             <hr />
         </>

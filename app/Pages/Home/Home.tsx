@@ -6,6 +6,8 @@ import TechMarquee from "../../Components/TechMarquee/TechMarquee";
 
 import OurServices from "./Components/OurServices";
 import WhyChooseUs from "./Components/WhyChooseUs";
+import HeroStats from "../../Components/HeroStats/HeroStats";
+import HomeTestimonialsStrip from "./Components/HomeTestimonialsStrip";
 
 const BannerHero: React.FC = () => {
   return (
@@ -34,13 +36,13 @@ const BannerHero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pointer-events-auto mt-2">
             <Link href="/contact">
               <button type="button" className="px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-white text-black font-semibold rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 active:scale-95">
-                Get Started
+                Book a Free Strategy Call
               </button>
             </Link>
 
-            <Link href="/about">
+            <Link href="/portfolio">
               <button type="button" className="px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300 active:scale-95">
-                Learn More
+                See Our Work
               </button>
             </Link>
           </div>
@@ -53,10 +55,12 @@ const BannerHero: React.FC = () => {
       </section>
 
       {/* Sections */}
+      <HeroStats />
       <TechMarquee />
       <OurServices />
       <hr />
       <WhyChooseUs />
+      <HomeTestimonialsStrip />
       <hr />
     </>
   );

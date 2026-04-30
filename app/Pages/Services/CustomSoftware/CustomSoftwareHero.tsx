@@ -9,8 +9,44 @@ import GameChanger from "./Components/CustomSoftwareGameChanger";
 import AnnotationServicesPage from "./Components/CustomSoftwareServicesPage";
 import AnnotationProcessSection from "./Components/CustomSoftwareProcessSection";
 import CustomSoftwareHowWeWorkSteps from "./Components/CustomSoftwareHowWeWorkSteps";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 const CustomSoftwareHero = () => {
+  const faqs = [
+    {
+        "question": "What is custom software development?",
+        "answer": "Custom software is built specifically for your business needs, unlike off-the-shelf tools. It gives you full control over features, integrations, and scalability."
+    },
+    {
+        "question": "How much does custom software development cost?",
+        "answer": "Costs vary based on scope. Simple web applications start around \u20b91.5\u20133L. Complex enterprise systems with integrations can range from \u20b95L to \u20b920L+. We provide a detailed estimate after a free discovery call."
+    },
+    {
+        "question": "Do you provide post-launch support?",
+        "answer": "Yes. We offer flexible maintenance and support packages after launch to handle bug fixes, updates, and feature additions."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Web Development",
+        "href": "/services/web-development",
+        "description": "Scalable web applications and platforms."
+    },
+    {
+        "title": "Mobile Development",
+        "href": "/services/mobile-development",
+        "description": "Cross-platform iOS and Android applications."
+    },
+    {
+        "title": "UI/UX Design",
+        "href": "/services/ui-ux-design",
+        "description": "User-centered design that improves conversion rates."
+    }
+];
+
 
   const containerVariants: Variants = useMemo(
     () => ({
@@ -55,6 +91,12 @@ const CustomSoftwareHero = () => {
       <AnnotationServicesPage />
       <hr />
       <AnnotationProcessSection />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
       <hr />
       <CustomSoftwareHowWeWorkSteps />
       <hr />

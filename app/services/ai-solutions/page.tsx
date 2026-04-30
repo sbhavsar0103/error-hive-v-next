@@ -3,9 +3,9 @@ import AISolutionsHero from "@/app/Pages/Services/AISolutions/AISolutionsHero";
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "AI Solutions | Error Hive",
+  title: "LLM & Generative AI Development Services India | Error Hive Solutions",
   description:
-    "Transform your business with AI-powered solutions including automation, machine learning models, and intelligent data processing by Error Hive.",
+    "Custom LLM development, generative AI applications, AI automation, and machine learning model deployment for startups and enterprises. Based in India, serving globally.",
   keywords: [
     "AI solutions",
     "machine learning services",

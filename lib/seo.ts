@@ -46,7 +46,7 @@ export function constructMetadata({
       siteName: "Error Hive Solutions",
       locale: "en_IN",
       type: "website",
-      ...(canonical && { url: `https://error-hive.com${canonical}` }),
+      ...(canonical && { url: `https://www.error-hive.com${canonical}` }),
     },
     twitter: {
       title,
@@ -55,10 +55,10 @@ export function constructMetadata({
       card: "summary_large_image",
     },
     icons,
-    metadataBase: new URL('https://error-hive.com'),
+    metadataBase: new URL('https://www.error-hive.com'),
     ...(canonical && {
       alternates: {
-        canonical: `https://error-hive.com${canonical}`,
+        canonical: `https://www.error-hive.com${canonical}`,
       },
     }),
     ...(noIndex && {

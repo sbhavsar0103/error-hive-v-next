@@ -3,9 +3,9 @@ import MobileDevelopmentHero from "@/app/Pages/Services/MobileDevelopment/Mobile
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Mobile App Development Company | iOS & Android App Development Services",
+  title: "Mobile App Development Company India | Error Hive Solutions",
   description:
-    "We are a leading mobile app development company offering custom iOS, Android, and cross-platform app development services. Build scalable, secure, and high-performance mobile applications tailored to your business goals.",
+    "Cross-platform iOS and Android mobile app development. We build fast, scalable, and user-friendly mobile applications for startups and growing businesses.",
   keywords: [
     "Mobile App Development Company",
     "iOS App Development",

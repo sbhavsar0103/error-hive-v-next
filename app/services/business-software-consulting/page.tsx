@@ -3,9 +3,9 @@ import BusinessSoftwareConsultingHero from "@/app/Pages/Services/BusinessSoftwar
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Business Software Consulting Services | Digital Transformation Experts",
+  title: "Business Software Consulting Services India | Error Hive Solutions",
   description:
-    "Error Hive Solutions offers professional Business Software Consulting services including ERP & CRM implementation, workflow automation, system integration, and scalable enterprise solutions to accelerate digital transformation and business growth.",
+    "Expert software consulting for startups and SMEs. We help you plan, architect, and execute the right technology strategy for long-term business growth.",
   keywords: [
     "Business Software Consulting",
     "Business Software Consulting Services",

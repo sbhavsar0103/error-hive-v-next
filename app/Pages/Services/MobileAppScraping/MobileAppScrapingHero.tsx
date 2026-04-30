@@ -9,8 +9,39 @@ import MobileAppScrapingGameChanger from "./Components/MobileAppScrapingGameChan
 import MobileAppScrapingProcessSection from "./Components/MobileAppScrapingProcessSection";
 import MobileAppScrapingTechSection from "./Components/MobileAppScrapingTechSection";
 import MobileAppScrapingHowWeWorkSteps from "./Components/MobileAppScrapingHowWeWorkSteps";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 export default function MobileAppScrapingHero() {
+  const faqs = [
+    {
+        "question": "How is mobile app scraping different from web scraping?",
+        "answer": "Mobile apps use different APIs and security protocols than websites. We use specialized tools to intercept and analyze app traffic or automate emulators to extract the data."
+    },
+    {
+        "question": "Is mobile app scraping reliable?",
+        "answer": "Yes, once our pipelines are configured to handle app updates and API changes, the data extraction is highly reliable and can run on an automated schedule."
+    },
+    {
+        "question": "Can you scrape data from any app?",
+        "answer": "We can scrape publicly accessible data from most apps, provided we follow ethical guidelines and the app doesn't employ extreme, targeted anti-scraping measures."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Web Scraping",
+        "href": "/services/web-scraping-services",
+        "description": "Extract structured data from the web at scale."
+    },
+    {
+        "title": "Data Preprocessing",
+        "href": "/services/data-preprocessing",
+        "description": "Clean and structure data for machine learning models."
+    }
+];
+
 
     const containerVariants: Variants = useMemo(
         () => ({
@@ -63,7 +94,13 @@ export default function MobileAppScrapingHero() {
             <MobileAppScrapingProcessSection />
             <hr />
             <MobileAppScrapingTechSection />
-            <hr />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
+      <hr />
             <MobileAppScrapingHowWeWorkSteps />
             <hr />
         </>

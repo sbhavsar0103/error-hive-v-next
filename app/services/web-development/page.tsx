@@ -3,9 +3,9 @@ import WebDevelopmentHero from "@/app/Pages/Services/WebDevelopment/WebDevelopme
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web Development Company in India | Custom Website Development",
+  title: "Web App Development Services India | Error Hive Solutions",
   description:
-    "Professional web development company in India offering custom website development, responsive design, eCommerce solutions, and scalable web applications. Build fast, secure, SEO-friendly websites with Error Hive Solutions.",
+    "Scalable and modern web application development using React, Next.js, and Node.js. From MVPs to enterprise platforms, we deliver fast and reliable web solutions.",
   keywords: [
     "Web Development Company",
     "Custom Website Development",

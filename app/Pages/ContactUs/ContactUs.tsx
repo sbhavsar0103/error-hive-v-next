@@ -41,23 +41,18 @@ const ContactUs: React.FC = () => {
   const steps: Step[] = [
     {
       number: 1,
-      title: "Share Your Requirements",
-      description: "Tell us about your project vision and goals",
+      title: "We review your request",
+      description: "within 24 hours",
     },
     {
       number: 2,
-      title: "Strategic Planning",
-      description: "We analyze and create a tailored roadmap",
+      title: "We schedule a discovery call",
+      description: "30 minutes, no commitment",
     },
     {
       number: 3,
-      title: "Development & Design",
-      description: "Our team brings your vision to life",
-    },
-    {
-      number: 4,
-      title: "Delivery & Support",
-      description: "Launch with confidence and ongoing assistance",
+      title: "You receive a custom proposal",
+      description: "scope, timeline, and budget",
     },
   ];
 
@@ -70,10 +65,10 @@ const ContactUs: React.FC = () => {
             <div className="space-y-12">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-amber-500 tracking-tight">
-                  Let's Build Something Amazing
+                  What happens after you reach out?
                 </h1>
                 <p className="text-lg lg:text-xl text-amber-200/70 leading-relaxed">
-                  Transform your ideas into reality with our streamlined process
+                  We review, connect, and propose a solution tailored to your goals.
                 </p>
               </div>
               <div className="space-y-8">
@@ -101,6 +96,11 @@ const ContactUs: React.FC = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              
+              <div className="mt-8 pt-8 border-t border-amber-500/20">
+                <h3 className="text-xl font-semibold text-amber-500 mb-2">Our Location</h3>
+                <p className="text-amber-100/70 text-lg">Ahmedabad, Gujarat, India</p>
               </div>
             </div>
             {/* RIGHT FORM */}
@@ -152,6 +152,15 @@ const ContactUs: React.FC = () => {
                       <Send className="w-5 h-5" />
                     </button>
                   </form>
+                  
+                  <div className="mt-8 pt-6 border-t border-amber-500/20 text-center space-y-4">
+                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="w-full py-3 px-6 rounded-xl bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 text-green-400 font-semibold flex items-center justify-center gap-2 transition-all duration-300">
+                      Chat on WhatsApp
+                    </a>
+                    <p className="text-amber-200/70 text-sm">
+                      Prefer email? Reach us at <a href="mailto:contact@error-hive.com" className="text-amber-500 hover:underline">contact@error-hive.com</a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

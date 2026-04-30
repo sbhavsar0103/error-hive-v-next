@@ -3,9 +3,9 @@ import UIUXDevelopmentHero from "@/app/Pages/Services/UIUXDevelopment/UIUXDevelo
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "UI/UX Design & Development | Error Hive",
+  title: "UI/UX Design & Development Services India | Error Hive Solutions",
   description:
-    "Create engaging and user-centered digital experiences with Error Hive's UI/UX design and development services. We design intuitive interfaces that improve user satisfaction and business growth.",
+    "User-centered UI/UX design and front-end development. We create engaging, high-converting digital experiences that align with your brand and business goals.",
   keywords: [
     "UI UX design services",
     "user experience design",

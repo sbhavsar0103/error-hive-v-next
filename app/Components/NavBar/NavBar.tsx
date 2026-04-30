@@ -3,71 +3,26 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from "next/link";
 
-const serviceColumns = [
+const primaryServices = [
   {
-    columnTitle: 'Software Development',
-    items: [
-      {
-        title: 'Custom Software Development',
-        description: 'Tailored solutions for unique business needs',
-        href: '/services/custom-software-development'
-      },
-      {
-        title: 'Web App Development',
-        description: 'Scalable, responsive, and modern web applications',
-        href: '/services/web-development'
-      },
-      {
-        title: 'Mobile App Development',
-        description: 'Cross-platform apps for iOS and Android',
-        href: '/services/mobile-development'
-      }
-    ]
+    title: 'AI & LLM Development',
+    description: 'Smart automation with machine learning models',
+    href: '/services/ai-solutions'
   },
   {
-    columnTitle: 'IT Consulting & Design',
-    items: [
-      {
-        title: 'Business Software Consulting',
-        description: 'Expert guidance for software planning and growth',
-        href: '/services/business-software-consulting'
-      },
-      {
-        title: 'UI/UX Design and Development',
-        description: 'Engaging, user-centered digital experiences',
-        href: '/services/ui-ux-design'
-      }
-    ]
+    title: 'Web & App Development',
+    description: 'Scalable web and mobile applications',
+    href: '/services/web-development'
   },
   {
-    columnTitle: 'AI & Data Solutions',
-    items: [
-      {
-        title: 'AI Solutions',
-        description: 'Smart automation with machine learning models',
-        href: '/services/ai-solutions'
-      },
-      {
-        title: 'Data Preprocessing and Cleaning',
-        description: 'Structured, clean data for reliable insights',
-        href: '/services/data-preprocessing'
-      }
-    ]
+    title: 'Web Scraping & Data',
+    description: 'Automated extraction of structured web data',
+    href: '/services/web-scraping-services'
   },
   {
-    columnTitle: 'Scraping',
-    items: [
-      {
-        title: 'Web Scraping',
-        description: 'Automated extraction of structured web data',
-        href: '/services/web-scraping-services'
-      },
-      {
-        title: 'Mobile App Scraping',
-        description: 'Extract valuable data from mobile applications',
-        href: '/services/mobile-scraping'
-      }
-    ]
+    title: 'Custom Software',
+    description: 'Tailored solutions for unique business needs',
+    href: '/services/custom-software-development'
   }
 ];
 
@@ -117,37 +72,29 @@ export default function Navbar() {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              <div className={`fixed left-1/2 top-[80px] -translate-x-1/2 w-[95vw] max-w-7xl transition-all duration-200 z-40 ${isServicesOpen
+              <div className={`absolute left-0 top-full pt-4 w-80 transition-all duration-200 z-40 ${isServicesOpen
                 ? 'opacity-100 visible translate-y-0'
                 : 'opacity-0 invisible -translate-y-2'
                 }`}>
-                <div className="bg-[#0a0a1a] rounded-2xl shadow-2xl p-8 border border-gray-800">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {serviceColumns.map((column, colIndex) => (
-                      <div key={colIndex} className={serviceColumns.length === 4 && colIndex === 3
-                        ? "lg:col-start-1" : ""}>
-                        <h2 className="text-amber-500 font-semibold text-sm mb-4 px-4">
-                          {column.columnTitle}
-                        </h2>
-
-                        <div className="space-y-4">
-                          {column.items.map((service, index) => (
-                            <a
-                              key={index}
-                              href={service.href}
-                              className="block p-4 rounded-xl bg-gray-800/50 transition-all duration-200"
-                            >
-                              <h3 className="text-white font-semibold text-sm mb-1 hover:text-amber-500 transition-colors">
-                                {service.title}
-                              </h3>
-                              <p className="text-gray-400 text-xs leading-relaxed">
-                                {service.description}
-                              </p>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                <div className="bg-[#0a0a1a] rounded-2xl shadow-2xl p-4 border border-gray-800 flex flex-col gap-2">
+                  {primaryServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.href}
+                      className="block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
+                    >
+                      <h3 className="text-white font-semibold text-sm mb-1 group-hover:text-amber-500 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-400 text-xs leading-relaxed">
+                        {service.description}
+                      </p>
+                    </Link>
+                  ))}
+                  <div className="mt-2 pt-2 border-t border-gray-800">
+                    <Link href="/services" className="block p-4 rounded-xl text-amber-500 font-semibold text-sm hover:bg-amber-500/10 transition-colors text-center">
+                      More Services &rarr;
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -158,6 +105,9 @@ export default function Navbar() {
             </Link>
             <Link href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
               Testimonials
+            </Link>
+            <Link href="/portfolio" className="text-gray-300 hover:text-amber-500 transition-colors">
+              Portfolio
             </Link>
             {/* <a href="/blogs" className="text-gray-300 hover:text-amber-500 transition-colors">
               Blogs
@@ -188,24 +138,25 @@ export default function Navbar() {
             </button>
             <div className={`space-y-2 overflow-hidden transition-all duration-300 mx-3 ${isMobileServicesOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
               }`}>
-              {serviceColumns.map((column, colIndex) => (
-                <div key={colIndex} className="space-y-2">
-                  <h3 className="text-amber-500 text-sm px-4 pt-3">
-                    {column.columnTitle}
-                  </h3>
-
-                  {column.items.map((service, index) => (
-                    <a
-                      key={index}
-                      href={service.href}
-                      className="block px-6 py-2 text-gray-300 text-sm hover:text-white"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {service.title}
-                    </a>
-                  ))}
-                </div>
-              ))}
+              <div className="space-y-2">
+                {primaryServices.map((service, index) => (
+                  <Link
+                    key={index}
+                    href={service.href}
+                    className="block px-6 py-3 text-gray-300 text-sm hover:text-white"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {service.title}
+                  </Link>
+                ))}
+                <Link
+                  href="/services"
+                  className="block px-6 py-3 text-amber-500 font-semibold text-sm hover:text-amber-400"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  More Services &rarr;
+                </Link>
+              </div>
             </div>
           </div>
           <Link href="/about" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
@@ -213,6 +164,9 @@ export default function Navbar() {
           </Link>
           <Link href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Testimonials
+          </Link>
+          <Link href="/portfolio" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            Portfolio
           </Link>
           {/* <a href="/blogs" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Blogs

@@ -3,9 +3,9 @@ import CustomSoftwareHero from "@/app/Pages/Services/CustomSoftware/CustomSoftwa
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Custom Software Development Services | Error Hive Solutions",
+  title: "Custom Software Development Company India | Error Hive Solutions",
   description:
-    "Error Hive Solutions provides custom software development services including AI-powered applications, enterprise systems, SaaS platforms, and scalable digital solutions tailored to your business needs.",
+    "End-to-end custom software development for startups and enterprises. We build scalable, production-ready web and mobile applications tailored to your business goals.",
   keywords: [
     "Custom Software Development",
     "AI Software Development Company",

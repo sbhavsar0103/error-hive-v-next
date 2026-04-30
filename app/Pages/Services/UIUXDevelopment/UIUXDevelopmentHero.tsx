@@ -10,8 +10,39 @@ import UIUXDevelopmentHowWeWorkSteps from "./Components/UIUXDevelopmentHowWeWork
 
 import FloatingParticles from "../../../Components/FloatingParticles/FloatingParticles";
 import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 const UIUXDevelopmentHero: React.FC = () => {
+  const faqs = [
+    {
+        "question": "Do you offer UI/UX design as a standalone service?",
+        "answer": "Yes. We can design your digital product from scratch or redesign your existing application without taking on the development phase, if that's what you need."
+    },
+    {
+        "question": "What tools do you use for design?",
+        "answer": "Our primary design tool is Figma. We use it for wireframing, high-fidelity UI design, and interactive prototyping."
+    },
+    {
+        "question": "How do you ensure the design aligns with our brand?",
+        "answer": "We start every project with a thorough discovery phase to understand your brand guidelines, target audience, and business objectives before creating any visual assets."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Web Development",
+        "href": "/services/web-development",
+        "description": "Scalable web applications and platforms."
+    },
+    {
+        "title": "Mobile Development",
+        "href": "/services/mobile-development",
+        "description": "Cross-platform iOS and Android applications."
+    }
+];
+
 
   const containerVariants: Variants = useMemo(
     () => ({
@@ -65,6 +96,12 @@ const UIUXDevelopmentHero: React.FC = () => {
       <WhyUIUXMatter />
       <hr />
       <UIUXDevelopmentServicesPage />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
       <hr />
       <UIUXDevelopmentHowWeWorkSteps />
       <hr />

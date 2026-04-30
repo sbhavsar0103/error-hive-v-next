@@ -72,6 +72,8 @@ const WhyChooseUs: React.FC = () => {
           >
             We deliver scalable AI development, LLM integration, and custom software
             solutions with a strong focus on performance, reliability, and long-term business growth.
+            <br /><br />
+            <span className="text-amber-500/80 font-medium">Headquartered in Ahmedabad, India — serving clients across the US, UK, UAE, and globally.</span>
           </p>
         </div>
 

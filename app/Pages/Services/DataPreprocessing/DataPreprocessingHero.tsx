@@ -7,9 +7,40 @@ import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
 import GenerativeAIServicePage from "./Components/DataPreprocessingServicesPage";
 import GenerativeAIProcessSection from "./Components/DataPreprocessingProcessSection";
 import DataPreprocessingHowWeWorkSteps from "./Components/DataPreprocessingHowWeWorkSteps";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 
 export default function DataPreprocessingHero() {
+  const faqs = [
+    {
+        "question": "What is data preprocessing and why is it important?",
+        "answer": "Data preprocessing involves cleaning and organizing raw data into a structured format. It's a critical first step for any machine learning or AI project to ensure accurate and reliable models."
+    },
+    {
+        "question": "Can you handle large, messy datasets?",
+        "answer": "Absolutely. We have robust pipelines designed to handle gigabytes to terabytes of raw, unstructured data efficiently."
+    },
+    {
+        "question": "Do you offer data annotation services?",
+        "answer": "Yes, we provide data labeling and annotation for computer vision, NLP, and other supervised machine learning tasks."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Web Scraping",
+        "href": "/services/web-scraping-services",
+        "description": "Extract structured data from the web at scale."
+    },
+    {
+        "title": "AI Solutions",
+        "href": "/services/ai-solutions",
+        "description": "Leverage your data with custom AI and LLM solutions."
+    }
+];
+
 
   const container = {
     hidden: { opacity: 0 },
@@ -56,6 +87,12 @@ export default function DataPreprocessingHero() {
       <GenerativeAIProcessSection />
       <hr />
       <GenerativeAIServicePage />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
       <hr />
       <DataPreprocessingHowWeWorkSteps />
       <hr />

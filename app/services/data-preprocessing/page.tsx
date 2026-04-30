@@ -3,9 +3,9 @@ import DataPreprocessingHero from "@/app/Pages/Services/DataPreprocessing/DataPr
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Data Processing & Cleaning Services | Data Preprocessing Solutions",
+  title: "Data Preprocessing & Cleaning Services | Error Hive Solutions",
   description:
-    "Professional Data Processing & Cleaning services to transform raw data into structured, high-quality datasets. We handle data cleansing, normalization, validation, and preparation for analytics, AI, and machine learning projects.",
+    "Professional data preprocessing, cleaning, and structuring services for machine learning, AI, and business intelligence projects. Delivered as clean, analysis-ready datasets.",
   keywords: [
     "Data Processing Services",
     "Data Cleaning Services",

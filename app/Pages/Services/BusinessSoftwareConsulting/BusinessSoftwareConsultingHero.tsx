@@ -9,8 +9,39 @@ import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
 import GameChanger from "./Components/GameChanger";
 import BusinessSoftwareConsultingServicesPage from "./Components/BusinessSoftwareConsultingServicesPage";
 import BusinessSoftwareConsultingProcessSection from "./Components/BusinessSoftwareConsultingProcessSection";
+import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
+import FAQ from "../../../Components/FAQ/FAQ";
+import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 export default function BusinessSoftwareConsultingHero() {
+  const faqs = [
+    {
+        "question": "What does a software consultant do?",
+        "answer": "We analyze your current business processes, identify technological gaps, and recommend or build the right software solutions to automate and scale your operations."
+    },
+    {
+        "question": "Do you help with digital transformation?",
+        "answer": "Yes, we specialize in guiding traditional businesses through digital transformation, implementing tools like ERPs, CRMs, and custom automation scripts."
+    },
+    {
+        "question": "We have an existing tech team. Can you work with them?",
+        "answer": "Absolutely. We frequently consult with internal tech teams, offering architectural guidance, code reviews, and strategic planning."
+    }
+];
+
+  const relatedServices = [
+    {
+        "title": "Custom Software",
+        "href": "/services/custom-software-development",
+        "description": "Build scalable, custom web applications and SaaS products."
+    },
+    {
+        "title": "AI Solutions",
+        "href": "/services/ai-solutions",
+        "description": "Leverage your data with custom AI and LLM solutions."
+    }
+];
+
 
     const containerVariants: Variants = useMemo(
         () => ({
@@ -58,7 +89,13 @@ export default function BusinessSoftwareConsultingHero() {
             <GameChanger />
             <hr />
             <BusinessSoftwareConsultingServicesPage />
-            <hr />
+      <ServiceExpectations />
+      <RelatedServices services={relatedServices} />
+      <hr />
+      <FAQ items={faqs} />
+      <hr />
+
+      <hr />
             <BusinessSoftwareConsultingProcessSection />
         </section>
     );
