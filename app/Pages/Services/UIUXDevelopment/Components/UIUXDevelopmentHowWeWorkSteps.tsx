@@ -142,7 +142,7 @@ export default function UIUXDevelopmentHowWeWorkSteps() {
 
         {/* Active Step Card */}
         {activeStepData && (
-          <div className="bg-gradient-to-br from-[#0a001b] to-[#100022] rounded-3xl p-8 sm:p-10 border border-amber-500/10 shadow-xl shadow-black/40 transition-all duration-500">
+          <div className="how-steps-card">
             <div className="mb-6">
               <h3 className="text-2xl sm:text-3xl font-bold text-white">
                 Step {activeStepData.id}:{" "}

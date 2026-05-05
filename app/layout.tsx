@@ -50,7 +50,7 @@ export default function RootLayout({
         </main>
 
         {/* CURVED LOOP SECTION */}
-        <section className="bg-[#060010] flex flex-col items-center justify-center overflow-hidden">
+        <section className="surface-base flex flex-col items-center justify-center overflow-hidden">
           <CurvedLoop
             marqueeText="Error - Hive Solutions ✦"
             speed={2}

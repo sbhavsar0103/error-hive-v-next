@@ -43,7 +43,7 @@ export default function UIUXDevelopmentServiceDetails({
         </p>
       </div>
 
-      <Link href="/contact" className="group inline-flex items-center gap-2 px-5 py-3 sm:px-8 sm:py-4  bg-amber-500 text-[#060010] rounded-xl  font-semibold text-sm sm:text-base lg:text-lg  hover:bg-amber-500 transition-all duration-300  hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105">
+      <Link href="/contact" className="group btn-primary-cta">
         Get Started
         <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
       </Link>

@@ -39,12 +39,12 @@ export default function AISolutionsServicesPage() {
     services.find((s) => s.id === selectedServiceId) || services[0];
 
   return (
-    <div className="min-h-screen bg-[#060010] text-white">
+    <div className="service-shell">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
         <AISolutionsServiceHeader />
 
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 lg:h-[600px]">
+        <div className="service-grid">
 
           <AISolutionsServicesList
             services={services}

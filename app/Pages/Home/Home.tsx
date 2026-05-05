@@ -12,22 +12,22 @@ import HomeTestimonialsStrip from "./Components/HomeTestimonialsStrip";
 const BannerHero: React.FC = () => {
   return (
     <>
-      <section id="home" className="relative min-h-[90vh] w-full overflow-hidden bg-[#060010]">
+      <section id="home" className="surface-base relative min-h-[90vh] w-full overflow-hidden">
         {/* Background Effect */}
         <div className="absolute inset-0 z-0">
           <LiquidEther colors={["#D97706", "#F59E0B", "#FBBF24"]} mouseForce={20} cursorSize={100} isViscous={false} viscous={30} iterationsViscous={32} iterationsPoisson={32} resolution={0.5} isBounce={false} autoDemo={true} autoSpeed={0.5} autoIntensity={2.2} takeoverDuration={0.25} autoResumeDelay={3000} autoRampDuration={0.6} style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, pointerEvents: "auto", zIndex: 0 }} />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 min-h-[90vh] flex flex-col items-center justify-center text-center px-6 sm:px-8">
-          <h1 className="font-bold text-white mb-6 leading-[1.1] tracking-tight pointer-events-auto" style={{ fontSize: "clamp(1.9rem, 5vw, 4.5rem)" }}>
+        <div className="relative z-10 min-h-[90vh] flex flex-col items-center justify-center px-6 text-center sm:px-8">
+          <h1 className="heading-display mb-6 text-white pointer-events-auto">
             AI Development Company <br />
             <span className="text-amber-500">
               Building LLM & Generative AI Solutions
             </span>
           </h1>
 
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed pointer-events-auto" style={{ fontSize: "clamp(0.95rem, 2.5vw, 1.25rem)" }}>
+          <p className="text-body-lead mb-8 max-w-2xl mx-auto text-gray-300 pointer-events-auto">
             Error Hive Solutions helps startups and enterprises build AI-powered
             products, LLM applications, automation systems, and scalable web
             platforms designed for real-world impact.
@@ -55,7 +55,7 @@ const BannerHero: React.FC = () => {
       </section>
 
       {/* Sections */}
-      <HeroStats />
+      {/* <HeroStats /> */}
       <TechMarquee />
       <OurServices />
       <hr />

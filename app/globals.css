@@ -48,6 +48,40 @@
 
 :root {
   --radius: 0.625rem;
+  --surface-base: #060010;
+  --surface-elevated: #0a001b;
+  --surface-elevated-2: #100022;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --accent-500: #f59e0b;
+  --accent-600: #d97706;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --container-max: 80rem;
+  --section-px: clamp(1rem, 2vw, 2rem);
+  --fs-h1: clamp(1.875rem, 5vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-body-lg: clamp(1rem, 2.2vw, 1.25rem);
+  --fs-body-md: 1rem;
+  --fs-caption: 0.75rem;
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-body: 1.65;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.08em;
+  --shadow-elevated: 0 24px 60px rgba(0, 0, 0, 0.45);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -121,5 +155,96 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .surface-base {
+    background-color: var(--surface-base);
+  }
+
+  .container-shell {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--section-px);
+  }
+
+  .section-shell {
+    background-color: var(--surface-base);
+    padding-block: var(--spacing-24);
+    padding-inline: var(--section-px);
+  }
+
+  .heading-display {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--tracking-tight);
+    font-weight: 700;
+  }
+
+  .text-body-lead {
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body);
+  }
+
+  .eyebrow {
+    font-size: var(--fs-caption);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .service-shell {
+    min-height: 100vh;
+    background-color: var(--surface-base);
+    color: var(--text-primary);
+  }
+
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+  }
+
+  @media (min-width: 1024px) {
+    .service-grid {
+      flex-direction: row;
+      gap: var(--spacing-8);
+      min-height: 37.5rem;
+    }
+  }
+
+  .how-steps-card {
+    background-image: linear-gradient(to bottom right, var(--surface-elevated), var(--surface-elevated-2));
+    border-radius: 1.5rem;
+    border: 1px solid color-mix(in oklab, var(--accent-500) 10%, transparent);
+    box-shadow: var(--shadow-elevated);
+    padding: var(--spacing-8);
+    transition: all 500ms;
+  }
+
+  @media (min-width: 640px) {
+    .how-steps-card {
+      padding: var(--spacing-10);
+    }
+  }
+
+  .btn-primary-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    border-radius: 0.75rem;
+    background-color: var(--accent-500);
+    color: var(--surface-base);
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+    padding-inline: clamp(1.25rem, 3vw, 2rem);
+    padding-block: clamp(0.75rem, 2vw, 1rem);
+    transition: transform 300ms, box-shadow 300ms;
+  }
+
+  .btn-primary-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px color-mix(in oklab, var(--accent-500) 30%, transparent);
   }
 }
