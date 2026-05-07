@@ -12,7 +12,6 @@ import {
 import Link from "next/link";
 
 const salesPhone = process.env.NEXT_PUBLIC_SALES_PHONE ?? "+91 XXX XXX XXXX";
-const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "/contact";
 
 const coreServices = [
   { name: "AI SaaS Development", href: "/services/ai-solutions" },
@@ -67,12 +66,6 @@ const Footer = () => {
               >
                 Book a Free Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link
-                href={whatsappUrl}
-                className="inline-flex items-center justify-center rounded-full border border-[#060010]/15 px-6 py-3 text-sm font-semibold text-[#060010] transition-colors duration-300 hover:bg-white/25"
-              >
-                WhatsApp Us
               </Link>
             </div>
           </div>
@@ -156,20 +149,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
-                <MessageCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <Link href={whatsappUrl} className="transition-colors duration-200 hover:text-amber-500">
-                  Chat on WhatsApp
-                </Link>
-              </li>
-              <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <span>India</span>
+                <span>507 Krupal Pathshala , Nr Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015</span>
               </li>
             </ul>
-
-            <p className="mt-6 text-sm leading-relaxed text-gray-500">
-              For live phone and WhatsApp contact, set `NEXT_PUBLIC_SALES_PHONE` and `NEXT_PUBLIC_WHATSAPP_URL`.
-            </p>
           </div>
         </div>
 

@@ -6,7 +6,6 @@ import TechMarquee from "../../Components/TechMarquee/TechMarquee";
 
 import OurServices from "./Components/OurServices";
 import WhyChooseUs from "./Components/WhyChooseUs";
-import HeroStats from "../../Components/HeroStats/HeroStats";
 import HomeTestimonialsStrip from "./Components/HomeTestimonialsStrip";
 
 const BannerHero: React.FC = () => {
