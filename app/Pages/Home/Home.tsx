@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import LiquidEther from "../../Components/LiquidEther/LiquidEther";
 import TechMarquee from "../../Components/TechMarquee/TechMarquee";
@@ -38,12 +39,6 @@ const BannerHero: React.FC = () => {
                 Book a Free Strategy Call
               </button>
             </Link>
-
-            <Link href="/portfolio">
-              <button type="button" className="px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300 active:scale-95">
-                See Our Work
-              </button>
-            </Link>
           </div>
           <p className="sr-only">
             We provide AI development services including LLM development,
@@ -54,11 +49,11 @@ const BannerHero: React.FC = () => {
       </section>
 
       {/* Sections */}
-      {/* <HeroStats /> */}
       <TechMarquee />
       <OurServices />
       <hr />
       <WhyChooseUs />
+      <hr />
       <HomeTestimonialsStrip />
       <hr />
     </>

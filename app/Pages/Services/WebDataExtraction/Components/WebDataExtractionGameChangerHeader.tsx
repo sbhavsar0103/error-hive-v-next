@@ -8,7 +8,7 @@ export default function WebDataExtractionGameChangerHeader() {
       </div>
 
       <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-        Why Web Data Extraction is a Game-Changer for Businesses
+        Why <span className="text-amber-500">Web Data Extraction</span> is a Game-Changer for Businesses
       </h2>
 
       <p className="text-gray-400 text-lg leading-relaxed">

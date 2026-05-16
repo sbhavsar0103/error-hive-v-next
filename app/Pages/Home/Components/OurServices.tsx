@@ -2,7 +2,7 @@ import React from "react";
 import SpotlightCard from "../../../Components/SpotlightCard/SpotlightCard";
 import ShinyText from "../../../Components/ShinyText/ShinyText";
 import FadeContent from "../../../Components/FadeContent/FadeContent";
-import { Code, Brain, Globe, Database, Smartphone, Briefcase, Layout, Search, AppWindow, LucideIcon } from "lucide-react";
+import { Code, Brain, Globe, Database, Smartphone, Briefcase, Layout, Search, LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 /* ----------------------------------
@@ -12,6 +12,8 @@ interface Service {
   id: number;
   icon: LucideIcon;
   title: string;
+  anchorText: string;
+  linkTitle: string;
   description: string;
   href: string;
 }
@@ -25,6 +27,8 @@ const OurServices: React.FC = () => {
       id: 1,
       icon: Code,
       title: "Custom Software Development",
+      anchorText: "Custom Software Development Services",
+      linkTitle: "Custom software development services for startups and enterprises",
       description: "Tailored solutions for unique business needs",
       href: "/services/custom-software-development",
     },
@@ -32,6 +36,8 @@ const OurServices: React.FC = () => {
       id: 2,
       icon: Globe,
       title: "Web App Development",
+      anchorText: "Web Application Development",
+      linkTitle: "Web application development services with React and Next.js",
       description: "Scalable, responsive, and modern web applications",
       href: "/services/web-development",
     },
@@ -39,6 +45,8 @@ const OurServices: React.FC = () => {
       id: 3,
       icon: Smartphone,
       title: "Mobile App Development",
+      anchorText: "Mobile App Development Services",
+      linkTitle: "Cross-platform mobile app development services",
       description: "Cross-platform apps for iOS and Android",
       href: "/services/mobile-development",
     },
@@ -46,6 +54,8 @@ const OurServices: React.FC = () => {
       id: 4,
       icon: Briefcase,
       title: "Business Software Consulting",
+      anchorText: "Business Software Consulting",
+      linkTitle: "Business software consulting for planning and digital transformation",
       description: "Expert guidance for software planning and growth",
       href: "/services/business-software-consulting",
     },
@@ -53,6 +63,8 @@ const OurServices: React.FC = () => {
       id: 5,
       icon: Layout,
       title: "UI/UX Design and Development",
+      anchorText: "UI/UX Design and Development",
+      linkTitle: "UI/UX design and front-end development services",
       description: "Engaging, user-centered digital experiences",
       href: "/services/ui-ux-design",
     },
@@ -60,6 +72,8 @@ const OurServices: React.FC = () => {
       id: 6,
       icon: Brain,
       title: "AI Solutions",
+      anchorText: "AI & LLM Development",
+      linkTitle: "AI and LLM development services in India",
       description: "Smart automation with machine learning models",
       href: "/services/ai-solutions",
     },
@@ -67,6 +81,8 @@ const OurServices: React.FC = () => {
       id: 7,
       icon: Database,
       title: "Data Preprocessing and Cleaning",
+      anchorText: "Data Preprocessing and Cleaning",
+      linkTitle: "Data preprocessing and cleaning services for AI and analytics",
       description: "Structured, clean data for reliable insights",
       href: "/services/data-preprocessing",
     },
@@ -74,6 +90,8 @@ const OurServices: React.FC = () => {
       id: 8,
       icon: Search,
       title: "Web Scraping",
+      anchorText: "Web Scraping and Data Extraction",
+      linkTitle: "Web scraping and data extraction services",
       description: "Automated extraction of structured web data",
       href: "/services/web-scraping-services",
     },
@@ -105,24 +123,19 @@ const OurServices: React.FC = () => {
               const Icon = service.icon;
 
               return (
-                <Link href={service.href} key={service.id || index} className="block h-full">
+                <Link href={service.href} key={service.id || index} title={service.linkTitle} className="block h-full">
                   <SpotlightCard className="h-full cursor-pointer">
                     <div className="relative z-10 flex flex-col h-full">
                       <div className="mb-4 p-3 bg-[#060010] rounded-xl w-fit">
                         <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-amber-500" />
                       </div>
 
-                      <h3
-                        className="font-semibold mb-2 tracking-tight bg-amber-500 bg-clip-text text-transparent"
-                        style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}
-                      >
-                        {service.title}
+                      <h3 className="font-semibold mb-2 tracking-tight bg-amber-500 bg-clip-text text-transparent"
+                        style={{ fontSize: "clamp(1rem, 3vw, 1.25rem)" }}>
+                        {service.anchorText}
                       </h3>
 
-                      <p
-                        className="text-gray-400 leading-relaxed flex-grow"
-                        style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}
-                      >
+                      <p className="text-gray-400 leading-relaxed flex-grow" style={{ fontSize: "clamp(0.85rem, 2.4vw, 0.95rem)" }}>
                         <ShinyText
                           text={service.description}
                           disabled={false}

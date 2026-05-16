@@ -8,7 +8,7 @@ export default function GameChangerHeader() {
       </div>
 
       <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
-        How Custom Software Drives Business Growth
+        How <span className="text-amber-500">Custom Software Drives</span> Business Growth
       </h2>
 
       <p className="text-gray-400 text-lg leading-relaxed">

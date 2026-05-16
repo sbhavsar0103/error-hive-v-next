@@ -46,9 +46,7 @@ const steps: Step[] = [
 ];
 const AISolutionsProcessSection: React.FC = () => {
   return (
-    <section
-      className="relative bg-[#060010] py-24 px-6"
-    >
+    <section className="relative bg-[#060010] py-24 px-6">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#060010] via-[#0a0520] to-[#060010]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />

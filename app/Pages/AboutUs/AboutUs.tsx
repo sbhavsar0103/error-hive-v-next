@@ -16,19 +16,20 @@ interface TechImage {
 }
 
 const AboutUs: React.FC = () => {
+  // SEO/performance fix: self-host skill icons to avoid external skillicons.dev requests.
   const techImages: TechImage[] = [
-    { src: "https://skillicons.dev/icons?i=react", alt: "React" },
-    { src: "https://skillicons.dev/icons?i=javascript", alt: "JavaScript" },
-    { src: "https://skillicons.dev/icons?i=typescript", alt: "TypeScript" },
-    { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js" },
-    { src: "https://skillicons.dev/icons?i=python", alt: "Python" },
-    { src: "https://skillicons.dev/icons?i=html", alt: "HTML" },
-    { src: "https://skillicons.dev/icons?i=css", alt: "CSS" },
-    { src: "https://skillicons.dev/icons?i=tailwind", alt: "TailwindCSS" },
-    { src: "https://skillicons.dev/icons?i=nextjs", alt: "Next.js" },
-    { src: "https://skillicons.dev/icons?i=git", alt: "Git" },
-    { src: "https://skillicons.dev/icons?i=github", alt: "GitHub" },
-    { src: "https://skillicons.dev/icons?i=docker", alt: "Docker" },
+    { src: "/skills/react.svg", alt: "React development icon" },
+    { src: "/skills/javascript.svg", alt: "JavaScript development icon" },
+    { src: "/skills/typescript.svg", alt: "TypeScript development icon" },
+    { src: "/skills/nodejs.svg", alt: "Node.js development icon" },
+    { src: "/skills/python.svg", alt: "Python development icon" },
+    { src: "/skills/html.svg", alt: "HTML development icon" },
+    { src: "/skills/css.svg", alt: "CSS development icon" },
+    { src: "/skills/tailwind.svg", alt: "Tailwind CSS development icon" },
+    { src: "/skills/nextjs.svg", alt: "Next.js development icon" },
+    { src: "/skills/git.svg", alt: "Git version control icon" },
+    { src: "/skills/github.svg", alt: "GitHub source control icon" },
+    { src: "/skills/docker.svg", alt: "Docker deployment icon" },
   ];
 
   return (

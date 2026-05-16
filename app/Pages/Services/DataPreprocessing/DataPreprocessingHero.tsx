@@ -6,7 +6,6 @@ import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
 
 import GenerativeAIServicePage from "./Components/DataPreprocessingServicesPage";
 import GenerativeAIProcessSection from "./Components/DataPreprocessingProcessSection";
-import DataPreprocessingHowWeWorkSteps from "./Components/DataPreprocessingHowWeWorkSteps";
 import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
 import FAQ from "../../../Components/FAQ/FAQ";
 import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
@@ -84,17 +83,15 @@ export default function DataPreprocessingHero() {
         </div>
       </motion.div >
       <hr />
+      <GenerativeAIServicePage />
+      <hr />
       <GenerativeAIProcessSection />
       <hr />
-      <GenerativeAIServicePage />
       <ServiceExpectations />
+      <hr />
       <RelatedServices services={relatedServices} />
       <hr />
       <FAQ items={faqs} />
-      <hr />
-
-      <hr />
-      <DataPreprocessingHowWeWorkSteps />
       <hr />
     </>
   );

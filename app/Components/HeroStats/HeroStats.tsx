@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import SpotlightCard from "../../Components/SpotlightCard/SpotlightCard";
 
 type StatItem = [string, string];
 
@@ -13,13 +14,7 @@ const stats: StatItem[] = [
 
 const HeroStats: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      className="container mx-auto max-w-6xl px-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center z-20 relative"
-    >
+    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="container mx-auto max-w-6xl pt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center z-20 relative">
       {stats.map(([value, label], i: number) => (
         <motion.div
           key={i}
@@ -27,14 +22,18 @@ const HeroStats: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: i * 0.2 }}
-          className="py-8 px-6 bg-white/5 border border-amber-500/10 rounded-2xl backdrop-blur-sm"
+          className="h-full"
         >
-          <div className="font-bold text-amber-500 mb-2 text-3xl sm:text-4xl">
-            {value}
-          </div>
-          <div className="text-amber-100/70 text-sm sm:text-base font-medium">
-            {label}
-          </div>
+          <SpotlightCard className="h-full bg-white/5 border-amber-500/10 rounded-2xl backdrop-blur-sm">
+            <div className="relative z-10">
+              <div className="font-bold text-amber-500 text-lg sm:text-xl">
+                {value}
+              </div>
+              <div className="text-amber-100/70 text-sm sm:text-base font-medium">
+                {label}
+              </div>
+            </div>
+          </SpotlightCard>
         </motion.div>
       ))}
     </motion.div>

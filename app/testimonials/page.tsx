@@ -6,12 +6,6 @@ export const metadata: Metadata = constructMetadata({
   title: "Client Testimonials | Error Hive Solutions",
   description:
     "See what our clients say about working with Error Hive Solutions. Real feedback from businesses we've helped with AI development, web apps, and data extraction.",
-  keywords: [
-    "Error Hive Reviews",
-    "Client Testimonials",
-    "Customer Feedback",
-    "Software Development Reviews"
-  ],
   canonical: "/testimonials",
 });
 

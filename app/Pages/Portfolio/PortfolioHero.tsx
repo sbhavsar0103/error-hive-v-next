@@ -11,21 +11,21 @@ const PortfolioHero: React.FC = () => {
       industry: "Sales Tech",
       services: "LLM Integration, Next.js",
       outcome: "Increased sales team efficiency by automating email drafting and lead scoring.",
-      link: "#placeholder"
+      link: "/contact?ref=portfolio-ai-crm"
     },
     {
       name: "E-Commerce Price Tracker",
       industry: "Retail",
       services: "Web Scraping, Data Automation",
       outcome: "Monitors 50k+ products daily with 99.8% accuracy for dynamic pricing.",
-      link: "#placeholder"
+      link: "/contact?ref=portfolio-price-tracker"
     },
     {
       name: "Enterprise Workflow Platform",
       industry: "Manufacturing",
       services: "Custom Software, React Native",
       outcome: "Unified operations across 5 factories with a custom web and mobile dashboard.",
-      link: "#placeholder"
+      link: "/contact?ref=portfolio-workflow"
     }
   ];
 
@@ -41,7 +41,7 @@ const PortfolioHero: React.FC = () => {
           </div>
           <div className="absolute bottom-10 left-0 right-0 text-center">
             <p className="text-xl sm:text-2xl text-amber-200/70 max-w-2xl mx-auto px-4">
-              A selection of projects we've delivered.
+              A selection of projects we&apos;ve delivered.
             </p>
           </div>
         </div>

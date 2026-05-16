@@ -16,7 +16,7 @@ export default function GameChangerHeader() {
           text-[clamp(1rem,4vw,3rem)]
         "
       >
-        Why Business Software Consulting is a Game-Changer for Growing Companies
+        Why <span className="text-amber-500">Business Software Consulting</span> is a Game-Changer for Growing Companies
       </h2>
 
       {/* Optional Subtext */}

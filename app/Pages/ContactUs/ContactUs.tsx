@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { Send, Mail, User, MessageSquare } from "lucide-react";
+import { Send, Mail, User, MessageSquare, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 interface FormData {
   name: string;
@@ -56,6 +57,24 @@ const ContactUs: React.FC = () => {
     },
   ];
 
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/error-hive",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/errorhivesolutions",
+      label: "Instagram",
+    },
+    {
+      icon: MessageCircle,
+      href: "https://wa.me/919408882844",
+      label: "WhatsApp",
+    },
+  ];
+
   return (
     <>
       <div className="min-h-screen relative overflow-hidden items-center flex py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#060010" }}>
@@ -97,10 +116,12 @@ const ContactUs: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8 pt-8 border-t border-amber-500/20">
                 <h3 className="text-xl font-semibold text-amber-500 mb-2">Our Location</h3>
-                <p className="text-amber-100/70 text-lg">Ahmedabad, Gujarat, India</p>
+                <span className="text-amber-100/70 text-lg">
+                  507 Krupal Pathshala , Nr Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015
+                </span>
               </div>
             </div>
             {/* RIGHT FORM */}
@@ -152,11 +173,20 @@ const ContactUs: React.FC = () => {
                       <Send className="w-5 h-5" />
                     </button>
                   </form>
-                  
+
                   <div className="mt-8 pt-6 border-t border-amber-500/20 text-center space-y-4">
-                    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="w-full py-3 px-6 rounded-xl bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 text-green-400 font-semibold flex items-center justify-center gap-2 transition-all duration-300">
-                      Chat on WhatsApp
-                    </a>
+                    <div className="flex items-center justify-center gap-4">
+                      {socialLinks.map((social) => (
+                        <Link
+                          key={social.label}
+                          href={social.href}
+                          aria-label={social.label}
+                          className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors duration-300 hover:border-amber-500 hover:text-amber-500"
+                        >
+                          <social.icon className="h-5 w-5" />
+                        </Link>
+                      ))}
+                    </div>
                     <p className="text-amber-200/70 text-sm">
                       Prefer email? Reach us at <a href="mailto:contact@error-hive.com" className="text-amber-500 hover:underline">contact@error-hive.com</a>
                     </p>

@@ -23,7 +23,7 @@ export default function WebDataExtractionTechSection() {
           </div>
 
           {/* Responsive clamp typography */}
-          <h2 className=" font-semibold tracking-tight leading-tight mb-8" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <h2 className="font-semibold tracking-tight leading-tight mb-8 text-amber-500" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
             Platforms We Collect Data From
           </h2>
 

@@ -8,7 +8,7 @@ export default function MobileAppScrapingGameChangerHeader() {
       </div>
 
       <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-        Why Mobile App Scraping is a Game-Changer for Businesses
+        Why <span className="text-amber-500">Mobile App Scraping</span> is a Game-Changer for Businesses
       </h2>
 
       <p className="text-gray-400 text-lg leading-relaxed">

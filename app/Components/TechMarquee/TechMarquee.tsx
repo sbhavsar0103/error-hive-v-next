@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 /** ✅ Type definition */
 interface Technology {
@@ -31,20 +32,18 @@ const TechMarquee: React.FC = () => {
   const allTechs: Technology[] = [...technologies, ...technologies];
 
   return (
-    <section className="bg-[#060010] border-y border-amber-500/20 overflow-hidden">
+    <section className="bg-[#060010] border-y border-amber-white overflow-hidden">
       <div className="relative">
         <div className="flex animate-marquee whitespace-nowrap items-center">
           {allTechs.map((tech, index) => (
-            <div
-              key={index}
-              className="tech-card inline-flex items-center justify-center mx-8 px-8 py-4 transition-all duration-300 group"
-            >
+            <div key={index} className="tech-card inline-flex items-center justify-center mx-8 px-8 py-4 transition-all duration-300 group">
               <div className="tech-icon">
-                <img
+                <Image
                   src={tech.img}
-                  alt={tech.name}
-                  loading="lazy"
-                  className="max-w-full max-h-full object-contain filter grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-300"
+                  alt={`${tech.name} technology icon`}
+                  width={48}
+                  height={48}
+                  className="max-w-full max-h-full"
                 />
               </div>
             </div>
@@ -63,6 +62,8 @@ const TechMarquee: React.FC = () => {
         }
         .animate-marquee {
           animation: marquee 30s linear infinite;
+          min-height: 5rem;
+          will-change: transform;
         }
         .tech-icon {
           width: 3rem;

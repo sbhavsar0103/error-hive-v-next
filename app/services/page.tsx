@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { constructMetadata } from "@/lib/seo";
+import SpotlightCard from "../Components/SpotlightCard/SpotlightCard";
 
 export const metadata: Metadata = constructMetadata({
   title: "All Services | Error Hive Solutions",
@@ -80,15 +81,23 @@ export default function ServicesIndexPage() {
               <Link 
                 key={index} 
                 href={service.href}
-                className="group p-8 rounded-2xl bg-white/5 border border-amber-500/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-amber-500/40 hover:-translate-y-1 flex flex-col"
+                className="group block h-full transition-transform duration-300 hover:-translate-y-1"
               >
-                <h3 className="text-xl font-semibold text-amber-500 mb-4 flex items-center justify-between">
-                  {service.title}
-                  <ArrowRight className="w-5 h-5 text-amber-500 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                  {service.description}
-                </p>
+                <SpotlightCard className="h-full cursor-pointer">
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="mb-4 p-3 bg-[#060010] rounded-xl w-fit">
+                      <ArrowRight className="w-6 h-6 text-amber-500 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
+
+                    <h3 className="text-xl font-semibold mb-3 tracking-tight bg-amber-500 bg-clip-text text-transparent">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-400 text-sm leading-relaxed flex-grow">
+                      {service.description}
+                    </p>
+                  </div>
+                </SpotlightCard>
               </Link>
             ))}
           </div>

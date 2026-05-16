@@ -11,7 +11,6 @@ import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
 import AIVisualization from "./Components/AIVisualization";
 import AISolutionsProcessSection from "./Components/AISolutionsProcessSection";
 import AISolutionsServicesPage from "./Components/AISolutionsServicesPage";
-import AISolutionsHowWeWorkSteps from "./Components/AISolutionsHowWeWorkSteps";
 import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
 import FAQ from "../../../Components/FAQ/FAQ";
 import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
@@ -90,12 +89,11 @@ const AISolutionsHero: React.FC = () => {
                   AI Intelligence
                 </span>
               </h1>
-              <p className="text-amber-200/70 mb-7 leading-relaxed max-w-xl" style={{ fontSize: "clamp(0.95rem, 2.8vw, 1.25rem)" }}>
+              <p className="text-amber-200/70 mb-6 leading-relaxed max-w-xl" style={{ fontSize: "clamp(0.95rem, 2.8vw, 1.25rem)" }}>
                 As a leading AI development company in Ahmedabad, India, we serve startups and enterprises worldwide. Unlock the power of artificial intelligence to automate
                 processes, gain insights, and drive growth—tailored for your
                 business.
               </p>
-
               <HeroButtons />
               <HeroStats />
             </div>
@@ -123,18 +121,17 @@ const AISolutionsHero: React.FC = () => {
         </div>
       </motion.div>
       <hr />
+      <AISolutionsServicesPage />
+      <hr />
       <AISolutionsProcessSection />
       <hr />
-      <AISolutionsServicesPage />
       <ServiceExpectations />
+      <hr />
       <RelatedServices services={relatedServices} />
       <hr />
       <FAQ items={faqs} />
       <hr />
 
-      <hr />
-      <AISolutionsHowWeWorkSteps />
-      <hr />
     </>
   );
 };

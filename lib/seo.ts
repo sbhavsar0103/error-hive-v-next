@@ -1,13 +1,18 @@
 import { Metadata } from 'next';
 
+export const SITE_URL = "https://www.error-hive.com";
+
+export function canonical(path: string) {
+  return { canonical: `${SITE_URL}${path}` };
+}
+
 export function constructMetadata({
   title = "Error Hive Solutions | AI Development Company in India",
   description = "Error Hive Solutions is an AI Development Company in India specializing in LLM Development, Generative AI, AI Automation, Web Development, and Custom Software Solutions for startups and enterprises.",
   image = "/og-image.png",
-  icons = "/favicon.ico",
+  icons = "/logo/Iconmark%20Main.svg",
   noIndex = false,
-  canonical = "",
-  keywords = [],
+  canonical: canonicalPath = "",
 }: {
   title?: string;
   description?: string;
@@ -15,20 +20,10 @@ export function constructMetadata({
   icons?: string;
   noIndex?: boolean;
   canonical?: string;
-  keywords?: string[];
 } = {}): Metadata {
   return {
     title,
     description,
-    keywords: [
-      ...keywords,
-      "AI Development Company India",
-      "LLM Development",
-      "Generative AI Development",
-      "AI Automation Services",
-      "Custom Software Development",
-      "Web Development Company India",
-    ],
     authors: [{ name: "Error Hive Solutions" }],
     creator: "Error Hive Solutions",
     publisher: "Error Hive Solutions",
@@ -46,7 +41,7 @@ export function constructMetadata({
       siteName: "Error Hive Solutions",
       locale: "en_IN",
       type: "website",
-      ...(canonical && { url: `https://www.error-hive.com${canonical}` }),
+      ...(canonicalPath && { url: `${SITE_URL}${canonicalPath}` }),
     },
     twitter: {
       title,
@@ -55,11 +50,9 @@ export function constructMetadata({
       card: "summary_large_image",
     },
     icons,
-    metadataBase: new URL('https://www.error-hive.com'),
-    ...(canonical && {
-      alternates: {
-        canonical: `https://www.error-hive.com${canonical}`,
-      },
+    metadataBase: new URL(SITE_URL),
+    ...(canonicalPath && {
+      alternates: canonical(canonicalPath),
     }),
     ...(noIndex && {
       robots: {

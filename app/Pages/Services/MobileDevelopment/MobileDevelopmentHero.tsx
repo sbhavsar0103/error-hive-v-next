@@ -8,39 +8,38 @@ import HeroButtons from "../../../Components/HeroButtons/HeroButtons";
 import MobileDevelopmentGameChanger from "./Components/MobileDevelopmentGameChanger";
 import MobileDevelopmentBusinessGrowthSection from "./Components/MobileDevelopmentBusinessGrowthSection";
 import MobileDevelopmentProcessSection from "./Components/MobileDevelopmentProcessSection";
-import MobileDevelopmentHowWeWorkSteps from "./Components/MobileDevelopmentHowWeWorkSteps";
 import ServiceExpectations from "../../../Components/ServiceExpectations/ServiceExpectations";
 import FAQ from "../../../Components/FAQ/FAQ";
 import RelatedServices from "../../../Components/RelatedServices/RelatedServices";
 
 export default function MobileDevelopmentHero() {
-  const faqs = [
-    {
-        "question": "Do you build for iOS or Android?",
-        "answer": "We build for both! We use cross-platform technologies like React Native and Flutter, as well as native Swift and Kotlin depending on the project requirements."
-    },
-    {
-        "question": "How long does it take to build a mobile app?",
-        "answer": "A typical MVP takes 8 to 12 weeks, while more complex apps with custom backend integrations can take 3 to 6 months."
-    },
-    {
-        "question": "Will you help us launch on the App Store and Google Play?",
-        "answer": "Yes, we handle the entire submission and review process for both Apple App Store and Google Play Store to ensure a smooth launch."
-    }
-];
+    const faqs = [
+        {
+            "question": "Do you build for iOS or Android?",
+            "answer": "We build for both! We use cross-platform technologies like React Native and Flutter, as well as native Swift and Kotlin depending on the project requirements."
+        },
+        {
+            "question": "How long does it take to build a mobile app?",
+            "answer": "A typical MVP takes 8 to 12 weeks, while more complex apps with custom backend integrations can take 3 to 6 months."
+        },
+        {
+            "question": "Will you help us launch on the App Store and Google Play?",
+            "answer": "Yes, we handle the entire submission and review process for both Apple App Store and Google Play Store to ensure a smooth launch."
+        }
+    ];
 
-  const relatedServices = [
-    {
-        "title": "Web Development",
-        "href": "/services/web-development",
-        "description": "Scalable web applications and platforms."
-    },
-    {
-        "title": "UI/UX Design",
-        "href": "/services/ui-ux-design",
-        "description": "User-centered design that improves conversion rates."
-    }
-];
+    const relatedServices = [
+        {
+            "title": "Web Development",
+            "href": "/services/web-development",
+            "description": "Scalable web applications and platforms."
+        },
+        {
+            "title": "UI/UX Design",
+            "href": "/services/ui-ux-design",
+            "description": "User-centered design that improves conversion rates."
+        }
+    ];
 
 
     const containerVariants: Variants = useMemo(
@@ -81,8 +80,9 @@ export default function MobileDevelopmentHero() {
                                 scalable, secure, and user-centric apps that enhance customer
                                 engagement, streamline operations, and accelerate digital growth.
                             </p>
-
-                            <HeroButtons />
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <HeroButtons />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
@@ -90,17 +90,13 @@ export default function MobileDevelopmentHero() {
             <hr />
             <MobileDevelopmentGameChanger />
             <hr />
-            <MobileDevelopmentBusinessGrowthSection />
-            <hr />
             <MobileDevelopmentProcessSection />
-      <ServiceExpectations />
-      <RelatedServices services={relatedServices} />
-      <hr />
-      <FAQ items={faqs} />
-      <hr />
-
-      <hr />
-            <MobileDevelopmentHowWeWorkSteps />
+            <hr />
+            <ServiceExpectations />
+            <hr />
+            <RelatedServices services={relatedServices} />
+            <hr />
+            <FAQ items={faqs} />
             <hr />
         </section>
     );

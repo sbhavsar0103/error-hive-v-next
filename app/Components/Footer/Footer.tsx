@@ -6,9 +6,9 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
 } from 'lucide-react';
+import Image from "next/image";
 import Link from "next/link";
 
 const salesPhone = process.env.NEXT_PUBLIC_SALES_PHONE ?? "+91 XXX XXX XXXX";
@@ -35,7 +35,7 @@ const socialLinks = [
   },
   {
     icon: Instagram,
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/errorhivesolutions",
     label: "Instagram",
   },
 ];
@@ -73,13 +73,16 @@ const Footer = () => {
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
           <div>
-            <Link href="/" className="inline-flex flex-col">
-              <span className="text-3xl font-bold text-white">
-                Error<span className="text-amber-500">-</span>Hive
-              </span>
-              <span className="mt-1 text-[11px] uppercase tracking-[0.3em] text-amber-500">
-                Solutions
-              </span>
+            <Link href="/" className="block w-fit" aria-label="Error Hive Solutions home">
+              <Image
+                src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
+                alt="Error Hive Solutions"
+                width={224}
+                height={56}
+                unoptimized
+                sizes="224px"
+                className="h-14 w-56 object-contain object-left"
+              />
             </Link>
 
             <p className="mt-6 max-w-md text-base leading-relaxed text-gray-400">

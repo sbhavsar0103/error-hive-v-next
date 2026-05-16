@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Image from "next/image";
 import Link from "next/link";
 
 const primaryServices = [
@@ -43,26 +44,17 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#060010]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex flex-col items-start group">
-
-            <span className="text-2xl lg:text-3xl font-bold flex items-center space-x-2">
-              <span className="text-white transition-colors">
-                Error
-              </span>
-
-              <span className="text-amber-500 transition-colors">
-                -
-              </span>
-
-              <span className="text-white transition-colors">
-                Hive
-              </span>
-            </span>
-
-            <span className="text-[11px] text-amber-500 tracking-[0.3em] uppercase mt-1 m-auto">
-              Solutions
-            </span>
-
+          <Link href="/" className="block" aria-label="Error Hive Solutions home">
+            <Image
+              src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
+              alt="Error Hive Solutions"
+              width={208}
+              height={48}
+              priority
+              unoptimized
+              sizes="(min-width: 1024px) 208px, 160px"
+              className="h-10 w-40 object-contain lg:h-12 lg:w-52"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -106,12 +98,6 @@ export default function Navbar() {
             <Link href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
               Testimonials
             </Link>
-            <Link href="/portfolio" className="text-gray-300 hover:text-amber-500 transition-colors">
-              Portfolio
-            </Link>
-            {/* <a href="/blogs" className="text-gray-300 hover:text-amber-500 transition-colors">
-              Blogs
-            </a> */}
           </div>
 
           <div className="hidden lg:block">
@@ -165,12 +151,6 @@ export default function Navbar() {
           <Link href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Testimonials
           </Link>
-          <Link href="/portfolio" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-            Portfolio
-          </Link>
-          {/* <a href="/blogs" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-            Blogs
-          </a> */}
           <div className="pt-4">
             <Link href="/contact" className="block text-center px-6 py-3 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
               Let's Talk

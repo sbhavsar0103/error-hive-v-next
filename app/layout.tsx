@@ -4,6 +4,7 @@ import Navbar from "@/app/Components/NavBar/NavBar";
 import Footer from "@/app/Components/Footer/Footer";
 import CurvedLoop from "@/app/Components/CurvedLoop/CurvedLoop";
 import { constructMetadata } from "@/lib/seo";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +19,46 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = constructMetadata();
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  name: "Error Hive Solutions",
+  url: "https://www.error-hive.com",
+  logo: "https://www.error-hive.com/og-image.png",
+  description:
+    "Error Hive Solutions is a leading AI development company in India. We build LLM applications, generative AI systems, web scraping pipelines, and custom software for startups and enterprises.",
+  email: "contact@error-hive.com",
+  telephone: "+919408882844",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "507 Krupal Pathshala, Nr Pintoo Apparels, Shivranjani Cross Road, 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump",
+    addressLocality: "Ahmedabad",
+    addressRegion: "Gujarat",
+    postalCode: "380015",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 23.0225,
+    longitude: 72.5714,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/error-hive",
+    "https://www.instagram.com/errorhivesolutions",
+  ],
+  areaServed: ["IN", "US", "GB", "AE"],
+  priceRange: "$$",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,27 +66,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN" className="overflow-x-hidden">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col min-h-screen`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Error Hive Solutions",
-              url: "https://error-hive.com",
-              logo: "https://error-hive.com/logo.png",
-              description:
-                "AI Development Company in India specializing in LLM Development, Generative AI, Automation and Custom Software Solutions.",
-              sameAs: [
-                "https://www.linkedin.com/company/error-hive"
-              ],
-            }),
-          }}
-        />
+      <head>
+        <SchemaMarkup schema={organizationSchema} />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden max-w-full flex flex-col min-h-screen`}>
         <Navbar />
 
-        <main className="flex-1">
+        <main className="flex-1 w-full overflow-x-hidden">
           {children}
         </main>
 

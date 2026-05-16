@@ -10,12 +10,12 @@ const HomeTestimonialsStrip: React.FC = () => {
   const selectedTestimonials = testimonials.slice(0, 3);
 
   return (
-    <section className="bg-[#060010] py-20 px-6 sm:px-8 border-t border-amber-500/10 relative overflow-hidden">
-      <div className="absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
+    <section className="bg-[#060010] py-20 px-6 sm:px-8 relative overflow-hidden">
+      {/* <div className="absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" /> */}
       
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-amber-500 mb-4">
             Trusted by Growing Businesses
           </h2>
           <p className="text-amber-100/70 max-w-2xl mx-auto">
