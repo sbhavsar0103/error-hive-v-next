@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/seo';
 import { getAllBlogPosts } from '@/lib/blog';
+import { healthcareServices } from '@/app/Pages/Services/HealthCareService/healthcareServicesData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -12,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : new Date(post.meta.publishedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+  }));
+  const healthcareServicePages = healthcareServices.map((service) => ({
+    url: `${baseUrl}/services/health-care-service/${service.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
   }));
 
   return [
@@ -27,6 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/services/data-preprocessing`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/services/business-software-consulting`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/services/mobile-scraping`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/services/health-care-service`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...healthcareServicePages,
     { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/testimonials`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },

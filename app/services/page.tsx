@@ -56,6 +56,11 @@ const allServices = [
     title: 'Mobile App Scraping',
     description: 'Extract valuable market data directly from mobile applications.',
     href: '/services/mobile-scraping'
+  },
+  {
+    title: 'Health Care Service',
+    description: 'RCM, credentialing, patient enablement, and billing compliance support.',
+    href: '/services/health-care-service'
   }
 ];
 

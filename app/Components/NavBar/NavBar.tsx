@@ -27,6 +27,8 @@ const primaryServices = [
   }
 ];
 
+const healthCareServiceHref = '/services/health-care-service';
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -95,6 +97,14 @@ export default function Navbar() {
             <Link href="/about" className="text-gray-300 hover:text-amber-500 transition-colors">
               About Us
             </Link>
+            <Link
+              href={healthCareServiceHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-amber-500 transition-colors"
+            >
+              Health Care Service
+            </Link>
             <Link href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
               Testimonials
             </Link>
@@ -102,7 +112,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <Link href="/contact" className="inline-block px-6 py-2.5 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-200">
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </div>
 
@@ -148,12 +158,21 @@ export default function Navbar() {
           <Link href="/about" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             About Us
           </Link>
+          <Link
+            href={healthCareServiceHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Health Care Service
+          </Link>
           <Link href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Testimonials
           </Link>
           <div className="pt-4">
             <Link href="/contact" className="block text-center px-6 py-3 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </div>
         </div>
