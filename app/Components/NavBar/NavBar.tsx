@@ -46,10 +46,10 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#060010]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="block" aria-label="Error Hive Solutions home">
+          <Link href="/" className="block" aria-label="Error-Hive Solutions home">
             <Image
               src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
-              alt="Error Hive Solutions"
+              alt="Error-Hive Solutions"
               width={208}
               height={48}
               priority
@@ -108,10 +108,18 @@ export default function Navbar() {
             <Link href="/testimonials" className="text-gray-300 hover:text-amber-500 transition-colors">
               Testimonials
             </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-amber-500 transition-colors">
+              Contact Us
+            </Link>
           </div>
 
           <div className="hidden lg:block">
-            <Link href="/contact" className="inline-block px-6 py-2.5 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-200">
+            <Link
+              href="https://calendly.com/contact-error-hive/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2.5 bg-amber-500 text-black font-semibold rounded-full hover:bg-amber-500/90 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-200"
+            >
               Let&apos;s Talk
             </Link>
           </div>
@@ -170,11 +178,9 @@ export default function Navbar() {
           <Link href="/testimonials" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             Testimonials
           </Link>
-          <div className="pt-4">
-            <Link href="/contact" className="block text-center px-6 py-3 bg-amber-500 text-black font-semibold rounded-xl hover:bg-amber-500 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
-              Let&apos;s Talk
-            </Link>
-          </div>
+          <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors py-3 px-4 hover:bg-gray-800/50 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>

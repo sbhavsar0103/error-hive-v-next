@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "UI/UX Design & Development Services India | Error Hive Solutions",
+  title: "UI/UX Design & Development Services India | Error-Hive Solutions",
   description:
     "User-centered UI/UX design and front-end development. We create engaging, high-converting digital experiences that align with your brand and business goals.",
   canonical: "/services/ui-ux-design",

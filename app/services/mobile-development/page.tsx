@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Mobile App Development Company India | Error Hive Solutions",
+  title: "Mobile App Development Company India | Error-Hive Solutions",
   description:
     "Cross-platform iOS and Android mobile app development. We build fast, scalable, and user-friendly mobile applications for startups and growing businesses.",
   canonical: "/services/mobile-development",

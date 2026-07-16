@@ -75,7 +75,7 @@ export default function MobileDevelopmentHero() {
                             </h1>
 
                             <p className="text-[clamp(1rem,2.5vw,1.4rem)] text-amber-200/80 mb-8 leading-relaxed max-w-4xl mx-auto">
-                                Error Hive Solutions builds high-performance mobile applications
+                                Error-Hive Solutions builds high-performance mobile applications
                                 for iOS, Android, and cross-platform environments. We create
                                 scalable, secure, and user-centric apps that enhance customer
                                 engagement, streamline operations, and accelerate digital growth.

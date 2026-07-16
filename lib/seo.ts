@@ -7,8 +7,8 @@ export function canonical(path: string) {
 }
 
 export function constructMetadata({
-  title = "Error Hive Solutions | AI Development Company in India",
-  description = "Error Hive Solutions is an AI Development Company in India specializing in LLM Development, Generative AI, AI Automation, Web Development, and Custom Software Solutions for startups and enterprises.",
+  title = "Error-Hive Solutions | AI Development Company in India",
+  description = "Error-Hive Solutions is an AI Development Company in India specializing in LLM Development, Generative AI, AI Automation, Web Development, and Custom Software Solutions for startups and enterprises.",
   image = "/og-image.png",
   icons = "/logo/Iconmark%20Main.svg",
   noIndex = false,
@@ -24,9 +24,9 @@ export function constructMetadata({
   return {
     title,
     description,
-    authors: [{ name: "Error Hive Solutions" }],
-    creator: "Error Hive Solutions",
-    publisher: "Error Hive Solutions",
+    authors: [{ name: "Error-Hive Solutions" }],
+    creator: "Error-Hive Solutions",
+    publisher: "Error-Hive Solutions",
     openGraph: {
       title,
       description,
@@ -38,7 +38,7 @@ export function constructMetadata({
           alt: title,
         },
       ],
-      siteName: "Error Hive Solutions",
+      siteName: "Error-Hive Solutions",
       locale: "en_IN",
       type: "website",
       ...(canonicalPath && { url: `${SITE_URL}${canonicalPath}` }),

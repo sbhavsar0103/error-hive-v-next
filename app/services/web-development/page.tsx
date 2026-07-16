@@ -6,7 +6,7 @@ import { createFAQSchema } from "@/lib/faqSchema";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web App Development Services India | Error Hive Solutions",
+  title: "Web App Development Services India | Error-Hive Solutions",
   description:
     "Scalable and modern web application development using React, Next.js, and Node.js. From MVPs to enterprise platforms, we deliver fast and reliable web solutions.",
   canonical: "/services/web-development",

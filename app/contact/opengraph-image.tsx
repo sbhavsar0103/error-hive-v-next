@@ -1,7 +1,7 @@
 import { createOgImage, ogSize } from "@/lib/ogImage";
 
 export const runtime = "edge";
-export const alt = "Contact Error Hive Solutions";
+export const alt = "Contact Error-Hive Solutions";
 export const size = ogSize;
 export const contentType = "image/png";
 

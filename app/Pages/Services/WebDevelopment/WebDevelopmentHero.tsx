@@ -69,7 +69,7 @@ export default function WebDevelopmentHero() {
                                 </span>
                             </h1>
                             <p className="text-[clamp(1rem,2.5vw,1.4rem)] text-amber-200/80 mb-8 leading-relaxed max-w-4xl mx-auto">
-                                Error Hive Solutions delivers modern web development services including
+                                Error-Hive Solutions delivers modern web development services including
                                 custom website development, full-stack applications, SaaS platforms,
                                 and AI-integrated solutions designed for performance, scalability, and business growth.
                             </p>

@@ -13,7 +13,7 @@ export default function TermsOfService() {
                         <section>
                             <h2 className="text-xl font-semibold text-amber-500 mb-3">1. Agreement to Terms</h2>
                             <p>
-                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Error Hive Solutions ("Company," "we," "us," or "our"), concerning your access to and use of our website as well as any other media form, media channel, IT services, software development, consulting, or linked services related thereto (collectively, the "Site" and "Services").
+                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Error-Hive Solutions ("Company," "we," "us," or "our"), concerning your access to and use of our website as well as any other media form, media channel, IT services, software development, consulting, or linked services related thereto (collectively, the "Site" and "Services").
                             </p>
                         </section>
 
@@ -34,7 +34,7 @@ export default function TermsOfService() {
                         <section>
                             <h2 className="text-xl font-semibold text-amber-500 mb-3">4. IT Services and Software Development</h2>
                             <p>
-                                Whenever you engage Error Hive Solutions for IT services, consulting, or software development, specific Statements of Work (SOW) or Service Level Agreements (SLA) will govern the specifics of those engagements. In the event of a conflict between these Terms of Service and a specific SOW/SLA, the SOW/SLA shall prevail for that specific engagement.
+                                Whenever you engage Error-Hive Solutions for IT services, consulting, or software development, specific Statements of Work (SOW) or Service Level Agreements (SLA) will govern the specifics of those engagements. In the event of a conflict between these Terms of Service and a specific SOW/SLA, the SOW/SLA shall prevail for that specific engagement.
                             </p>
                         </section>
 
@@ -48,7 +48,7 @@ export default function TermsOfService() {
                         <section>
                             <h2 className="text-xl font-semibold text-amber-500 mb-3">6. Governing Law</h2>
                             <p>
-                                These Terms shall be governed by and defined following the laws of India. Error Hive Solutions and yourself irrevocably consent that the courts of India shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+                                These Terms shall be governed by and defined following the laws of India. Error-Hive Solutions and yourself irrevocably consent that the courts of India shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
                             </p>
                         </section>
                     </div>

@@ -115,7 +115,7 @@ const OurServices: React.FC = () => {
         <FadeContent blur={false} duration={200} initialOpacity={0}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <p className="sr-only">
-              Error Hive Solutions is a leading AI development company in India
+              Error-Hive Solutions is a leading AI development company in India
               providing LLM development, generative AI solutions, machine learning,
               web development, cloud engineering, and enterprise software services.
             </p>

@@ -6,7 +6,7 @@ import { createFAQSchema } from "@/lib/faqSchema";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "LLM & Generative AI Development Services India | Error Hive Solutions",
+  title: "LLM & Generative AI Development Services India | Error-Hive Solutions",
   description:
     "Custom LLM development, generative AI applications, AI automation, and machine learning model deployment for startups and enterprises. Based in India, serving globally.",
   canonical: "/services/ai-solutions",

@@ -137,7 +137,7 @@ const WhyChooseUs: React.FC = () => {
         </FadeContent>
       </div>
       <p className="sr-only">
-        Error Hive Solutions is a trusted AI development company in India
+        Error-Hive Solutions is a trusted AI development company in India
         offering LLM development, generative AI applications, machine learning,
         and enterprise software engineering services for startups and enterprises.
       </p>

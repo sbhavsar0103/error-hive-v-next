@@ -19,7 +19,7 @@ export function createServiceSchema({
     description,
     provider: {
       "@type": "Organization",
-      name: "Error Hive Solutions",
+      name: "Error-Hive Solutions",
       url: SITE_URL,
     },
     areaServed: ["IN", "US", "GB", "AE"],

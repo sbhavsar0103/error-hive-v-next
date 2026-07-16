@@ -31,7 +31,7 @@ export async function generateMetadata({
 
   if (!service) {
     return constructMetadata({
-      title: "Health Care Service | Error Hive Solutions",
+      title: "Health Care Service | Error-Hive Solutions",
       canonical: "/services/health-care-service",
     });
   }

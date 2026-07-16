@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Custom Software Development Company India | Error Hive Solutions",
+  title: "Custom Software Development Company India | Error-Hive Solutions",
   description:
     "End-to-end custom software development for startups and enterprises. We build scalable, production-ready web and mobile applications tailored to your business goals.",
   canonical: "/services/custom-software-development",

@@ -5,7 +5,7 @@ import { constructMetadata } from "@/lib/seo";
 import SpotlightCard from "../Components/SpotlightCard/SpotlightCard";
 
 export const metadata: Metadata = constructMetadata({
-  title: "All Services | Error Hive Solutions",
+  title: "All Services | Error-Hive Solutions",
   description:
     "Explore our complete range of software development, AI solutions, web scraping, and consulting services designed to scale your business.",
   canonical: "/services",

@@ -22,11 +22,11 @@ export const metadata: Metadata = constructMetadata();
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
-  name: "Error Hive Solutions",
+  name: "Error-Hive Solutions",
   url: "https://www.error-hive.com",
   logo: "https://www.error-hive.com/og-image.png",
   description:
-    "Error Hive Solutions is a leading AI development company in India. We build LLM applications, generative AI systems, web scraping pipelines, and custom software for startups and enterprises.",
+    "Error-Hive Solutions is a leading AI development company in India. We build LLM applications, generative AI systems, web scraping pipelines, and custom software for startups and enterprises.",
   email: "contact@error-hive.com",
   telephone: "+919408882844",
   address: {

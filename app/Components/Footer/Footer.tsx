@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#060010]/65">
-                Build With Error Hive
+                Build With Error-Hive Solutions
               </p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
                 Book a Free Strategy Call and get a practical roadmap for your next product.
@@ -61,7 +61,9 @@ const Footer = () => {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/contact"
+                href="https://calendly.com/contact-error-hive/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#060010] px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
               >
                 Book a Free Strategy Call
@@ -73,10 +75,10 @@ const Footer = () => {
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
           <div>
-            <Link href="/" className="block w-fit" aria-label="Error Hive Solutions home">
+            <Link href="/" className="block w-fit" aria-label="Error-Hive Solutions home">
               <Image
                 src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
-                alt="Error Hive Solutions"
+                alt="Error-Hive Solutions"
                 width={224}
                 height={56}
                 unoptimized

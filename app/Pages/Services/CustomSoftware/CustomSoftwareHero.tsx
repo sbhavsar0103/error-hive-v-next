@@ -100,7 +100,7 @@ const CustomSoftwareHero = () => {
       <FAQ items={faqs} />
       <hr />
       <p className="sr-only">
-        Error Hive Solutions is a custom software development company in India
+        Error-Hive Solutions is a custom software development company in India
         providing enterprise software, SaaS development, AI-powered applications,
         and scalable digital product engineering services.
       </p>

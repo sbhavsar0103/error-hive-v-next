@@ -19,7 +19,7 @@ export function createOgImage(title: string, subtitle: string) {
         }}
       >
         <div style={{ fontSize: 30, color: "#f59e0b", fontWeight: 700 }}>
-          Error Hive Solutions
+          Error-Hive Solutions
         </div>
         <div>
           <h1

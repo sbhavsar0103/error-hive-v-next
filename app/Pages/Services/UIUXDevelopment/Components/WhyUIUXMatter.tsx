@@ -92,7 +92,7 @@ const WhyUIUXMatter: React.FC = () => {
         <FadeContent blur={false} duration={200} initialOpacity={0}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <p className="sr-only">
-              Error Hive Solutions provides professional UI UX design services including
+              Error-Hive Solutions provides professional UI UX design services including
               user experience research, interface design, mobile app UX, website UX
               optimization, usability testing, and product design for startups and enterprises.
             </p>

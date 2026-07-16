@@ -5,7 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Mobile App Data Extraction Services | Error Hive Solutions",
+  title: "Mobile App Data Extraction Services | Error-Hive Solutions",
   description:
     "Extract structured data from mobile applications and APIs for market research, competitive analysis, and business intelligence. Scalable and automated pipelines.",
   canonical: "/services/mobile-scraping",

@@ -6,7 +6,7 @@ import { createFAQSchema } from "@/lib/faqSchema";
 import { createServiceSchema } from "@/lib/serviceSchema";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web Scraping & Data Extraction Services India | Error Hive Solutions",
+  title: "Web Scraping & Data Extraction Services India | Error-Hive Solutions",
   description:
     "Scalable web scraping and data extraction services for eCommerce, real estate, finance, and marketplaces. Get structured datasets delivered via API, CSV, or JSON.",
   canonical: "/services/web-scraping-services",

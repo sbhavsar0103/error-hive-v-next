@@ -81,7 +81,7 @@ export default function WebDataExtractionHero() {
                             </h1>
 
                             <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-amber-200/70 mb-8 leading-relaxed max-w-4xl mx-auto">
-                                Error Hive Solutions provides reliable and scalable web scraping services
+                                Error-Hive Solutions provides reliable and scalable web scraping services
                                 to extract valuable data from websites, marketplaces, directories, and
                                 social platforms. We help businesses collect structured datasets for
                                 market research, price monitoring, competitor analysis, lead generation,

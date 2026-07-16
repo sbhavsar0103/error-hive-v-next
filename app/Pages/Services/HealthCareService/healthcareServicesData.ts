@@ -48,7 +48,7 @@ export const healthcareServices: HealthcareService[] = [
     heroHighlight: "cleaner claims",
     description:
       "End-to-end RCM support for healthcare organizations that need stronger charge capture, fewer denials, cleaner AR, and more predictable reimbursement operations.",
-    metaTitle: "Revenue Cycle Management Services | Healthcare RCM | Error Hive Solutions",
+    metaTitle: "Revenue Cycle Management Services | Healthcare RCM | Error-Hive Solutions",
     metaDescription:
       "Healthcare revenue cycle management services for claims, AR follow-up, denial management, payment posting, reporting, and compliance-ready billing operations.",
     serviceType: "Healthcare Revenue Cycle Management",
@@ -138,7 +138,7 @@ export const healthcareServices: HealthcareService[] = [
     heroHighlight: "Dental RCM",
     description:
       "Dental revenue cycle support designed for practices that need cleaner insurance workflows, stronger patient billing, attachment accuracy, and reliable reimbursement follow-up.",
-    metaTitle: "Dental RCM Services | Dental Billing Support | Error Hive Solutions",
+    metaTitle: "Dental RCM Services | Dental Billing Support | Error-Hive Solutions",
     metaDescription:
       "Dental RCM services for insurance verification, dental claims, attachments, payment posting, denial follow-up, and patient billing workflows.",
     serviceType: "Dental Revenue Cycle Management",
@@ -228,7 +228,7 @@ export const healthcareServices: HealthcareService[] = [
     heroHighlight: "provider readiness",
     description:
       "Credentialing and enrollment support that helps healthcare organizations organize provider data, reduce payer delays, and maintain enrollment visibility.",
-    metaTitle: "Credentialing & Enrollment Services | Provider Enrollment | Error Hive Solutions",
+    metaTitle: "Credentialing & Enrollment Services | Provider Enrollment | Error-Hive Solutions",
     metaDescription:
       "Provider credentialing and payer enrollment services for CAQH maintenance, application tracking, recredentialing, document management, and enrollment operations.",
     serviceType: "Provider Credentialing and Enrollment",
@@ -318,7 +318,7 @@ export const healthcareServices: HealthcareService[] = [
     heroHighlight: "Patient-centric",
     description:
       "Enablement support for healthcare teams that need smoother intake, better patient communication, stronger workflow coordination, and clearer operational handoffs.",
-    metaTitle: "Patient Centric Enablement Services | Healthcare Operations | Error Hive Solutions",
+    metaTitle: "Patient Centric Enablement Services | Healthcare Operations | Error-Hive Solutions",
     metaDescription:
       "Patient-centric enablement services for healthcare intake, scheduling support, communication workflows, care coordination, and operational follow-through.",
     serviceType: "Patient Centric Healthcare Enablement",
@@ -408,7 +408,7 @@ export const healthcareServices: HealthcareService[] = [
     heroHighlight: "revenue integrity",
     description:
       "Structured billing assessment and compliance support to identify revenue leakage, documentation gaps, payer risk, process weakness, and audit readiness opportunities.",
-    metaTitle: "Billing Assessment & Compliance Services | Healthcare Billing Audit | Error Hive Solutions",
+    metaTitle: "Billing Assessment & Compliance Services | Healthcare Billing Audit | Error-Hive Solutions",
     metaDescription:
       "Healthcare billing assessment and compliance services for revenue leakage review, claims process audits, documentation checks, denial trends, and compliance-ready operations.",
     serviceType: "Healthcare Billing Assessment and Compliance",
@@ -493,7 +493,7 @@ export const healthcareServices: HealthcareService[] = [
 
 export const healthcareHub = {
   title: "Health Care Service",
-  metaTitle: "Health Care Service | Healthcare RCM & Billing Operations | Error Hive Solutions",
+  metaTitle: "Health Care Service | Healthcare RCM & Billing Operations | Error-Hive Solutions",
   metaDescription:
     "Explore healthcare services for RCM, Dental RCM, credentialing, patient-centric enablement, and billing assessment and compliance.",
   description:

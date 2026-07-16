@@ -75,7 +75,7 @@ export default function BusinessSoftwareConsultingHero() {
                             </h1>
 
                             <p className="text-[clamp(1rem,2.5vw,1.4rem)] text-amber-200/80 mb-8 leading-relaxed max-w-4xl mx-auto">
-                                Error Hive Solutions provides expert business software consulting services to help companies
+                                Error-Hive Solutions provides expert business software consulting services to help companies
                                 streamline operations, improve efficiency, and accelerate digital transformation. We design
                                 and implement custom enterprise solutions, automation systems, SaaS platforms, and
                                 AI-powered business tools tailored to your growth strategy.

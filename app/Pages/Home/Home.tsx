@@ -28,7 +28,7 @@ const BannerHero: React.FC = () => {
           </h1>
 
           <p className="text-body-lead mb-8 max-w-2xl mx-auto text-gray-300 pointer-events-auto">
-            Error Hive Solutions helps startups and enterprises build AI-powered
+            Error-Hive Solutions helps startups and enterprises build AI-powered
             products, LLM applications, automation systems, and scalable web
             platforms designed for real-world impact.
           </p>
