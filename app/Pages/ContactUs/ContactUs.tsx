@@ -3,6 +3,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Send, Mail, User, MessageSquare, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   name: string;
@@ -17,15 +18,51 @@ interface Step {
 }
 
 const ContactUs: React.FC = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSend = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setErrorMessage(null);
+    setIsLoading(true);
+
+    try {
+      const payload = {
+        first_name: formData.name,
+        to_email: formData.email,
+        message: formData.message,
+      };
+
+      const response = await fetch("/api/mail/send", {
+        method: "POST",
+        headers: {
+          "accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
+      setFormData({ name: "", email: "", message: "" });
+
+      // Redirect to thank you page
+      router.push("/thank-you");
+    } catch (err) {
+      console.error("Send mail error:", err);
+      setErrorMessage("Failed to send. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
@@ -60,7 +97,7 @@ const ContactUs: React.FC = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/company/error-hive",
+      href: "https://www.linkedin.com/company/error-hive-solutions/",
       label: "LinkedIn",
     },
     {
@@ -137,7 +174,7 @@ const ContactUs: React.FC = () => {
                       Let's discuss your project
                     </p>
                   </div>
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form onSubmit={handleSend} className="space-y-5">
                     {/* NAME */}
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-amber-200/70">
@@ -168,11 +205,15 @@ const ContactUs: React.FC = () => {
                         <textarea name="message" value={formData.message} onChange={handleChange} rows={5} required className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/5 border border-amber-500/20 text-amber-50 focus:ring-2 focus:ring-amber-500/50 resize-none" placeholder="Tell us about your project..." />
                       </div>
                     </div>
-                    <button type="submit" className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold flex items-center justify-center gap-2">
-                      Send Message
+                    <button type="submit" disabled={isLoading} className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer">
+                      {isLoading ? "Sending..." : "Send Message"}
                       <Send className="w-5 h-5" />
                     </button>
                   </form>
+
+                  {errorMessage && (
+                    <p className="text-red-400 text-center font-medium">{errorMessage}</p>
+                  )}
 
                   <div className="mt-8 pt-6 border-t border-amber-500/20 text-center space-y-4">
                     <div className="flex items-center justify-center gap-4">

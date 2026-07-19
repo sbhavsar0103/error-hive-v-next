@@ -52,7 +52,7 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    "https://www.linkedin.com/company/error-hive",
+    "https://www.linkedin.com/company/error-hive-solutions/",
     "https://www.instagram.com/errorhivesolutions",
   ],
   areaServed: ["IN", "US", "GB", "AE"],
@@ -72,9 +72,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden max-w-full flex flex-col min-h-screen`}>
         <Navbar />
 
-        <main className="flex-1 w-full overflow-x-hidden">
-          {children}
-        </main>
+        <main className="flex-1 w-full overflow-x-hidden">{children}</main>
 
         {/* CURVED LOOP SECTION */}
         <section className="surface-base flex flex-col items-center justify-center overflow-hidden">

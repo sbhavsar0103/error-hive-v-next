@@ -30,7 +30,7 @@ const quickLinks = [
 const socialLinks = [
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/company/error-hive",
+    href: "https://www.linkedin.com/company/error-hive-solutions/",
     label: "LinkedIn",
   },
   {
