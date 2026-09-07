@@ -29,15 +29,39 @@ const organizationSchema = {
     "Error-Hive Solutions is a leading AI development company in India. We build LLM applications, generative AI systems, web scraping pipelines, and custom software for startups and enterprises.",
   email: "contact@error-hive.com",
   telephone: "+919408882844",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "507 Krupal Pathshala, Nr Pintoo Apparels, Shivranjani Cross Road, 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump",
-    addressLocality: "Ahmedabad",
-    addressRegion: "Gujarat",
-    postalCode: "380015",
-    addressCountry: "IN",
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress:
+        "507 Krupal Pathshala, Nr Pintoo Apparels, Shivranjani Cross Road, 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump",
+      addressLocality: "Ahmedabad",
+      addressRegion: "Gujarat",
+      postalCode: "380015",
+      addressCountry: "IN",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "1128 Taunton Court, Schaumburg, IL 60193, United States",
+      addressLocality: "Schaumburg",
+      addressRegion: "IL",
+      postalCode: "60193",
+      addressCountry: "US",
+    },
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+919408882844",
+      contactType: "customer service",
+      areaServed: ["IN"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+16592720538",
+      contactType: "customer service",
+      areaServed: ["US"],
+    },
+  ],
   geo: {
     "@type": "GeoCoordinates",
     latitude: 23.0225,

@@ -153,13 +153,6 @@ const ContactUs: React.FC = () => {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 pt-8 border-t border-amber-500/20">
-                <h3 className="text-xl font-semibold text-amber-500 mb-2">Our Location</h3>
-                <span className="text-amber-100/70 text-lg">
-                  507 Krupal Pathshala , Nr Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015
-                </span>
-              </div>
             </div>
             {/* RIGHT FORM */}
             <div className="lg:pl-8">
@@ -192,7 +185,7 @@ const ContactUs: React.FC = () => {
                       </label>
                       <div className="relative">
                         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-500/50" />
-                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/5 border border-amber-500/20 text-amber-50 focus:ring-2 focus:ring-amber-500/50" placeholder="your@email-id.com" />
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/5 border border-amber-500/20 text-amber-50 focus:ring-2 focus:ring-amber-500/50" placeholder="username@email-id.com" />
                       </div>
                     </div>
                     {/* MESSAGE */}

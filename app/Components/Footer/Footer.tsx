@@ -73,91 +73,138 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
-          <div>
-            <Link href="/" className="block w-fit" aria-label="Error-Hive Solutions home">
-              <Image
-                src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
-                alt="Error-Hive Solutions"
-                width={224}
-                height={56}
-                unoptimized
-                sizes="224px"
-                className="h-14 w-56 object-contain object-left"
-              />
-            </Link>
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          {/* LEFT COLUMN: Logo + Core Services / Quick Links */}
+          <div className="flex flex-col">
+            <div>
+              <Link href="/" className="block w-fit" aria-label="Error-Hive Solutions home">
+                <Image
+                  src="/logo/Logo%20Main%20White%20Text%20(Horizontal).svg"
+                  alt="Error-Hive Solutions"
+                  width={224}
+                  height={56}
+                  unoptimized
+                  sizes="224px"
+                  className="h-14 w-auto object-contain"
+                />
+              </Link>
+            </div>
 
-            <p className="mt-6 max-w-md text-base leading-relaxed text-gray-400">
-              AI development company focused on SaaS development, custom software, and automation systems that
-              help businesses launch faster and operate smarter.
-            </p>
+            <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Core Services</h3>
+                <div className="border-b border-gray-800/40 lg:hidden mt-4 mb-4" />
+                <ul className="mt-6 space-y-3">
+                  {coreServices.map((service) => (
+                    <li key={service.name}>
+                      <Link
+                        href={service.href}
+                        className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div className="mt-8 flex gap-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors duration-300 hover:border-amber-500 hover:text-amber-500"
-                >
-                  <social.icon className="h-5 w-5" />
-                </Link>
-              ))}
+              <div>
+                <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+                <div className="border-b border-gray-800/40 lg:hidden mt-4 mb-4" />
+                <ul className="mt-6 space-y-3">
+                  {quickLinks.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold text-white">Core Services</h3>
-            <ul className="mt-6 space-y-3">
-              {coreServices.map((service) => (
-                <li key={service.name}>
+          {/* RIGHT COLUMN: Email at top-right, then Offices */}
+          <div className="lg:pl-8 lg:border-l lg:border-gray-800/40">
+            <div className="flex justify-start lg:justify-end">
+              <div className="flex gap-3 items-center">
+                {socialLinks.map((social) => (
                   <Link
-                    href={service.href}
-                    className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors duration-300 hover:border-amber-500 hover:text-amber-500"
                   >
-                    {service.name}
+                    <social.icon className="h-5 w-5" />
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                ))}
 
-          <div>
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-            <ul className="mt-6 space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 transition-colors duration-200 hover:text-amber-500"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                <Link
+                  href="mailto:contact@error-hive.com"
+                  aria-label="Email"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors duration-300 hover:border-amber-500 hover:text-amber-500"
+                >
+                  <Mail className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
 
-          <div>
-            <h3 className="text-lg font-semibold text-white">Contact</h3>
-            <ul className="mt-6 space-y-4">
-              <li className="flex items-start gap-3 text-gray-400">
-                <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <Link href="mailto:contact@error-hive.com" className="transition-colors duration-200 hover:text-amber-500">
-                  contact@error-hive.com
-                </Link>
-              </li>
-              <li className="flex items-start gap-3 text-gray-400">
-                <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <Link href={`tel:${salesPhone.replace(/\s+/g, "")}`} className="transition-colors duration-200 hover:text-amber-500">
-                  {salesPhone}
-                </Link>
-              </li>
-              <li className="flex items-start gap-3 text-gray-400">
-                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <span>507 Krupal Pathshala , Nr Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015</span>
-              </li>
-            </ul>
+            <div className="border-b border-gray-800/40 lg:hidden mt-4 mb-4" />
+
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-white">Offices</h3>
+
+              <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/SVG/Flags/US.svg" alt="United States flag" width={28} height={20} unoptimized className="h-6 w-6 object-contain" />
+                    <div>
+                      <p className="font-semibold text-white">United States</p>
+                      <p className="text-sm text-gray-400">HQ</p>
+                    </div>
+                  </div>
+
+                  <div className="border-b border-gray-800/40 lg:hidden mt-3 mb-3" />
+
+                  <ul className="mt-4 space-y-2 text-gray-400">
+                    <li className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 flex-shrink-0 text-amber-500" />
+                      <Link href="tel:+16592720538" className="transition-colors duration-200 hover:text-amber-500">+1 (659) 272-0538</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                      <span>1128 Taunton Court, Schaumburg, IL 60193, United States</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/SVG/Flags/IN.svg" alt="India flag" width={28} height={20} unoptimized className="h-6 w-6 object-contain" />
+                    <div>
+                      <p className="font-semibold text-white">India</p>
+                      <p className="text-sm text-gray-400">Office</p>
+                    </div>
+                  </div>
+
+                  <div className="border-b border-gray-800/40 lg:hidden mt-3 mb-3" />
+
+                  <ul className="mt-4 space-y-2 text-gray-400">
+                    <li className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 flex-shrink-0 text-amber-500" />
+                      <Link href="tel:+919408882844" className="transition-colors duration-200 hover:text-amber-500">+91 9408882844</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
+                      <span>507 Krupal Pathshala, Nr Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
